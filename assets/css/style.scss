@@ -10,19 +10,19 @@
 @include google-font("Source Sans Pro");
 
 
-$font-stack: 'Source Sans Pro', sans-serif;
-$font-subhead: 'Source Sans Pro', sans-serif;
-$font-head: 'Arsenal', cursive;
+// $font-stack: 'Source Sans Pro', sans-serif;
+// $font-subhead: 'Source Sans Pro', sans-serif;
+// $font-head: 'Arsenal', cursive;
 
-$color-primary: #bdbdbd;
-$color-primary-light: #efefef;
-$color-primary-dark: #8d8d8d;
-$color-secondary: #3394f4;
-$color-secondary-light: #77c4ff;
-$color-secondary-dark: #0067c1;
-$color-bonus: #f8991d50;
+// $color-primary: #bdbdbd;
+// $color-primary-light: #efefef;
+// $color-primary-dark: #8d8d8d;
+// $color-secondary: #3394f4;
+// $color-secondary-light: #77c4ff;
+// $color-secondary-dark: #0067c1;
+// $color-bonus: #f8991d50;
 
-$color-text: #000000;
+// $color-text: #000000;
 
 
  /* Start initial styles */
@@ -31,20 +31,24 @@ $color-text: #000000;
     padding: 0;
 };
 
-.app {
-    font-family: $font-stack;
+#content {
+    font-family: 'Source Sans Pro', sans-serif;
 };
 
 h1 {
-    font-family: $font-head;
+    font-family: 'Arsenal', cursive;
     text-decoration: underline;
-    text-decoration-color:$color-secondary;
+    text-decoration-color: #3394f4;
     text-align: center;
     padding-bottom: 1rem;
 };
 
+h2 {
+    font-family: 'Arsenal', cursive;
+}
+
 h3 {
     padding-bottom: .5rem;
-    font-family: $font-head;
+    font-family: 'Arsenal', cursive;
     font-size: 1.5rem;
 };
