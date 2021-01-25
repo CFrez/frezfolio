@@ -1,5 +1,24 @@
 ---
 ---
+// Headers
+$header-heading-color: #fff;
+$header-bg-color: #3394f4;
+$header-bg-color-secondary: #f8991d50;
+
+// Text
+$section-headings-color: #0067c1;
+$body-text-color: #606c71;
+$body-link-color: #77c4ff;
+$blockquote-text-color: #818b98;
+
+// Code
+$code-bg-color: #f3f6fa;
+$code-text-color: #0067c1;
+
+// Borders
+$border-color: #dce6f0;
+$table-border-color: #e9ebec;
+$hr-border-color: #eff0f1;
 
 @import "{{ site.theme }}";
 
@@ -25,30 +44,30 @@
 // $color-text: #000000;
 
 
- /* Start initial styles */
-* {
-    margin: 0;
-    padding: 0;
-};
+//  /* Start initial styles */
+// * {
+//     margin: 0;
+//     padding: 0;
+// };
 
-#content {
-    font-family: 'Source Sans Pro', sans-serif;
-};
+// #content {
+//     font-family: 'Source Sans Pro', sans-serif;
+// };
 
-h1 {
-    font-family: 'Arsenal', cursive;
-    text-decoration: underline;
-    text-decoration-color: #3394f4;
-    text-align: center;
-    padding-bottom: 1rem;
-};
+// h1 {
+//     font-family: 'Arsenal', cursive;
+//     text-decoration: underline;
+//     text-decoration-color: #3394f4;
+//     text-align: center;
+//     padding-bottom: 1rem;
+// };
 
-h2 {
-    font-family: 'Arsenal', cursive;
-}
+// h2 {
+//     font-family: 'Arsenal', cursive;
+// }
 
-h3 {
-    padding-bottom: .5rem;
-    font-family: 'Arsenal', cursive;
-    font-size: 1.5rem;
-};
+// h3 {
+//     padding-bottom: .5rem;
+//     font-family: 'Arsenal', cursive;
+//     font-size: 1.5rem;
+// };
