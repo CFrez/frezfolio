@@ -2,3 +2,30 @@
 ---
 
 @import "{{ site.theme }}";
+
+@import 'variables.scss';
+
+
+ /* Start initial styles */
+ * {
+    margin: 0;
+    padding: 0;
+};
+
+.app {
+    font-family: $font-stack;
+};
+
+h1 {
+    font-family: $font-head;
+    text-decoration: underline;
+    text-decoration-color:$color-secondary;
+    text-align: center;
+    padding-bottom: 1rem;
+};
+
+h3 {
+    padding-bottom: .5rem;
+    font-family: $font-head;
+    font-size: 1.5rem;
+};
