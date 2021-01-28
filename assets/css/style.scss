@@ -51,21 +51,24 @@ header.page-header {
   }
 };
 
+main#content.main-content {
+  font-family: $font-stack;
+  h1 {
+      font-family: 'Josefin Sans', sans-serif;
+      text-decoration: underline;
+      text-decoration-color: #3394f4;
+      text-align: center;
+      padding-bottom: 1rem;
+  };
 
-// h1 {
-//     font-family: 'Arsenal', cursive;
-//     text-decoration: underline;
-//     text-decoration-color: #3394f4;
-//     text-align: center;
-//     padding-bottom: 1rem;
-// };
+  h2 {
+      font-family: 'Josefin Sans', sans-serif;
+  }
 
-// h2 {
-//     font-family: 'Arsenal', cursive;
-// }
+  h3 {
+      padding-bottom: .5rem;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 1.5rem;
+  };
+}
 
-// h3 {
-//     padding-bottom: .5rem;
-//     font-family: 'Arsenal', cursive;
-//     font-size: 1.5rem;
-// };
