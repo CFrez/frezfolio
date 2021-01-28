@@ -29,30 +29,25 @@ $hr-border-color: #eff0f1;
 @include google-font("Source Sans Pro");
 
 
-// $font-stack: 'Source Sans Pro', sans-serif;
-// $font-subhead: 'Source Sans Pro', sans-serif;
-// $font-head: 'Arsenal', cursive;
+$font-stack: 'Source Sans Pro', sans-serif;
+$font-subhead: 'Source Sans Pro', sans-serif;
+$font-head: 'Arsenal', cursive;
 
-// $color-primary: #bdbdbd;
-// $color-primary-light: #efefef;
-// $color-primary-dark: #8d8d8d;
-// $color-secondary: #3394f4;
-// $color-secondary-light: #77c4ff;
-// $color-secondary-dark: #0067c1;
-// $color-bonus: #f8991d50;
+$color-primary: #bdbdbd;
+$color-primary-light: #efefef;
+$color-primary-dark: #8d8d8d;
+$color-secondary: #3394f4;
+$color-secondary-light: #77c4ff;
+$color-secondary-dark: #0067c1;
+$color-bonus: #f8991d50;
 
-// $color-text: #000000;
+$color-text: #000000;
 
 
-//  /* Start initial styles */
-// * {
-//     margin: 0;
-//     padding: 0;
-// };
-
-// #content {
-//     font-family: 'Source Sans Pro', sans-serif;
-// };
+/* Start initial styles */
+#content {
+    font-family: 'Source Sans Pro', sans-serif;
+};
 
 // h1 {
 //     font-family: 'Arsenal', cursive;
