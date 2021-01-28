@@ -5,8 +5,15 @@
         <title>{{ page.title }}</title>
         <link rel="stylesheet" href="/assets/css/styles.css">
     </head>
-    <body>
-        {% include navigation.html %}
+    <body className="app">
+        <div id='pagetop'>
+            <img
+                id="topper"
+                src={'/static/images/topper.svg'}
+                alt='topper'
+            />
+            {% include navigation.html %}
+        </div>
         {{ content }}
     </body>
 </html>
