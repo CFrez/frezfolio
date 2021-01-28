@@ -1,36 +1,24 @@
 ---
 ---
-
-$color-primary: #bdbdbd;
-$color-primary-light: #efefef;
-$color-primary-dark: #8d8d8d;
-$color-secondary: #3394f4;
-$color-secondary-light: #77c4ff;
-$color-secondary-dark: #0067c1;
-$color-bonus: #f8991d50;
-
-$color-text: #000000;
-
-
 // Headers
-$header-heading-color: $color-primary-light;
-$header-bg-color: $color-secondary;
-$header-bg-color-secondary: $color-bonus;
+$header-heading-color: #fff;
+$header-bg-color: #3394f4;
+$header-bg-color-secondary: #f8991d;
 
 // Text
-$section-headings-color: $color-secondary-dark;
-$body-text-color: $color-primary-dark;
-$body-link-color: $color-secondary-light;
-$blockquote-text-color: $color-primary-dark;
+$section-headings-color: #0067c1;
+$body-text-color: #606c71;
+$body-link-color: #77c4ff;
+$blockquote-text-color: #818b98;
 
 // Code
-$code-bg-color: $color-primary-light;
-$code-text-color: $color-secondary;
+$code-bg-color: #f3f6fa;
+$code-text-color: #0067c1;
 
 // Borders
-$border-color: $color-primary-light;
-$table-border-color: $color-primary-light;
-$hr-border-color: $color-primary-light;
+$border-color: #dce6f0;
+$table-border-color: #e9ebec;
+$hr-border-color: #eff0f1;
 
 @import "{{ site.theme }}";
 
@@ -43,7 +31,17 @@ $hr-border-color: $color-primary-light;
 
 $font-stack: 'Source Sans Pro', sans-serif;
 $font-subhead: 'Source Sans Pro', sans-serif;
-$font-head: 'Arsenal', cursive;
+$font-head: 'Josefin Sans', sans-serif;
+
+$color-primary: #bdbdbd;
+$color-primary-light: #efefef;
+$color-primary-dark: #8d8d8d;
+$color-secondary: #3394f4;
+$color-secondary-light: #77c4ff;
+$color-secondary-dark: #0067c1;
+$color-bonus: #f8991d50;
+
+$color-text: #000000;
 
 
 /* Start initial styles */
