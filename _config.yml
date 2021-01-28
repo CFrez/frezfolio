@@ -1,6 +1,3 @@
 markdown: kramdown
 title: [Christina Frezynski]
 description: [A portfolio of some of my work.]
-collections:
-  authors:
-    output: true
