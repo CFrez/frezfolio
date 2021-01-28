@@ -1,91 +1,97 @@
 ---
 ---
-// Headers
-$header-heading-color: #fff;
-$header-bg-color: #3394f4;
-$header-bg-color-secondary: #f8991d;
+@import "main";
 
-// Text
-$section-headings-color: #0067c1;
-$body-text-color: #606c71;
-$body-link-color: #77c4ff;
-$blockquote-text-color: #818b98;
-
-// Code
-$code-bg-color: #f3f6fa;
-$code-text-color: #0067c1;
-
-// Borders
-$border-color: #dce6f0;
-$table-border-color: #e9ebec;
-$hr-border-color: #eff0f1;
-
-@import "{{ site.theme }}";
-
-@mixin google-font($family) {
-    @import url("http://fonts.googleapis.com/css?family=#{$family}");
-  }
-@include google-font("Arsenal");
-@include google-font("Source Sans Pro");
-
-
-$font-stack: 'Source Sans Pro', sans-serif;
-$font-subhead: 'Source Sans Pro', sans-serif;
-$font-head: 'Josefin Sans', sans-serif;
-
-$color-primary: #bdbdbd;
-$color-primary-light: #efefef;
-$color-primary-dark: #8d8d8d;
-$color-secondary: #3394f4;
-$color-secondary-light: #77c4ff;
-$color-secondary-dark: #0067c1;
-$color-bonus: #f8991d50;
-
-$color-text: #000000;
-
-
-/* Start initial styles */
-header {
-    #pagetop {
-        grid-area: header;
-        display: grid;
-        align-items: center;
-        grid-template-areas:
-        "topper"
-        "navbar";
-        grid-template-columns: 1fr;
-        background: linear-gradient(to bottom,
-            $color-bonus,
-            $color-secondary-light,
-        );
-    };
-
-    #topper {
-        grid-area: topper;
-        display: flex;
-        justify-self: center;
-        max-height: 200px;
-    };
-};
-
-main#content.main-content {
-    font-family: $font-stack;
-    h1 {
-        font-family: $font-head;
-        text-decoration: underline;
-        text-decoration-color: #3394f4;
-        text-align: center;
-        padding-bottom: 1rem;
-    };
-
-    h2 {
-        font-family: $font-head;
-    }
-
-    h3 {
-        padding-bottom: .5rem;
-        font-family: $font-head;
-        font-size: 1.5rem;
-    };
+.current {
+    color: green;
 }
+
+// // Headers
+// $header-heading-color: #fff;
+// $header-bg-color: #3394f4;
+// $header-bg-color-secondary: #f8991d;
+
+// // Text
+// $section-headings-color: #0067c1;
+// $body-text-color: #606c71;
+// $body-link-color: #77c4ff;
+// $blockquote-text-color: #818b98;
+
+// // Code
+// $code-bg-color: #f3f6fa;
+// $code-text-color: #0067c1;
+
+// // Borders
+// $border-color: #dce6f0;
+// $table-border-color: #e9ebec;
+// $hr-border-color: #eff0f1;
+
+// @import "{{ site.theme }}";
+
+// @mixin google-font($family) {
+//     @import url("http://fonts.googleapis.com/css?family=#{$family}");
+//   }
+// @include google-font("Arsenal");
+// @include google-font("Source Sans Pro");
+
+
+// $font-stack: 'Source Sans Pro', sans-serif;
+// $font-subhead: 'Source Sans Pro', sans-serif;
+// $font-head: 'Josefin Sans', sans-serif;
+
+// $color-primary: #bdbdbd;
+// $color-primary-light: #efefef;
+// $color-primary-dark: #8d8d8d;
+// $color-secondary: #3394f4;
+// $color-secondary-light: #77c4ff;
+// $color-secondary-dark: #0067c1;
+// $color-bonus: #f8991d50;
+
+// $color-text: #000000;
+
+
+// /* Start initial styles */
+// header {
+//     #pagetop {
+//         grid-area: header;
+//         display: grid;
+//         align-items: center;
+//         grid-template-areas:
+//         "topper"
+//         "navbar";
+//         grid-template-columns: 1fr;
+//         background: linear-gradient(to bottom,
+//             $color-bonus,
+//             $color-secondary-light,
+//         );
+//     };
+
+//     #topper {
+//         grid-area: topper;
+//         display: flex;
+//         justify-self: center;
+//         max-height: 200px;
+//     };
+// };
+
+// main#content.main-content {
+//     font-family: $font-stack;
+//     h1 {
+//         font-family: $font-head;
+//         text-decoration: underline;
+//         text-decoration-color: #3394f4;
+//         text-align: center;
+//         padding-bottom: 1rem;
+//     };
+
+//     h2 {
+//         font-family: $font-head;
+//     }
+
+//     h3 {
+//         padding-bottom: .5rem;
+//         font-family: $font-head;
+//         font-size: 1.5rem;
+//     };
+// }
 
