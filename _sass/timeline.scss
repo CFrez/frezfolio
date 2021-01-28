@@ -1,0 +1,40 @@
+@import 'variables.scss';
+
+// Local Variables
+$line_size: .25rem;
+
+.timeline {
+    display: flex;
+    flex-flow: column nowrap;
+    a {
+        // font-size: 1rem;
+        border-top: $line_size solid;
+        border-image: linear-gradient(to right,
+            $color-bonus 0%,
+            $color-secondary 100%);
+        border-image-slice: 1;
+        border-width: $line_size;
+        text-decoration: none;
+        color: $color-primary-dark;
+        padding: 10px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    //odd number borders
+    a:nth-child(odd) {
+        border-right: $line_size solid;
+        text-align: right;
+    }
+    //even number borders
+    a:nth-child(even) {
+        border-left: $line_size solid;
+    }
+    a:nth-child(3) {
+        flex-grow: 1;
+    }
+    //handle first
+    // li:first-child {
+        //   border-top: 0;
+        // }
+    }

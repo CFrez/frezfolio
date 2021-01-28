@@ -1,0 +1,11 @@
+<header id="page_header" aria-label="Header">
+  <img id='topper' alt='topper' src='/assets/images/topper.svg'/>
+  <nav id="navbar">
+    <a href="/" {% if page.url == "/" %} class="active" {% endif %}>
+      Home
+    </a>
+    <a href="/about" {% if page.url == "/about" %} class="active" {% endif %}>
+      About
+    </a>
+  </nav>
+</header>

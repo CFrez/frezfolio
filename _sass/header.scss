@@ -1,0 +1,53 @@
+@import 'variables.scss';
+
+#page_header {
+    grid-area: header;
+    display: grid;
+    align-items: center;
+    grid-template-areas:
+    "topper"
+    "navbar";
+    grid-template-columns: 1fr;
+    background: linear-gradient(to bottom,
+        $color-bonus,
+        $color-secondary-light,
+        );
+};
+
+#topper {
+    grid-area: topper;
+    display: flex;
+    justify-self: center;
+    max-height: 200px;
+};
+
+#navbar {
+    grid-area: navbar;
+    font-family: $font-subhead;
+    background-color: rgb(51, 51, 51);
+    display: flex;
+    justify-content: space-evenly;
+    padding: .25rem;
+
+    a {
+        align-self: flex-start;
+        line-height: 1.5rem;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        margin: .25rem;
+        font-size: 1rem;
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: $color-secondary;
+        };
+    };
+
+    .active {
+        color: $color-secondary;
+        text-decoration: underline;
+        &:hover {
+            text-decoration-style: double;
+        };
+    };
+};

@@ -1,0 +1,34 @@
+@import 'variables.scss';
+
+/* card */
+.card_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.card {
+    margin: 1rem;
+    display: grid;
+    grid-template-areas: 'img';
+    background: white;
+    box-shadow: 0 .125rem .5rem rgba(0,0,0,0.2);
+    border-radius: .5rem;
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 .125rem .5rem rgba(0,0,0,0.3);
+    }
+    img {
+        grid-area: img;
+        object-fit: cover;
+        max-height: 200px;
+        border-radius: .5rem;
+        width: 100%;
+    }
+    &-label {
+        grid-area: label;
+        font-family: $font-subhead;
+        color: $color-secondary;
+        padding: 1rem;
+    }
+};

@@ -1,0 +1,22 @@
+@import 'variables.scss';
+
+#page_body {
+    grid-area: body;
+    display: grid;
+    grid-template-areas: "sidebar content";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+};
+
+/* Sidebar */
+#sidebar {
+    grid-area: sidebar;
+    overflow-y: scroll;
+    padding: 1rem;
+};
+
+/* Content */
+#page_content {
+    grid-area: content;
+    padding: 1rem;
+}
