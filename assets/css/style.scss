@@ -45,30 +45,47 @@ $color-text: #000000;
 
 
 /* Start initial styles */
-header.page-header {
-  h1 {
-    font-family: $font-head;
-  }
+header {
+    #pagetop {
+        grid-area: header;
+        display: grid;
+        align-items: center;
+        grid-template-areas:
+        "topper"
+        "navbar";
+        grid-template-columns: 1fr;
+        background: linear-gradient(to bottom,
+            $color-bonus,
+            $color-secondary-light,
+        );
+    };
+
+    #topper {
+        grid-area: topper;
+        display: flex;
+        justify-self: center;
+        max-height: 200px;
+    };
 };
 
 main#content.main-content {
-  font-family: $font-stack;
-  h1 {
-      font-family: $font-head;
-      text-decoration: underline;
-      text-decoration-color: #3394f4;
-      text-align: center;
-      padding-bottom: 1rem;
-  };
+    font-family: $font-stack;
+    h1 {
+        font-family: $font-head;
+        text-decoration: underline;
+        text-decoration-color: #3394f4;
+        text-align: center;
+        padding-bottom: 1rem;
+    };
 
-  h2 {
-      font-family: $font-head;
-  }
+    h2 {
+        font-family: $font-head;
+    }
 
-  h3 {
-      padding-bottom: .5rem;
-      font-family: $font-head;
-      font-size: 1.5rem;
-  };
+    h3 {
+        padding-bottom: .5rem;
+        font-family: $font-head;
+        font-size: 1.5rem;
+    };
 }
 
