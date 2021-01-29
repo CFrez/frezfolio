@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About
-permalink: /about/
+permalink: /about
 sidebar: [1, 2, 3, 4]
 ---
 
