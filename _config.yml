@@ -1,8 +1,7 @@
 title: Christina Frezynski
 description: A portfolio of some of my work.
 url: redfrez.github.io
-# baseurl: /frezfolio
-
+baseurl: /frezfolio
 lsi: false
 safe: true
 incremental: false
@@ -16,4 +15,3 @@ markdown: kramdown
 collections:
   projects:
     output: true
-    permalink: /project/:path/

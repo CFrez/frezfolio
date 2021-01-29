@@ -1,13 +1,13 @@
 <header id="page_header" aria-label="Header">
-  <img id='topper' alt='topper' src='/assets/images/topper.svg'/>
+  <img id="topper" alt="topper" src="{{ site.baseurl }}/assets/images/topper.svg"/>
   <nav id="navbar">
-    <a href="/" {% if page.url == "/" %} class="active" {% endif %}>
+    <a href="{{ site.baseurl }}/" {% if page.url == "{{ site.baseurl }}/" %} class="active" {% endif %}>
       Home
     </a>
-    <a href="/about" {% if page.url == "/about" %} class="active" {% endif %}>
+    <a href="{{ site.baseurl }}/about" {% if page.url == "{{ site.baseurl }}/about/" %} class="active" {% endif %}>
       About
     </a>
-    <a href="/projects" {% if page.url == "/projects" %} class="active" {% endif %}>
+    <a href="{{ site.baseurl }}/projects"  {% if page.url == "{{ site.baseurl }}/projects" %} class="active" {% endif %}>
       Projects
     </a>
   </nav>
