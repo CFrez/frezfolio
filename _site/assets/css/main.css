@@ -1,0 +1,70 @@
+@import url("http://fonts.googleapis.com/css?family=Source Sans Pro");
+@import url("http://fonts.googleapis.com/css?family=Josefin Sans");
+@import url("http://fonts.googleapis.com/css?family=Source Sans Pro");
+@import url("http://fonts.googleapis.com/css?family=Josefin Sans");
+@import url("http://fonts.googleapis.com/css?family=Source Sans Pro");
+@import url("http://fonts.googleapis.com/css?family=Josefin Sans");
+@import url("http://fonts.googleapis.com/css?family=Source Sans Pro");
+@import url("http://fonts.googleapis.com/css?family=Josefin Sans");
+@import url("http://fonts.googleapis.com/css?family=Source Sans Pro");
+@import url("http://fonts.googleapis.com/css?family=Josefin Sans");
+#page_body { grid-area: body; display: grid; grid-template-areas: "sidebar content"; grid-template-columns: auto 1fr; grid-template-rows: 1fr; }
+
+/* Sidebar */
+#sidebar { grid-area: sidebar; overflow-y: scroll; padding: 1rem; }
+
+/* Content */
+#page_content { grid-area: content; padding: 1rem; }
+
+#page_content .title { text-align: center; }
+
+/* card */
+.card_box { display: flex; flex-wrap: wrap; justify-content: center; align-content: center; }
+
+.card { margin: 1rem; display: grid; grid-template-areas: 'img'; background: white; box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2); border-radius: .5rem; }
+
+.card:hover { transform: scale(1.1); box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3); }
+
+.card img { grid-area: img; object-fit: cover; max-height: 200px; border-radius: .5rem; width: 100%; }
+
+.card-label { grid-area: label; font-family: "Source Sans Pro", sans-serif; color: #3394f4; padding: 1rem; }
+
+/* Footer */
+#page_footer { grid-area: footer; background-color: #8d8d8d; padding: .5rem; }
+
+#page_header { grid-area: header; display: grid; align-items: center; grid-template-areas: "topper" "navbar"; grid-template-columns: 1fr; background: linear-gradient(to bottom, #f8991d50, #77c4ff); }
+
+#topper { grid-area: topper; display: flex; justify-self: center; max-height: 200px; }
+
+#navbar { grid-area: navbar; font-family: "Source Sans Pro", sans-serif; background-color: #333333; display: flex; justify-content: space-evenly; padding: .25rem; }
+
+#navbar a { align-self: flex-start; line-height: 1.5rem; text-align: center; color: white; text-decoration: none; margin: .25rem; font-size: 1rem; }
+
+#navbar a:hover { text-decoration: underline; text-decoration-color: #3394f4; }
+
+#navbar .active { color: #3394f4; text-decoration: underline; }
+
+#navbar .active:hover { text-decoration-style: double; }
+
+.timeline { display: flex; flex-flow: column nowrap; }
+
+.timeline a { border-top: 0.25rem solid; border-image: linear-gradient(to right, #f8991d50 0%, #3394f4 100%); border-image-slice: 1; border-width: 0.25rem; text-decoration: none; color: #8d8d8d; padding: 10px; }
+
+.timeline a:hover { text-decoration: underline; }
+
+.timeline a:nth-child(odd) { border-right: 0.25rem solid; text-align: right; }
+
+.timeline a:nth-child(even) { border-left: 0.25rem solid; }
+
+.timeline a:nth-child(3) { flex-grow: 1; }
+
+/* Start initial styles */
+* { margin: 0; padding: 0; }
+
+.app { display: grid; height: 100vh; grid-template-areas: "header" "body" "footer"; grid-template-rows: auto 1fr auto; grid-template-columns: 1fr; font-family: "Source Sans Pro", sans-serif; }
+
+h1 { font-family: "Josefin Sans", sans-serif; text-decoration: underline; text-decoration-color: #3394f4; padding-bottom: .5rem; }
+
+h3 { padding-bottom: .5rem; font-family: "Josefin Sans", sans-serif; font-size: 1.5rem; }
+
+/*# sourceMappingURL=main.css.map */

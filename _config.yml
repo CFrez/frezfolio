@@ -4,3 +4,4 @@ description: A portfolio of some of my work.
 collections:
   projects:
     output: true
+    permalink: /project/:path/
