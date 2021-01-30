@@ -6,16 +6,17 @@
     display: flex;
     flex-direction: column;
     padding: 1% 3%;
-    // .quote {
-    //     text-align: center;
-    //     align-self: center;
-    //     font-size: clamp(1.5rem,3vw,2rem);
-    //     font-family: $font-head;
-    //     font-style: italic;
-    // }
-    // .author {
-    //     align-self: flex-end;
-    //     font-size: clamp(.1rem, 5vw, 2.75rem);
-    //     font-family: 'Kaushan Script', cursive;
-    // }
+    .quote {
+        text-align: center;
+        align-self: center;
+        font-size: clamp(1rem,3vw,1.5rem);
+        font-family: $font-head;
+        font-style: italic;
+    }
+    .author {
+        display: inline-block;
+        align-self: flex-end;
+        font-size: clamp(1.25rem, 4vw, 1.75rem);
+        font-family: 'Kaushan Script', cursive;
+    }
 };
