@@ -16,6 +16,10 @@
 #page_content .ui.header { font-size: 2rem; }
 #page_content .ui.header .sub.header { font-size: 1.5rem; }
 
+/* card */
+.ui.raised.link.cards { display: flex; flex-flow: column wrap; gap: 2rem; justify-content: center; align-content: center; }
+.ui.raised.link.cards .card:nth(n + 2) { break-before: always; }
+
 /* Footer */
 #page_footer { padding-top: 1rem; background-color: #8d8d8d; color: #f3f3f3; display: flex; flex-direction: column; padding: 1% 3%; }
 #page_footer .quote { text-align: center; align-self: center; font-size: clamp(1rem, 3vw, 1.5rem); font-family: "Josefin Sans", sans-serif; font-style: italic; }

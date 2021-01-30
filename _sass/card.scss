@@ -1,12 +1,18 @@
 // @import 'variables.scss';
 
-// /* card */
-// .card_box {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//     align-content: center;
-// }
+/* card */
+.ui.raised.link.cards {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-content: center;
+    .card:nth(n + 2) {
+        break-before: always;
+    }
+}
+
+
 // .card {
 //     margin: 1rem;
 //     padding: 1rem;
