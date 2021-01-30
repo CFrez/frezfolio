@@ -4,9 +4,6 @@ title: Personal Projects
 permalink: /projects
 ---
 
-
-{% include math.html %}
-
 *note* add tools, languages, etc.
 
 <div class="ui header">
@@ -17,7 +14,7 @@ permalink: /projects
 </div>
 
 <div container relaxed columns="equal">
-<div class="ui raised link three cards">
+    <div class="ui raised stackable link three cards">
 
 {% for project in site.projects %}
 {% capture title %}{{ project.title }}{% endcapture %}
@@ -34,5 +31,5 @@ permalink: /projects
 %}
 {% endfor %}
 
-</div>
+    </div>
 </div>
