@@ -1,11 +1,14 @@
-<figure>
-   <img src="{{ include.file }}" style="max-width: {{ include.max-width }};"
-      alt="{{ include.alt }}"/>
-   </a>
-   <figcaption>{{ include.caption }}</figcaption>
-</figure>
+<a class="card" href="{{ site.baseurl }}{{ include.url }}">
+   <div class="image">
+      <img src="{{ site.baseurl }}{{ include.image }}">
+   </div>
 
-
-{% comment %} {% include image.html url="http://jekyllrb.com"
-max-width="200px" file="logo.png" alt="Jekyll logo"
-caption="This is the Jekyll logo." %} {% endcomment %}
+   <div class="content">
+      <div class="center aligned header">
+         {{ include.title }}
+      </div>
+      <div class="center aligned description">
+         {{ include.description }}
+      </div>
+   </div>
+</a>

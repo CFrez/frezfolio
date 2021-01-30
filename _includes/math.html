@@ -1,0 +1,5 @@
+{% comment %} attempt to change * to \cdot project wide... doesn't seem to work {% endcomment %}
+$$
+\mathcode`\*="8000 
+{\catcode`\*=\active\gdef*{\cdot}}
+$$

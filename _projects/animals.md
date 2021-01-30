@@ -1,6 +1,9 @@
 ---
 layout: project
 title: Animal Tracking
+image: /assets/images/projects/animal/quick.png
+alt: dog picture
+description: an app to assist in tracking of fostered cats & dogs and adoptions
 ---
 
 something about animals....

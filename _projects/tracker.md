@@ -1,0 +1,9 @@
+---
+layout: project
+title: Project Tracker
+image: /assets/images/projects/tracker/project-board.png
+alt: sketch of project tracker design
+description: New best friend of any maker.
+---
+
+Conceptualized an application that is a maker's best friend, by helping analyze/choose which project to do next, maintaining an inventory of supplies and knowledge required to execute, as well as documenting progress to enable easier resuming.

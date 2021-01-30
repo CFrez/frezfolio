@@ -1,14 +1,16 @@
 <header id="page_header" aria-label="Header">
   <img id="topper" alt="topper" src="{{ site.baseurl }}/assets/images/topper.svg"/>
-  <nav id="navbar">
-    <a href="{{ site.baseurl }}/" {% if page.url == "{{ site.baseurl }}/" %} class="active" {% endif %}>
-      Home
-    </a>
-    <a href="{{ site.baseurl }}/about" {% if page.url == "{{ site.baseurl }}/about/" %} class="active" {% endif %}>
-      About
-    </a>
-    <a href="{{ site.baseurl }}/projects"  {% if page.url == "{{ site.baseurl }}/projects" %} class="active" {% endif %}>
-      Projects
-    </a>
-  </nav>
+  {%- include navbar.html -%}
 </header>
+
+{% comment %} use for making nav small? {% endcomment %}
+
+{% comment %} <details>
+  <summary markdown="span">This is the summary text, click me to expand</summary>
+
+  This is the detailed text.
+
+  We can still use markdown, but we need to take the additional step of using the `parse_block_html` option as described in the [Mix HTML + Markdown Markup section](#mix-html--markdown-markup).
+
+  You can learn more about expected usage of this approach in the [GitLab UI docs](https://gitlab-org.gitlab.io/gitlab-ui/?path=/story/base-collapse--default) though the solution we use above is specific to usage in markdown.
+</details> {% endcomment %}

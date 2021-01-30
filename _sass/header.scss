@@ -41,13 +41,12 @@
             text-decoration: underline;
             text-decoration-color: $color-secondary;
         };
-    };
-
-    .active {
-        color: $color-secondary;
-        text-decoration: underline;
-        &:hover {
-            text-decoration-style: double;
+        .active {
+            color: $color-secondary;
+            text-decoration: underline;
+            &:hover {
+                text-decoration-style: double;
+            };
         };
     };
 };

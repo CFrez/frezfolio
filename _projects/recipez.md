@@ -1,6 +1,9 @@
 ---
 layout: project
 title: RecipEZ
+image: /assets/images/projects/recipe/Recipe-Main.png
+alt: mockup of recipe page
+description: version control recipe tracker that knows your pantry and tells you what to cook
 ---
 
 version control recipe tracker that knows your pantry and tells you what to cook
