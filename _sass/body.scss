@@ -1,25 +1,19 @@
 @import 'variables.scss';
 
 #page_body {
-    grid-area: body;
-    display: grid;
-    grid-template-areas: "sidebar content";
-    grid-template-columns: auto 1fr;
-    grid-template-rows: 1fr;
+    width: 100%;
+    display: flex;
 };
 
 /* Sidebar */
 #sidebar {
-    grid-area: sidebar;
-    overflow-y: scroll;
-    padding: 1rem;
+    color: red;
 };
 
 /* Content */
 #page_content {
-    grid-area: content;
     padding: 1rem;
-    .title {
-        text-align: center;
+    .ui.header {
+        font-size: 2rem;
     }
 }

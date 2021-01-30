@@ -4,8 +4,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FrezFolio</title>
-  <link rel="icon" href="/frezfolio/assets/images/favicon.ico" type="image/x-icon"/>
-  <link rel="shortcut icon" href="/frezfolio/assets/images/favicon.ico" type="image/x-icon"/>
+  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon"/>
   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"/>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -20,32 +20,32 @@
   <script id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
   </script>
-  <link rel="stylesheet" href="/frezfolio/assets/css/main.css"/>
+  <link rel="stylesheet" href="/assets/css/main.css"/>
 </head>
-<body class="app"><header id="page_header" aria-label="Header">
-  <img id="topper" alt="topper" src="/frezfolio/assets/images/topper.svg"/><nav id="navbar">
+<body class="app"><header id="page_header" class="ui basic raised segment" aria-label="Header">
+  <img id="topper" alt="topper" src="/assets/images/topper.svg"/><nav>
     
-        <a 
-            href="/frezfolio/"
+        <a
+            href="/"
             
             
-            >
+        >
             Home
         </a>
     
-        <a 
-            href="/frezfolio/about/"
+        <a
+            href="/about/"
             
             
-            >
+        >
             About
         </a>
     
-        <a 
-            href="/frezfolio/projects/"
+        <a
+            href="/projects/"
             
             
-            >
+        >
             Projects
         </a>
     
@@ -54,17 +54,26 @@
 
 
 
+
 <main id="page_body" aria-label="Content">
-      <div id="sidebar"></div>
+      
+      
       <div id="page_content">
         
 <script type="math/tex; mode=display">\mathcode`\*="8000 
 {\catcode`\*=\active\gdef*{\cdot}}</script>
 
-<h1 id="various-assortment-of-personal-projects">Various Assortment of Personal Projects</h1>
-<h2 id="title">most are driven by “how is there no good app for this in existence!?!”</h2>
+<p><em>note</em> add tools, languages, etc.</p>
 
-<div class="ui raised link horizontal cards">
+<div class="ui header">
+    Various Assortment of Personal Projects
+    <div class="sub header">
+        most are driven by "how is there no good app for this in existence!?!"
+    </div>
+</div>
+
+<div container="" relaxed="" columns="equal">
+<div class="ui raised link three cards">
 
 
 
@@ -72,9 +81,9 @@
 
 
 
-<a class="card" href="/frezfolio/projects/animals.html">
+<a class="card" href="/projects/2016-02-01-animals.html">
    <div class="image">
-      <img src="/frezfolio/assets/images/projects/animal/quick.png" />
+      <img src="/assets/images/projects/animal/quick.png" />
    </div>
 
    <div class="content">
@@ -92,17 +101,17 @@
 
 
 
-<a class="card" href="/frezfolio/projects/lending.html">
+<a class="card" href="/projects/2017-05-08-goals.html">
    <div class="image">
-      <img src="/frezfolio/assets/images/projects/lending/book.png" />
+      <img src="/assets/images/projects/goals/goals-design.png" />
    </div>
 
    <div class="content">
       <div class="center aligned header">
-         Lending Library
+         Goal Accomplishments Log
       </div>
       <div class="center aligned description">
-         A quick and easy way to track what books are on my shelf and which have been leant to a friend.
+         a pretty app for tracking different types of goals
       </div>
    </div>
 </a>
@@ -112,29 +121,9 @@
 
 
 
-<a class="card" href="/frezfolio/projects/mindlog.html">
+<a class="card" href="/projects/2018-07-10-recipez.html">
    <div class="image">
-      <img src="/frezfolio/assets/images/projects/mind/today.png" />
-   </div>
-
-   <div class="content">
-      <div class="center aligned header">
-         Mindful Logging
-      </div>
-      <div class="center aligned description">
-         App to quickly track how time is used and the mindful benefit.
-      </div>
-   </div>
-</a>
-
-
-
-
-
-
-<a class="card" href="/frezfolio/projects/recipez.html">
-   <div class="image">
-      <img src="/frezfolio/assets/images/projects/recipe/Recipe-Main.png" />
+      <img src="/assets/images/projects/recipe/Recipe-Main.png" />
    </div>
 
    <div class="content">
@@ -152,9 +141,49 @@
 
 
 
-<a class="card" href="/frezfolio/projects/tracker.html">
+<a class="card" href="/projects/2020-11-06-lending.html">
    <div class="image">
-      <img src="/frezfolio/assets/images/projects/tracker/project-board.png" />
+      <img src="/assets/images/projects/lending/book.png" />
+   </div>
+
+   <div class="content">
+      <div class="center aligned header">
+         Lending Library
+      </div>
+      <div class="center aligned description">
+         A quick and easy way to track what books are on my shelf and which have been leant to a friend.
+      </div>
+   </div>
+</a>
+
+
+
+
+
+
+<a class="card" href="/projects/mindlog.html">
+   <div class="image">
+      <img src="/assets/images/projects/mind/today.png" />
+   </div>
+
+   <div class="content">
+      <div class="center aligned header">
+         Mindful Logging
+      </div>
+      <div class="center aligned description">
+         App to quickly track how time is used and the mindful benefit.
+      </div>
+   </div>
+</a>
+
+
+
+
+
+
+<a class="card" href="/projects/tracker.html">
+   <div class="image">
+      <img src="/assets/images/projects/tracker/project-board.png" />
    </div>
 
    <div class="content">
@@ -169,12 +198,13 @@
 
 
 </div>
+</div>
 
+      
       </div>
     </main><footer id="page_footer" aria-label="Footer">
   <p>A portfolio of some of my work.</p>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-  </body>
+</body>
 
 </html>

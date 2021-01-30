@@ -1,42 +1,46 @@
 @import 'variables.scss';
 
-#page_header {
-    grid-area: header;
-    display: grid;
-    align-items: center;
-    grid-template-areas:
-    "topper"
-    "navbar";
-    grid-template-columns: 1fr;
+#page_header.ui.basic.raised.segment {
+    // position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    box-shadow: 0px .05rem 1rem $color-primary-dark;
+    max-width: $max;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
     background: linear-gradient(to bottom,
         $color-bonus,
         $color-secondary-light,
-        );
+    );
 };
 
 #topper {
-    grid-area: topper;
-    display: flex;
-    justify-self: center;
+    width: 100%;
     max-height: 200px;
 };
 
-#navbar {
-    grid-area: navbar;
+nav {
+    margin: 0;
+    padding: .5rem;
+    // sticky not working right now
+    position: sticky;
     font-family: $font-subhead;
     background-color: rgb(51, 51, 51);
     display: flex;
     justify-content: space-evenly;
-    padding: .25rem;
 
     a {
-        align-self: flex-start;
+        align-self: center;
         line-height: 1.5rem;
         text-align: center;
         color: white;
         text-decoration: none;
         margin: .25rem;
-        font-size: 1rem;
+        font-size: 1.25rem;
         &:hover {
             text-decoration: underline;
             text-decoration-color: $color-secondary;

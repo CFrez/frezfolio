@@ -1,12 +1,12 @@
-<nav id="navbar">
+<nav>
     {% for item in site.data.navbar %}
-        <a 
+        <a
             href="{{ site.baseurl }}{{ item.link }}"
             {% comment %} not working right now.... {% endcomment %}
             {% if page.url == "{{ site.baseurl }}{{ item.link }}" %}
                 class="active"
             {% endif %}
-            >
+        >
             {{ item.name }}
         </a>
     {% endfor %}
