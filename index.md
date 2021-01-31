@@ -12,6 +12,8 @@ Welcome to my Wonderous World of Design!
 
 </div>
 
+As my types of design continue to exapand and grow, so does my website. Please be forgiving as the site will most likely always be under construction. 
+
 <!-- If you think any aspect of software development doesn't involve design, 
 then you might doing something wrong.
 {: .ui .grey .stacked .padded .segment}
