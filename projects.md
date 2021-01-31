@@ -4,17 +4,16 @@ title: Personal Projects
 permalink: /projects
 ---
 
-*note* add tools, languages, etc.
+<div class="ui header" markdown="1">
 
-<div class="ui header">
-    Various Assortment of Personal Projects
-    <div class="sub header">
-        most are driven by "how is there no good app for this in existence!?!"
-    </div>
+Various Assortment of Personal Projects
+
+most are driven by "how is there no good app for this in existence!?!"
+{: .sub .header}
+
 </div>
 
-<div container relaxed columns="equal">
-    <div class="ui raised stackable link three cards">
+<div class="ui raised link cards">
 
 {% for project in site.projects %}
 {% capture title %}{{ project.title }}{% endcapture %}
@@ -31,5 +30,4 @@ permalink: /projects
 %}
 {% endfor %}
 
-    </div>
 </div>

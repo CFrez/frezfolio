@@ -13,11 +13,21 @@
 
 /* Content */
 #page_content {
-    padding: 1rem;
-    .ui.header {
-        font-size: 2rem;
-        .sub.header {
-            font-size: 1.5rem;
+    padding: 3rem;
+    .ui.header.line {
+        display: flex;
+        align-items: baseline;
+        gap: 3rem;
+        h1 {
+            font-size: 3rem;
         }
+        .sub.header {
+            font-size: 2rem;
+        }
+    }
+
+    p.segment { 
+        font-size: 1.5rem;
+        font-style: italic;
     }
 }

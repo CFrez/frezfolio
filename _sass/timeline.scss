@@ -3,38 +3,41 @@
 // Local Variables
 $line_size: .25rem;
 
-.timeline {
-    display: flex;
-    flex-flow: column nowrap;
-    a {
-        // font-size: 1rem;
-        border-top: $line_size solid;
-        border-image: linear-gradient(to right,
-            $color-bonus 0%,
-            $color-secondary 100%);
-        border-image-slice: 1;
-        border-width: $line_size;
-        text-decoration: none;
-        color: $color-primary-dark;
-        padding: 10px;
-        &:hover {
-            text-decoration: underline;
+.sidebar {
+    .timeline {
+        display: flex;
+        flex-flow: column nowrap;
+        border: solid black 1rem;
+        li {
+            // font-size: 1rem;
+            border-top: .25rem solid;
+            border-image: linear-gradient(to right,
+                $color-bonus 0%,
+                $color-secondary 100%);
+            border-image-slice: 1;
+            border-width: .25rem;
+            text-decoration: none;
+            color: $color-primary-dark;
+            padding: 10px;
+            &:hover {
+                text-decoration: underline;
+            }
         }
+        //odd number borders
+        li:nth-child(odd) {
+            border-right: .25rem solid;
+            text-align: right;
+        }
+        //even number borders
+        li:nth-child(even) {
+            border-left: .25rem solid;
+        }
+        li:nth-child(3) {
+            flex-grow: 1;
+        }
+        //handle first
+        // li:first-child {
+            //   border-top: 0;
+            // }
     }
-    //odd number borders
-    a:nth-child(odd) {
-        border-right: $line_size solid;
-        text-align: right;
-    }
-    //even number borders
-    a:nth-child(even) {
-        border-left: $line_size solid;
-    }
-    a:nth-child(3) {
-        flex-grow: 1;
-    }
-    //handle first
-    // li:first-child {
-        //   border-top: 0;
-        // }
-    }
+}

@@ -12,13 +12,16 @@
 #sidebar { color: red; }
 
 /* Content */
-#page_content { padding: 1rem; }
-#page_content .ui.header { font-size: 2rem; }
-#page_content .ui.header .sub.header { font-size: 1.5rem; }
+#page_content { padding: 3rem; }
+#page_content .ui.header.line { display: flex; align-items: baseline; gap: 3rem; }
+#page_content .ui.header.line h1 { font-size: 3rem; }
+#page_content .ui.header.line .sub.header { font-size: 2rem; }
+#page_content p.segment { font-size: 1.5rem; font-style: italic; }
 
 /* card */
-.ui.raised.link.cards { display: flex; flex-flow: column wrap; gap: 2rem; justify-content: center; align-content: center; }
-.ui.raised.link.cards .card:nth(n + 2) { break-before: always; }
+.ui.raised.link.cards { display: flex; gap: 2rem; justify-content: center; align-content: center; }
+
+.card img { grid-area: img; object-fit: contain; max-height: 200px; border-radius: .5rem; width: 100%; }
 
 /* Footer */
 #page_footer { padding-top: 1rem; background-color: #8d8d8d; color: #f3f3f3; display: flex; flex-direction: column; padding: 1% 3%; }
@@ -35,18 +38,18 @@ nav a:hover { text-decoration: underline; text-decoration-color: #3394f4; }
 nav a .active { color: #3394f4; text-decoration: underline; }
 nav a .active:hover { text-decoration-style: double; }
 
-.timeline { display: flex; flex-flow: column nowrap; }
-.timeline a { border-top: 0.25rem solid; border-image: linear-gradient(to right, #f8991d50 0%, #3394f4 100%); border-image-slice: 1; border-width: 0.25rem; text-decoration: none; color: #8d8d8d; padding: 10px; }
-.timeline a:hover { text-decoration: underline; }
-.timeline a:nth-child(odd) { border-right: 0.25rem solid; text-align: right; }
-.timeline a:nth-child(even) { border-left: 0.25rem solid; }
-.timeline a:nth-child(3) { flex-grow: 1; }
+.sidebar .timeline { display: flex; flex-flow: column nowrap; border: solid black 1rem; }
+.sidebar .timeline li { border-top: .25rem solid; border-image: linear-gradient(to right, #f8991d50 0%, #3394f4 100%); border-image-slice: 1; border-width: .25rem; text-decoration: none; color: #8d8d8d; padding: 10px; }
+.sidebar .timeline li:hover { text-decoration: underline; }
+.sidebar .timeline li:nth-child(odd) { border-right: .25rem solid; text-align: right; }
+.sidebar .timeline li:nth-child(even) { border-left: .25rem solid; }
+.sidebar .timeline li:nth-child(3) { flex-grow: 1; }
 
 /* Start initial styles */
 html { margin: 0; padding: 0; background-color: #ffffff; background-image: url("/assets/images/stressed-linen.png"); font-family: "Source Sans Pro", sans-serif; }
 
 .app { max-width: 1200px; min-width: 320px; margin: 0 auto 0 auto; background-color: #f3f3f3; box-shadow: 0px 1rem 1rem #525252; display: flex; flex-direction: column; }
 
-h1 { font-family: "Josefin Sans", sans-serif; text-decoration: underline; text-decoration-color: #3394f4; padding-bottom: .5rem; }
+h1 { font-family: "Josefin Sans", sans-serif; text-decoration: underline; text-decoration-color: #3394f4; padding-bottom: .5rem; margin: 0; }
 
-h3 { padding-bottom: .5rem; font-family: "Josefin Sans", sans-serif; font-size: 1.5rem; }
+h3 { padding-bottom: .5rem; font-family: "Josefin Sans", sans-serif; }

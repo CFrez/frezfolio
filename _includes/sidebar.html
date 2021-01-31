@@ -1,0 +1,10 @@
+<div className='sidebar'>
+    <div className='timeline'>
+        <h3>Projects</h3>
+        {% for proj in site.projects %}
+            <li>
+                {{proj.title}}
+            </li>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,10 @@
+{% assign alldocs = {{include.label | prepend: site.}} %}	
+{% assign grouptag =  alldocs | map: 'tags' | join: ',' | split: ',' | group_by: tag %}
+{% for tag in grouptag %}
+    <h1>{{ tag.name }}</h1>
+    {% for document in alldocs %}
+        {% if document.tags contains tag.name %}
+            <p>{{ document.title}}</p>
+        {% endif %}
+    {% endfor %}
+{% endfor %}

@@ -1,0 +1,6 @@
+{% assign uniq_tags = {{include.label | prepend: site.}}
+    | map: 'tags' | join: "," | split: "," | uniq 
+%}
+
+<p>{{ uniq_tags }}</p>
+

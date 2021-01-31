@@ -2,7 +2,7 @@
 layout: default
 title: About
 permalink: /about
-sidebar: [1, 2, 3, 4]
+sidebar: yes
 ---
 
 # About page
