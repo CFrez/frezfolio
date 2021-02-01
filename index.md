@@ -13,7 +13,7 @@ Welcome to my Wonderous World of Design!
 </div>
 
 As my types of design continue to expand and grow, so does my website. <br>
-Please be forgiving as the site will most likely always be under &#x1F6A7; construction &#x1F6A7;
+Please be forgiving, as the site will most likely always be under &#x1F6A7; construction &#x1F6A7;
 {: .ui .center .aligned .large .header}
 
 <!-- If you think any aspect of software development doesn't involve design, 
@@ -24,6 +24,11 @@ When you come across a well written piece of code,
 it is truly a work of art to be admired.
 {: .ui .grey .stacked .padded .segment}
  -->
+<br/>
+
+---
+
+<br/>
 
 
 Design comes in many shapes and forms, a few that I engage in include:

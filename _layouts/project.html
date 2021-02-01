@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="project-header">
-    {% assign iteration = {{page.process}} | split: ", " %}
+    {% assign iteration = {{page.process}} | split: "," %}
     <img src="/assets/images/process/{{ iteration.last }}.png"/>
     <div>
         <h1>{{page.title}}</h1>

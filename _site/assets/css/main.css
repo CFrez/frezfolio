@@ -35,7 +35,7 @@
 #page_footer .quote { text-align: center; align-self: center; font-size: clamp(1rem, 3vw, 1.5rem); font-family: "Josefin Sans", sans-serif; font-style: italic; }
 #page_footer .author { display: inline-block; align-self: flex-end; font-size: clamp(1.25rem, 4vw, 1.75rem); font-family: 'Kaushan Script', cursive; }
 
-#page_header.ui.basic.raised.segment { top: 0; width: 100%; z-index: 99; box-shadow: 0px 0.05rem 1rem #8d8d8d; max-width: 1200px; display: flex; flex-direction: column; justify-content: center; margin: 0; padding: 0; background: linear-gradient(to bottom, #f8991d50, #77c4ff); }
+#page_header.ui.basic.raised.segment { top: 0; width: 100%; z-index: 99; box-shadow: 0px 0.05rem 1rem #8d8d8d; display: flex; flex-direction: column; justify-content: center; margin: 0; padding: 0; background: linear-gradient(to bottom, #f8991d50, #77c4ff); }
 
 #topper { width: 100%; max-height: 200px; }
 
@@ -53,10 +53,12 @@ nav a .active:hover { text-decoration-style: double; }
 .sidebar .timeline li:nth-child(3) { flex-grow: 1; }
 
 /* Start initial styles */
-html { margin: 0; padding: 0; background-color: #ffffff; background-image: url("/assets/images/stressed-linen.png"); font-family: "Source Sans Pro", sans-serif; }
+html { margin: 0; padding: 0; background-color: #f3f3f3; font-family: "Source Sans Pro", sans-serif; }
 
-.app { max-width: 1200px; min-width: 320px; margin: 0 auto 0 auto; background-color: #f3f3f3; box-shadow: 0px 1rem 1rem #525252; display: flex; flex-direction: column; }
+.app { margin: 0 auto 0 auto; background-color: #f3f3f3; display: flex; flex-direction: column; }
 
 h1 { font-family: "Josefin Sans", sans-serif; text-decoration: underline; text-decoration-color: #3394f4; padding-bottom: .5rem; margin: 0; }
 
 h3 { padding-bottom: .5rem; font-family: "Josefin Sans", sans-serif; }
+
+p, ul, li { font-size: 1.5rem; line-height: 2rem; }
