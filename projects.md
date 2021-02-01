@@ -3,6 +3,7 @@ layout: default
 title: Personal Projects
 permalink: /projects
 ---
+{{ page.process | split: "," | last }}
 
 <div class="ui header" markdown="1">
 
@@ -21,12 +22,15 @@ most are driven by "how is there no good app for this in existence!?!"
 {% capture description %}{{ project.description }}{% endcapture %}
 {% capture image %}{{ project.image }}{% endcapture %}
 {% capture alt %}{{ project.alt }}{% endcapture %}
+{% capture ribbon %}{{ page.process | split: "," | last }}{% endcapture %}
+
 {% include card.html 
     title=title
     url=url
     description=description
     image=image
     alt=alt
+    ribbon=ribbon
 %}
 {% endfor %}
 

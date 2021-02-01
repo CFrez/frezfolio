@@ -1,0 +1,14 @@
+- name: Software Applications
+  icon: laptop code
+- name: 3D Printing
+  icon: print
+- name: Furniture
+  icon: wrench
+- name: Electronics
+  icon: lightbulb outline
+- name: Architecture
+  icon: pencil ruler
+- name: Graphics
+  icon: paint brush
+- name: Photography
+  icon: camera retro

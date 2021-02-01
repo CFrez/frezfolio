@@ -30,11 +30,22 @@ it is truly a work of art to be admired.
 
 <br/>
 
+<div class="ui basic segment" markdown="1">
 
 Design comes in many shapes and forms, a few that I engage in include:
-- Software Applications
-- 3D Printed Objects
-- Furniture
-- Electronics
-- Architecture
-- Graphics
+
+{% for type in site.data.category %}
+<i class="{{type.icon}} icon"></i> {{ type.name }}
+
+{% endfor %}
+
+</div>
+
+<div class="ui basic segment" markdown="1">
+
+Other places you can find me:
+[<i class="linkedin icon"></i>](https://www.linkedin.com/in/cfrezynski/)
+[<i class="github icon"></i>](https://github.com/RedFrez/)
+[Thingiverse](https://www.thingiverse.com/redfrez/designs)
+
+</div>

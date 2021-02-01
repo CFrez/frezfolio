@@ -22,4 +22,14 @@
         border-radius: .5rem;
         width: 100%;
     }
+    .ui.left.corner.label::after {
+        border-top: 4em solid transparent;
+        border-right: 4em solid transparent;
+        border-bottom: 0 solid transparent;
+        border-left: 0 solid transparent;
+        border-top-color: $color-secondary-light;
+        i {
+            color: white;
+        }
+    }
 };
