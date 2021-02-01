@@ -1,22 +1,29 @@
 @import url("http://fonts.googleapis.com/css?family=Source Sans Pro");
 @import url("http://fonts.googleapis.com/css?family=Josefin Sans");
+@import url("http://fonts.googleapis.com/css?family=Kaushan Script");
 @import url("http://fonts.googleapis.com/css?family=Source Sans Pro");
 @import url("http://fonts.googleapis.com/css?family=Josefin Sans");
+@import url("http://fonts.googleapis.com/css?family=Kaushan Script");
 @import url("http://fonts.googleapis.com/css?family=Source Sans Pro");
 @import url("http://fonts.googleapis.com/css?family=Josefin Sans");
+@import url("http://fonts.googleapis.com/css?family=Kaushan Script");
 @import url("http://fonts.googleapis.com/css?family=Source Sans Pro");
 @import url("http://fonts.googleapis.com/css?family=Josefin Sans");
+@import url("http://fonts.googleapis.com/css?family=Kaushan Script");
 #page_body { width: 100%; display: flex; flex-grow: 1; }
 
 /* Sidebar */
 #sidebar { color: red; }
 
 /* Content */
-#page_content { padding: 3rem; }
-#page_content .ui.header.line { display: flex; align-items: baseline; gap: 3rem; }
+#page_content { flex-grow: 1; padding: 3rem; }
+#page_content .ui.header.line { display: flex; align-items: baseline; justify-content: center; gap: 5rem; }
 #page_content .ui.header.line h1 { font-size: 3rem; }
 #page_content .ui.header.line .sub.header { font-size: 2rem; }
 #page_content p.segment { font-size: 1.5rem; font-style: italic; }
+
+.project-header { display: flex; gap: 2rem; }
+.project-header img { height: 150px; margin-top: -1.5rem; }
 
 /* card */
 .ui.raised.link.cards { display: flex; gap: 2rem; justify-content: center; align-content: center; }
