@@ -33,9 +33,10 @@
 .card .ui.left.corner.label::after i { color: white; }
 
 /* Footer */
-#page_footer { padding-top: 1rem; background-color: #8d8d8d; color: #f3f3f3; display: flex; flex-direction: column; padding: 1% 3%; }
-#page_footer .quote { text-align: center; align-self: center; font-size: clamp(1rem, 3vw, 1.5rem); font-family: "Josefin Sans", sans-serif; font-style: italic; }
-#page_footer .author { display: inline-block; align-self: flex-end; font-size: clamp(1.25rem, 4vw, 1.75rem); font-family: 'Kaushan Script', cursive; }
+#page_footer { display: block; padding-top: 1rem; background-color: #8d8d8d; color: #f3f3f3; padding: 1% 3%; }
+#page_footer .content { display: flex; flex-direction: column; }
+#page_footer .content .quote { text-align: center; align-self: center; font-size: clamp(1rem, 3vw, 1.5rem); font-family: "Josefin Sans", sans-serif; font-style: italic; }
+#page_footer .content .author { display: inline-block; align-self: flex-end; font-size: clamp(1.25rem, 4vw, 1.75rem); font-family: 'Kaushan Script', cursive; }
 
 #page_header.ui.basic.raised.segment { top: 0; width: 100%; z-index: 99; box-shadow: 0px 0.05rem 1rem #8d8d8d; display: flex; flex-direction: column; justify-content: center; margin: 0; padding: 0; background: linear-gradient(to bottom, #f8991d50, #77c4ff); }
 

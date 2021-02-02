@@ -12,10 +12,6 @@ Welcome to my Wonderous World of Design!
 
 </div>
 
-As my types of design continue to expand and grow, so does my website. <br>
-Please be forgiving, as the site will most likely always be under &#x1F6A7; construction &#x1F6A7;
-{: .ui .center .aligned .large .header}
-
 <!-- If you think any aspect of software development doesn't involve design, 
 then you might doing something wrong.
 {: .ui .grey .stacked .padded .segment}
