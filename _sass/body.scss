@@ -42,3 +42,13 @@
         margin-top: -1.5rem;
     }
 }
+
+hr {
+    border: 0;
+    height: 1.5px;
+    background: linear-gradient(to right,
+            transparentize($color-bonus, 0.5),
+            transparentize($color-secondary, 0.5),
+            transparentize($color-bonus, 0.5));
+    margin: 2rem 0;
+}

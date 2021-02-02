@@ -3,16 +3,18 @@ layout: default
 title: Personal Projects
 permalink: /projects
 ---
-{{ page.process | split: "," | last }}
 
 <div class="ui header" markdown="1">
 
-Various Assortment of Personal Projects
+## Various Assortment of Personal Projects
 
 most are driven by "how is there no good app for this in existence!?!"
-{: .sub .header}
 
 </div>
+
+---
+
+All projects are in different stages of development ranging from planning to evaluation.
 
 <div class="ui raised link cards">
 
@@ -22,7 +24,7 @@ most are driven by "how is there no good app for this in existence!?!"
 {% capture description %}{{ project.description }}{% endcapture %}
 {% capture image %}{{ project.image }}{% endcapture %}
 {% capture alt %}{{ project.alt }}{% endcapture %}
-{% capture ribbon %}{{ page.process | split: "," | last }}{% endcapture %}
+{% capture ribbon %}{{ project.process | split: "," | last | strip }}{% endcapture %}
 
 {% include card.html 
     title=title

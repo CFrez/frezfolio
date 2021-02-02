@@ -12,7 +12,7 @@
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom,
-        $color-bonus,
+        transparentize($color-bonus, .5),
         $color-secondary-light,
     );
 };
