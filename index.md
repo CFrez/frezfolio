@@ -36,10 +36,10 @@ it is truly a work of art to be admired.
 <div class="contact-me">
     <h3>Places you can find me:</h3>
     <a href="https://www.linkedin.com/in/cfrezynski/">
-        <i class="linkedin icon"></i>
+        <img src="/assets/images/linkedin.png">
     </a>
     <a href="https://github.com/RedFrez/">
-        <i class="github icon"></i>
+        <img src="/assets/images/github.svg">
     </a>
     <a href="https://www.thingiverse.com/redfrez/designs">
         Thingiverse

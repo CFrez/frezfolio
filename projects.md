@@ -14,8 +14,8 @@ most are driven by "how is there no good option for this in existence!?!"
 
 ---
 
-![progress bar for reference](/assets/images/process/full-line.png)
-{: .bar}
+<!-- ![progress bar for reference](/assets/images/process/full-line.png)
+{: .bar} -->
 
 <div class="masonry-grid">
 
