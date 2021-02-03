@@ -1,6 +1,7 @@
 @import 'variables.scss';
 
 #page_body {
+    display-outside: block;
     width: 100%;
     display: flex;
     flex-grow: 1;
@@ -13,7 +14,7 @@
 
 /* Content */
 #page_content {
-    display: block;
+    display-outside: block;
     flex-grow: 1;
     padding: 3rem;
     width: 100vw;

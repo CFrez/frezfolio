@@ -1,7 +1,7 @@
 @import 'variables.scss';
 
 #page_header.ui.basic.raised.segment {
-    // position: fixed;
+    display-outside: block;
     top: 0;
     width: 100%;
     z-index: 99;
