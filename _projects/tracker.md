@@ -17,7 +17,7 @@ It will be application that is a maker's best friend, allowing for rating/rankin
 
 <div class="masonry-grid">
     {% for image in site.data.tracker %}
-        <figure class="grid-item">
+        <figure class="card">
             <img src="{{ page.imageurl }}{{ image.src }}.png" alt="{{ image.alt }}">
             <figcaption>{{ image.alt }}</figcaption>
         </figure>

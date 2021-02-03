@@ -16,7 +16,7 @@ While volunteering and fostering with an Animal Resucue in Las Vegas, it became 
 
 <div class="masonry-grid">
     {% for image in site.data.animals %}
-        <figure class="grid-item">
+        <figure class="card">
             <img src="{{ page.imageurl }}{{ image.src }}.png" alt="{{ image.alt }}">
             <figcaption>{{ image.alt }}</figcaption>
         </figure>

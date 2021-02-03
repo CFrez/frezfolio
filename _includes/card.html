@@ -1,11 +1,6 @@
-<a class="grid-item card" href="{{ site.baseurl }}{{ include.url }}">
-   <div class="image">
-      {% comment %} <div class="corner-tag">
-         <i class="laptop icon"></i>
-      </div> {% endcomment %}
-      <img src="{{ site.baseurl }}{{ include.image }}">
-   </div>
-
+<a class="card" href="{{ site.baseurl }}{{ include.url }}">
+   {% comment %} <i class="laptop icon"></i> for corner tag.... {% endcomment %}
+   <img src="{{ site.baseurl }}{{ include.image }}">
    <div class="content">
       <h3>{{ include.title }}</h3>
       <p>{{ include.description }}</p>

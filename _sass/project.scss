@@ -1,0 +1,38 @@
+// Project Layout Specific Styling //
+
+.project-header {
+    h1 {
+        padding: 0;
+    }
+    h2 {
+        margin-top: 1rem;
+    }
+}
+
+.project-content {
+    display: flex;
+    column-gap: 3rem;
+    flex-wrap: wrap;
+
+    p:first-child{
+        width: 100%
+    }
+
+    .model-list {
+        ul {
+            padding-left: 1rem;
+            li {
+                line-height: 1.25rem;
+                list-style: inside;
+                list-style-type: '⤏ ';
+                &::marker {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    .project-image {
+        max-width: 300px;
+    }
+}

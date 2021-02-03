@@ -19,7 +19,7 @@ This is an app that I took from start to finish.
 
 <div class="masonry-grid">
     {% for image in site.data.mindlog %}
-        <figure class="grid-item">
+        <figure class="card">
             <img src="{{ page.imageurl }}{{ image.src }}.png" alt="{{ image.alt }}">
             <figcaption>{{ image.alt }}</figcaption>
         </figure>

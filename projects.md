@@ -4,13 +4,10 @@ title: Personal Projects
 permalink: /projects
 ---
 
-<div class="header" markdown="1">
+# Various Assortment of Personal Projects
 
-## Various Assortment of Personal Projects
+## most are driven by "how is there no good option for this in existence!?!"
 
-most are driven by "how is there no good option for this in existence!?!"
-
-</div>
 
 ---
 

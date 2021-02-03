@@ -16,7 +16,7 @@ While this app in many forms does exist, the goal was to have one that easily in
 
 <div class="masonry-grid">
     {% for image in site.data.goals %}
-        <figure class="grid-item">
+        <figure class="card">
             <img src="{{ page.imageurl }}{{ image.src }}.png" alt="{{ image.alt }}">
             <figcaption>{{ image.alt }}</figcaption>
         </figure>
