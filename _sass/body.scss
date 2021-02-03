@@ -1,23 +1,10 @@
 @import 'variables.scss';
 
 #page_body {
-    display-outside: block;
     width: 100%;
-    display: flex;
-    flex-grow: 1;
-};
-
-/* Sidebar */
-#sidebar {
-    color: red;
-};
-
-/* Content */
-#page_content {
-    display-outside: block;
+    height: 100%;
     flex-grow: 1;
     padding: 3rem;
-    width: 100vw;
     .ui.header.line {
         display: flex;
         align-items: baseline;
