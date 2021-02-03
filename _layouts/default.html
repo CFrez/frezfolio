@@ -8,15 +8,9 @@
     {%- include header.html -%}
 
     <main id="page_body" aria-label="Content">
-      {% if page.sidebar %}
-        {% capture sidebar %}{{site.projects}}{% endcapture %}
-        {% include sidebar.html title="sidebar stuffs" sidebar=sidebar %}
-      {% endif %}
       {% if page.content %}
-      <div id="page_content">
         {{ content }}
       {% endif %}
-      </div>
     </main>
 
     {%- include footer.html -%}

@@ -5,6 +5,7 @@
     height: 100%;
     flex-grow: 1;
     padding: 3rem;
+
     .ui.header.line {
         display: flex;
         align-items: baseline;
@@ -22,14 +23,13 @@
         font-size: 1.5rem;
         font-style: italic;
     }
-    .project {
-        &-header {
-            display: flex;
-            gap: 2rem;
-            img {
-                height: 150px;
-                margin-top: -1.5rem;
-            }
+
+    .project-header {
+        h1 {
+            padding: 0;
+        }
+        h2 {
+            margin-top: 1rem;
         }
     }
 }
@@ -37,7 +37,8 @@
 .ui.basic.segment.bar {
     display: flex;
     justify-content: center;
-    margin-top: 0;
+    margin: 1rem;
+    padding: 0;
     img {
         width: clamp(320px, 65vw, 700px);
     }

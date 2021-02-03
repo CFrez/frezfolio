@@ -1,5 +1,5 @@
 .masonry-grid {
-    margin: 0 auto;
+    margin: 3rem auto;
 
     @media (max-width: 600px) {
         column-count: 1;
@@ -7,12 +7,14 @@
             max-width: min(85vw, 450px)
         }
     }
+
     @media (max-width: $laptop) and (min-width: 600px) {
         column-count: 2;
         .grid-item {
             max-width: min(40vw, 400px)
         }
     }
+
     @media (min-width: $laptop) {
         column-count: 3;
         .grid-item {
