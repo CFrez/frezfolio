@@ -4,7 +4,7 @@
 #sidebar { color: red; }
 
 /* Content */
-#page_content { display: flex; flex-direction: column; justify-content: center; flex-grow: 1; padding: 3rem; width: 100vw; }
+#page_content { flex-grow: 1; padding: 3rem; width: 100vw; }
 #page_content .ui.header.line { display: flex; align-items: baseline; justify-content: center; gap: 5rem; }
 #page_content .ui.header.line h1 { font-size: 3rem; }
 #page_content .ui.header.line .sub.header { font-size: 2rem; }
