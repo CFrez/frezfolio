@@ -31,7 +31,11 @@ it is truly a work of art to be admired.
 Design comes in many shapes and forms, a few that I engage in include:
 
 {% for type in site.data.category %}
-<i class="{{type.icon}} icon"></i> {{ type.name }}\
+<h3 class="ui header">
+    <i class="{{type.icon}} icon"></i>
+    {{ type.name }}
+</h3>
+
 {% endfor %}
 
 </div>
