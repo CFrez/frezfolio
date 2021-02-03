@@ -1,9 +1,9 @@
 /* Footer */
 #page_footer {
-    padding-top: 1rem;
+    flex-shrink: 0;
     background-color: $color-primary-dark;
     color: $color-background;
-    padding: 2rem 5rem;
+    padding: 1rem 5rem 2rem 5rem;
     .content {
         display: flex;
         flex-direction: column;

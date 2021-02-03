@@ -17,6 +17,7 @@ html {
 
 .app {
     max-width: $max;
+    min-height: 100vh;
     margin: 0 auto 0 auto;
     background-color: $color-background;
     box-shadow: 0px 1rem 1rem rgb(82, 82, 82);
