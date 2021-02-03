@@ -4,7 +4,7 @@ title: Personal Projects
 permalink: /projects
 ---
 
-<div class="ui header" markdown="1">
+<div class="header" markdown="1">
 
 ## Various Assortment of Personal Projects
 

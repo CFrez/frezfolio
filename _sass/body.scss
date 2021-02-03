@@ -6,6 +6,11 @@
     flex-grow: 1;
     padding: 3rem;
 
+    .header {
+        p {
+            text-indent: 0;
+        }
+    }
     .header-line {
         display: flex;
         align-items: baseline;
