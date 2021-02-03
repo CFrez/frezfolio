@@ -10,25 +10,32 @@
 }
 
 .project-content {
-    display: flex;
     column-gap: 3rem;
-    flex-wrap: wrap;
 
     p:first-child{
         width: 100%
     }
 
     .model-list {
+        column-count: 2;
         ul {
+            margin: 0;
             padding-left: 1rem;
             li {
-                line-height: 1.25rem;
                 list-style: inside;
                 list-style-type: '⤏ ';
+                margin-bottom: 1rem;
                 &::marker {
                     font-size: 2rem;
                 }
             }
+        }
+        h3 {
+            margin: .5rem;
+            font-size: 1.5rem;
+        }
+        .mvp, .expanded {
+            break-inside: avoid;
         }
     }
 

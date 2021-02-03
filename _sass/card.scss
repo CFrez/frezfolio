@@ -6,9 +6,11 @@
     transition: 0.3s;
     // to keep cards from breaking between columns
     break-inside: avoid; 
+    // keep card from growing to container size
+    align-self: start;
+    display: inline-block;
 
     // inside controls
-    display: grid;
     padding: 0;
     background-color: lighten($color-background, 10%);
     // used for keeping ribbon inside of projects card with border radius
@@ -28,7 +30,8 @@
         bottom: 0;
         width: 100%;
         background-color: transparentize($color-secondary-dark, .2);
-        padding: .2em .5em;
+        padding-top: .25rem;
+        padding-bottom: .25rem;
         // text
         text-align: center;
         color: $color-background;

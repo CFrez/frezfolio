@@ -11,7 +11,6 @@ imageurl: /assets/images/projects/recipez/
 
 version control recipe tracker that knows your pantry and tells you what to cook
 
-
 <div class="masonry-grid">
     {% for image in site.data.recipez %}
         <figure class="card">
