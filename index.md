@@ -28,23 +28,29 @@ it is truly a work of art to be admired.
 
 <div class="ui basic segment" markdown="1">
 
-Design comes in many shapes and forms, a few that I engage in include:
+### Design comes in many shapes and forms, a few that I engage in include:
 
 {% for type in site.data.category %}
-<h3 class="ui header">
+<h4 class="ui header">
     <i class="{{type.icon}} icon"></i>
     {{ type.name }}
-</h3>
+</h4>
 
 {% endfor %}
 
 </div>
 
-<div class="ui basic segment" markdown="1">
+---
 
-Other places you can find me:
-[<i class="linkedin icon"></i>](https://www.linkedin.com/in/cfrezynski/)
-[<i class="github icon"></i>](https://github.com/RedFrez/)
-[Thingiverse](https://www.thingiverse.com/redfrez/designs)
-
+<div class="contact-me">
+    <h3>Places you can find me:</h3>
+    <a href="https://www.linkedin.com/in/cfrezynski/">
+        <i class="linkedin icon"></i>
+    </a>
+    <a href="https://github.com/RedFrez/">
+        <i class="github icon"></i>
+    </a>
+    <a href="https://www.thingiverse.com/redfrez/designs">
+        Thingiverse
+    </a>
 </div>
