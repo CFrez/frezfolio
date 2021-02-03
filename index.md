@@ -3,12 +3,12 @@ layout: default
 title: Home
 ---
 
-<div class="ui center aligned header line" markdown="1">
+<div class="header-line" markdown="1">
 
 # Hello World!
 
 Welcome to my Wonderous World of Design!
-{: .sub .header}
+{: .sub-header}
 
 </div>
 
@@ -26,16 +26,15 @@ it is truly a work of art to be admired.
 
 <br/>
 
-<div class="ui basic segment" markdown="1">
+<div class="segment" markdown="1">
 
 ### Design comes in many shapes and forms, a few that I engage in include:
 
 {% for type in site.data.category %}
-<h4 class="ui header">
+<h4>
     <i class="{{type.icon}} icon"></i>
     {{ type.name }}
 </h4>
-
 {% endfor %}
 
 </div>

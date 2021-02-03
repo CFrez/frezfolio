@@ -15,7 +15,7 @@ most are driven by "how is there no good option for this in existence!?!"
 ---
 
 ![progress bar for reference](/assets/images/process/full-line.png)
-{: .ui .basic .segment .bar}
+{: .bar}
 
 <div class="masonry-grid">
 

@@ -6,7 +6,7 @@
     flex-grow: 1;
     padding: 3rem;
 
-    .ui.header.line {
+    .header-line {
         display: flex;
         align-items: baseline;
         justify-content: center;
@@ -14,7 +14,7 @@
         h1 {
             font-size: 3rem;
         }
-        .sub.header {
+        .sub-header {
             font-size: 2rem;
         }
     }
@@ -34,7 +34,7 @@
     }
 }
 
-.ui.basic.segment.bar {
+.bar {
     display: flex;
     justify-content: center;
     margin: 1rem;
