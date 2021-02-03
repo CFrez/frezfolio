@@ -17,6 +17,8 @@
 
 hr { border: 0; height: 1.5px; background: linear-gradient(to right, rgba(248, 153, 29, 0.5), rgba(51, 148, 244, 0.5), rgba(248, 153, 29, 0.5)); margin: 2rem 0; }
 
+p { text-indent: 2rem; }
+
 .ui.raised.segment.grid-item { flex-direction: column; padding: 0; }
 .ui.raised.segment.grid-item .image { display: block; object-fit: contain; border-radius: .5rem; max-width: 100%; }
 .ui.raised.segment.grid-item .ui.left.corner.label::after { border-top: 4em solid transparent; border-right: 4em solid transparent; border-bottom: 0 solid transparent; border-left: 0 solid transparent; border-top-color: rgba(248, 153, 29, 0.8); }
