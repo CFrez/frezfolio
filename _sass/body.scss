@@ -63,3 +63,11 @@ p {
         color: $color-text;
     }
 }
+
+.icon-label {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 1rem;
+    font-size: 1.25rem;
+}

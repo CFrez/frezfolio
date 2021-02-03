@@ -1,14 +1,14 @@
 - name: Software Applications
-  icon: laptop code
+  icon: code
 - name: 3D Printing
-  icon: print
+  icon: precision_manufacturing
 - name: Furniture
-  icon: wrench
+  icon: handyman
 - name: Electronics
-  icon: lightbulb outline
+  icon: smart_toy
 - name: Architecture
-  icon: pencil ruler
+  icon: architecture
 - name: Graphics
-  icon: paint brush
+  icon: gesture
 - name: Photography
-  icon: camera retro
+  icon: photo_camera

@@ -3,14 +3,9 @@ layout: default
 title: Home
 ---
 
-<div class="header-line" markdown="1">
-
 # Hello World!
 
-Welcome to my Wonderous World of Design!
-{: .sub-header}
-
-</div>
+## Welcome to my Wonderous World of Design!
 
 <!-- If you think any aspect of software development doesn't involve design, 
 then you might doing something wrong.
@@ -20,21 +15,18 @@ When you come across a well written piece of code,
 it is truly a work of art to be admired.
 {: .ui .grey .stacked .padded .segment}
  -->
-<br/>
 
 ---
-
-<br/>
 
 <div class="segment" markdown="1">
 
 ### Design comes in many shapes and forms, a few that I engage in include:
 
 {% for type in site.data.category %}
-<h4>
-    <i class="{{type.icon}} icon"></i>
+<div class="icon-label">
+    <span class="material-icons outlined">{{type.icon}}</span>
     {{ type.name }}
-</h4>
+</div>
 {% endfor %}
 
 </div>
