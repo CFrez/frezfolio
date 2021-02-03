@@ -11,5 +11,16 @@ layout: default
     </div>
 </div>
 
-
 <p>{{ page.content }}</p>
+
+
+<div class="masonry-grid" markdown="1">
+    {% for image in site.data.animals %}
+        <figure class="grid-item">
+            <img src="{{ page.imageurl }}{{ image.src }}.png" alt="{{ image.alt }}">
+            <figcaption>{{ image.alt }}</figcaption>
+        </figure>
+    {% endfor %}
+
+
+</div>

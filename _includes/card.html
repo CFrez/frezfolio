@@ -1,4 +1,4 @@
-<a class="ui link card" href="{{ site.baseurl }}{{ include.url }}">
+<a class="ui raised segment grid-item" href="{{ site.baseurl }}{{ include.url }}">
    <div class="ui left corner label">
       <i class="laptop icon"></i>
    </div>
@@ -8,12 +8,8 @@
    </div>
 
    <div class="content">
-      <div class="center aligned header">
-         {{ include.title }}
-      </div>
-      <div class="center aligned description">
-         {{ include.description }}
-      </div>
+      <h3>{{ include.title }}</h3>
+      <p>{{ include.description }}</p>
+      <img class="ribbon" src="/assets/images/process/{{ include.ribbon }}-line.png" alt="{{include.ribbon}}"/>
    </div>
-   <img src="/assets/images/process/{{ include.ribbon }}-line.png" alt="{{include.ribbon}}"/>
 </a>

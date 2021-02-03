@@ -8,15 +8,16 @@ permalink: /projects
 
 ## Various Assortment of Personal Projects
 
-most are driven by "how is there no good app for this in existence!?!"
+most are driven by "how is there no good option for this in existence!?!"
 
 </div>
 
 ---
 
-All projects are in different stages of development ranging from planning to evaluation.
+![progress bar for reference](/assets/images/process/full-line.png)
+{: .ui .basic .segment .bar}
 
-<div class="ui raised link cards">
+<div class="masonry-grid">
 
 {% for project in site.projects %}
 {% capture title %}{{ project.title }}{% endcapture %}

@@ -28,3 +28,8 @@ $tablet: 768px;
 $laptop: 900px;
 $desktop: 1200px;
 $max: 1200px;
+
+$color-blend: linear-gradient(to right,
+    transparentize($color-bonus, 0.5),
+    transparentize($color-secondary, 0.5),
+    transparentize($color-bonus, 0.5));

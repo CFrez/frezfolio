@@ -1,26 +1,11 @@
-// @import 'variables.scss';
-
-/* card */
-.ui.raised.link.cards {
-    display: flex;
-    // flex-flow: column wrap;
-    gap: 2rem;
-    justify-content: center;
-    align-content: center;
-    // .card:nth-child(4n):after {
-    //     content: ' ';
-    //     display: block;
-    // }
-}
-
-
-.card {
-    img {
-        grid-area: img;
+.ui.raised.segment.grid-item {
+    flex-direction: column;
+    padding: 0;
+    .image {
+        display: block;
         object-fit: contain;
-        max-height: 200px;
         border-radius: .5rem;
-        width: 100%;
+        max-width: 100%;
     }
     .ui.left.corner.label::after {
         border-top: 4em solid transparent;
@@ -32,4 +17,23 @@
             color: white;
         }
     }
-};
+    .content {
+        text-align: center;
+        h3 {
+            border-top: solid .2rem;
+            border-color: transparentize($color-primary-dark, 0.9);
+            padding-top: 1rem;
+            margin-bottom: 0;
+            color: $color-text;
+            text-decoration: underline;
+            text-decoration-color: $color-secondary;
+        }
+        p {
+            color: $color-text;
+            padding: 0 1rem;
+        }
+        .ribbon {
+            align-self: flex-end;
+        }
+    }
+}
