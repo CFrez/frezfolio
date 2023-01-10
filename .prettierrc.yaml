@@ -1,0 +1,10 @@
+singleQuote: true
+tabWidth: 4
+printWidth: 88
+trailingComma: 'all'
+semi: false
+overrides:
+    - files:
+          - '*.tsx?'
+      options:
+          parser: 'typescript'
