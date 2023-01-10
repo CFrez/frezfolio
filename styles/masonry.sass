@@ -1,0 +1,13 @@
+@import 'variables.sass'
+
+.masonry-grid
+    margin: 3rem auto
+
+    @media (max-width: 600px)
+        column-count: 1
+
+    @media (max-width: $laptop) and (min-width: 600px)
+        column-count: 2
+
+    @media (min-width: $laptop)
+        column-count: 3
