@@ -1,8 +1,6 @@
-import { Layout } from '../components'
-
 export default function About() {
     return (
-        <Layout>
+        <>
             <h1>My Journey</h1>
             <p>
                 Sometimes it takes a scenic route to learn what you are meant to be doing.
@@ -25,6 +23,6 @@ export default function About() {
             <p>
                 I am eager to see what adventures software will lead me on.
             </p>
-        </Layout>
+        </>
     )
 }

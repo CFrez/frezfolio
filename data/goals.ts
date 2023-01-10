@@ -1,4 +1,4 @@
-import type { ImageData } from "./data.types";
+import type { ImageData } from "../types";
 
 export const goalsImages: ImageData[] = [
     {

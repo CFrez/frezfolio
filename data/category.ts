@@ -1,4 +1,4 @@
-import type { CategoryData } from "./data.types";
+import type { CategoryData } from "../types";
 
 export const categorySet: CategoryData[] = [
     {
