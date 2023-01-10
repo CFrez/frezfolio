@@ -7,7 +7,7 @@ export const animalsImages: ImageData[] = [
     },
     {
        src: "home",
-       alt: "Expanded Home Page"
+       alt: "Expanded Home Page",
     },
     {
        src: "new-animal",
@@ -32,6 +32,11 @@ export const animalsImages: ImageData[] = [
     {
        src: "edit-record",
        alt: "Edit Record for Animal"
+    },
+    {
+       src: "quick",
+       alt: "Animal Quick View",
+       primary: true
     }
 ]
 

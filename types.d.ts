@@ -1,6 +1,9 @@
+import { Process } from "./constants";
+
 export interface ImageData {
     src: string;
     alt: string;
+    primary?: boolean;
 }
 
 export interface CategoryData {
@@ -15,6 +18,6 @@ export interface ProjectData {
     imageSet: ImageData[];
     name: string;
     tags?: string[];
-    process?: string[];
+    process?: Process;
     type?: string;
 }

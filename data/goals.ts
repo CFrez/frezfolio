@@ -3,7 +3,8 @@ import type { ImageData } from "../types";
 export const goalsImages: ImageData[] = [
     {
        src: "goals-design",
-       alt: "Dashboard Mockup"
+       alt: "Dashboard Mockup",
+       primary: true
     }
 ]
 
