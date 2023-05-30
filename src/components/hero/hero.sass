@@ -1,0 +1,25 @@
+@import '../../assets/variables.sass'
+
+div.hero
+    width: 100%
+
+    div.topper
+        position: sticky
+        bottom: 0
+        height: 100%
+        width: 100%
+        overflow-x: scroll
+
+        img
+            position: absolute
+            bottom: 0
+            height: 100%
+            filter: saturate(0)
+
+            &:hover
+                filter: saturate(1)
+
+        // TODO: Does this do anything? (possibly not since link)
+        @media(hover: hover) and (pointer: fine)
+            img:hover
+                filter: saturate(1)
