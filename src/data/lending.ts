@@ -1,11 +1,11 @@
-import type { ImageData } from "../types";
+import type { ImageData } from '../types'
 
 export const lendingImages: ImageData[] = [
     {
-        src: "book",
+        src: 'book',
         alt: "graphic I created for a 'book' bag",
-        primary: true
-    }
+        primary: true,
+    },
 ]
 
-export default lendingImages;
+export default lendingImages

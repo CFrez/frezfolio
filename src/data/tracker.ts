@@ -1,11 +1,11 @@
-import type { ImageData } from "../types";
+import type { ImageData } from '../types'
 
 export const trackerImages: ImageData[] = [
     {
-       src: "project-board",
-       alt: "project page 'mockup'",
-       primary: true
-    }
+        src: 'project-board',
+        alt: "project page 'mockup'",
+        primary: true,
+    },
 ]
 
-export default trackerImages;
+export default trackerImages

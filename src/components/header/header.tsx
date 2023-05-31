@@ -1,31 +1,36 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
-import background from '/images/topper/background.svg'
-import archdesign from '/images/topper/archdesign.svg'
-import archeng from '/images/topper/archeng.svg'
-import humanfactors from '/images/topper/humanfactors.svg'
-import code from '/images/topper/code.svg'
-import ux from '/images/topper/ux.svg'
-
-
+import { PageUrl, topperProperties } from "../../data/pages";
+import { LogoLink, Contact } from "..";
 
 import './header.sass'
 
+
+
 export const Header: React.FC = () => {
+    const { pathname } = useLocation();
 
     const topper = (
-        <div className="topper">
-            <img className="background" src={background} alt="dallas skyline background" />
-            <img className="ux" src={ux} alt="user experience" />
-            <img className="code" src={code} alt="code" />
-            <img className="hf" src={humanfactors} alt="human factors" />
-            <img className="ae" src={archeng} alt="architectural engineering" />
-            <img className="ad" src={archdesign} alt="architectural design" />
+        <div className={`topper ${PageUrl.About === pathname ? 'about' : ''}`}>
+            {Object.entries(topperProperties).map(([key, {src, alt, link}]) => (
+                <Link key={key} className={key} to={link}>
+                    <img
+                        className={`${key} ${link === pathname ? 'active' : ''}`}
+                        src={src}
+                        alt={alt}
+                    />
+                </Link>
+            ))}
         </div>
     )
 
     return (
         <header>
+            <div className="info">
+                <LogoLink />
+                <Contact />
+            </div>
             {topper}
         </header>
     )

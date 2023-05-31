@@ -1,34 +1,34 @@
-import type { CategoryData } from "../types";
+import type { CategoryData } from '../types'
 
 export const categorySet: CategoryData[] = [
     {
-       name: "Software Applications",
-       icon: "code"
+        name: 'Software Applications',
+        icon: 'code',
     },
     {
-       name: "3D Printing",
-       icon: "precision_manufacturing"
+        name: '3D Printing',
+        icon: 'precision_manufacturing',
     },
     {
-       name: "Furniture",
-       icon: "handyman"
+        name: 'Furniture',
+        icon: 'handyman',
     },
     {
-       name: "Electronics",
-       icon: "smart_toy"
+        name: 'Electronics',
+        icon: 'smart_toy',
     },
     {
-       name: "Architecture",
-       icon: "architecture"
+        name: 'Architecture',
+        icon: 'architecture',
     },
     {
-       name: "Graphics",
-       icon: "gesture"
+        name: 'Graphics',
+        icon: 'gesture',
     },
     {
-       name: "Photography",
-       icon: "photo_camera"
-    }
+        name: 'Photography',
+        icon: 'photo_camera',
+    },
 ]
 
-export default categorySet;
+export default categorySet

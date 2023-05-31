@@ -1,14 +1,20 @@
 @import '../../assets/variables.sass'
 
+$widthHeightRatio: 3.5
+$width: clamp(1050px, 200vw, 2800px)
+$height: clamp(300px, 57.14vw, 800px)
+
 div.hero
     width: 100%
+    overflow-x: scroll
+    background: linear-gradient(transparent 0px, transparent 87.65%, $color-gray-dark 87.65%, $color-gray-dark)
 
-    div.topper
+    div.hero__topper
+        margin: 0 auto
         position: sticky
         bottom: 0
-        height: 100%
-        width: 100%
-        overflow-x: scroll
+        height: $height
+        width: $width
 
         img
             position: absolute
@@ -18,6 +24,25 @@ div.hero
 
             &:hover
                 filter: saturate(1)
+
+            &.BG-labeled
+                left: 0
+                width: $width
+
+            &.UX-labeled
+                left: calc(966 / 1470 * 100%)
+
+            &.SE-labeled
+                left: calc(1143 / 1470 * 100%)
+
+            &.HF-labeled
+                left: calc(715 / 1470 * 100%)
+
+            &.AE-labeled
+                left: calc(435 / 1470 * 100%)
+
+            &.AD-labeled
+                left: calc(58 / 1470 * 100%)
 
         // TODO: Does this do anything? (possibly not since link)
         @media(hover: hover) and (pointer: fine)
