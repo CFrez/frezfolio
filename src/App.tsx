@@ -7,7 +7,7 @@ import {
     Home,
     ArchDesign,
     ArchEng,
-    HumanFactors,
+    Graphics,
     Software,
     UserExperience,
 } from './pages'
@@ -22,9 +22,9 @@ export const App: React.FC = () => {
                 <Route element={<Layout/>}>
                     <Route path={`${PageUrl.ArchDesign}/*`} element={<ArchDesign/>}/>
                     <Route path={`${PageUrl.ArchEngineering}/*`} element={<ArchEng/>}/>
-                    <Route path={PageUrl.HumanFactors} element={<HumanFactors/>}/>
+                    <Route path={`${PageUrl.UserExperience}/*`} element={<UserExperience/>}/>
+                    <Route path={`${PageUrl.GraphicDesign}/*`} element={<Graphics/>}/>
                     <Route path={`${PageUrl.SoftwareEngineering}/*`} element={<Software/>}/>
-                    <Route path={PageUrl.UserExperience} element={<UserExperience/>}/>
                 </Route>
             </Routes>
         </div>

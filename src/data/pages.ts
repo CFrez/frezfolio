@@ -3,14 +3,14 @@ import { TopperProperties } from '../types'
 import BG from '/images/topper/bg.svg'
 import AD from '/images/topper/ad.svg'
 import AE from '/images/topper/ae.svg'
-import HF from '/images/topper/hf.svg'
+import GD from '/images/topper/gd.svg'
 import SE from '/images/topper/se.svg'
 import UX from '/images/topper/ux.svg'
 
 import labeledBG from '/images/topper/labeled-bg.svg'
 import labeledAD from '/images/topper/labeled-ad.svg'
 import labeledAE from '/images/topper/labeled-ae.svg'
-import labeledHF from '/images/topper/labeled-hf.svg'
+import labeledGD from '/images/topper/labeled-gd.svg'
 import labeledSE from '/images/topper/labeled-se.svg'
 import labeledUX from '/images/topper/labeled-ux.svg'
 
@@ -19,16 +19,16 @@ export enum PageUrl {
     About = '/about',
     UserExperience = '/ux',
     SoftwareEngineering = '/software',
-    HumanFactors = '/humanfactors',
+    GraphicDesign = '/graphics',
     ArchEngineering = '/archeng',
     ArchDesign = '/archdesign',
 }
 
 export enum Topper {
     BG = 'BG',
-    UX = 'UX',
+    GD = 'GD',
     SE = 'SE',
-    HF = 'HF',
+    UX = 'UX',
     AE = 'AE',
     AD = 'AD',
 }
@@ -41,11 +41,11 @@ export const topperProperties: Record<Topper, TopperProperties> = {
         link: PageUrl.Home,
         percentage: 0,
     },
-    [Topper.UX]: {
-        src: UX,
-        srcLabeled: labeledUX,
-        alt: 'user experience',
-        link: PageUrl.UserExperience,
+    [Topper.GD]: {
+        src: GD,
+        srcLabeled: labeledGD,
+        alt: 'graphic design',
+        link: PageUrl.GraphicDesign,
         percentage: 966 / 1470,
     },
     [Topper.SE]: {
@@ -55,11 +55,11 @@ export const topperProperties: Record<Topper, TopperProperties> = {
         link: PageUrl.SoftwareEngineering,
         percentage: 1143 / 1470,
     },
-    [Topper.HF]: {
-        src: HF,
-        srcLabeled: labeledHF,
-        alt: 'human factors',
-        link: PageUrl.HumanFactors,
+    [Topper.UX]: {
+        src: UX,
+        srcLabeled: labeledUX,
+        alt: 'user experience',
+        link: PageUrl.UserExperience,
         percentage: 715 / 1470,
     },
     [Topper.AE]: {
