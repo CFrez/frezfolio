@@ -5,9 +5,12 @@ div.app div.container
     gap: 0
 
     width: clamp(320px, 100vw, 1470px)
+    min-height: 100vh
+    height: 100%
     margin: 0 auto
-    background-color: white
-    height: 100vh
+    background-color: $color-background
 
     main
         flex-grow: 1
+        padding: 24px 48px
+        @include verticalStart

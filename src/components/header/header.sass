@@ -4,10 +4,10 @@ $widthHeightRatio: 3.8684
 $width: clamp(320px, 100vw, 742.7328px)
 $height: clamp(82.72154px, 25.85048vw, 192px)
 
-header
+header.page-header
     @include verticalCenter
     gap: 0
-    background: linear-gradient(to bottom, transparentize($color-bonus, .5), $color-secondary-light,)
+    background: $color-linear-background
 
     div.info
         @include horizontalSpaced
@@ -19,6 +19,10 @@ header
         bottom: 0
         height: $height
         width: $width
+        margin-top: -48px
+
+        @media (max-width: $laptop)
+            margin-top: 0px
 
         img
             position: absolute

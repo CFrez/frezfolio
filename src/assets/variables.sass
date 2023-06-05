@@ -2,6 +2,9 @@
 @import "@fontsource/source-sans-pro"
 @import "@fontsource/material-icons"
 
+@import './styles/elevation.sass'
+@import './styles/layout.sass'
+
 $font-stack: 'Source Sans Pro', sans-serif
 $font-head: 'Josefin Sans', sans-serif
 $font-subhead: 'Source Sans Pro', sans-serif
@@ -14,7 +17,8 @@ $color-secondary: #3394f4
 $color-secondary-light: #77c4ff
 $color-secondary-dark: #0067c1
 $color-bonus: #f8991d
-$color-background: #f3f3f3
+$color-bonus-dark: #f28500
+$color-background: #fafafa
 
 $color-black: #000000
 $color-white: #ffffff
@@ -30,71 +34,4 @@ $max: 1200px
 
 $color-blend: linear-gradient(to right, transparentize($color-bonus, 0.5), transparentize($color-secondary, 0.5))
 
-$color-background: linear-gradient(to bottom, transparentize($color-bonus, .5), $color-secondary-light)
-
-$verticalGap: 24px
-$horizontalGap: 24px
-
-@mixin flexVertical
-    width: 100%
-    display: flex
-    flex-direction: column
-    gap: $verticalGap
-
-@mixin flexHorizontal
-    width: 100%
-    display: flex
-    flex-direction: row
-    gap: $horizontalGap
-
-@mixin verticalCenter
-    @include flexVertical
-    justify-content: center
-    align-items: center
-    text-align: center
-
-@mixin verticalStart
-    @include flexVertical
-    justify-content: flex-start
-    align-items: flex-start
-
-@mixin verticalEnd
-    @include flexVertical
-    justify-content: flex-end
-    align-items: flex-end
-
-@mixin verticalStretched
-    @include flexVertical
-    justify-content: stretch
-    align-items: stretch
-
-@mixin verticalSpaced
-    @include flexVertical
-    justify-content: space-between
-    align-items: center
-
-@mixin horizontalCenter
-    @include flexHorizontal
-    justify-content: center
-    align-items: center
-    text-align: center
-
-@mixin horizontalStart
-    @include flexHorizontal
-    justify-content: flex-start
-    align-items: flex-start
-
-@mixin horizontalEnd
-    @include flexHorizontal
-    justify-content: flex-end
-    align-items: flex-end
-
-@mixin horizontalStretched
-    @include flexHorizontal
-    justify-content: stretch
-    align-items: stretch
-
-@mixin horizontalSpaced
-    @include flexHorizontal
-    justify-content: space-between
-    align-items: center
+$color-linear-background: linear-gradient(to bottom, transparentize($color-bonus, .5), $color-secondary-light)

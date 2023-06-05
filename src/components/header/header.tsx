@@ -1,22 +1,20 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
-import { PageUrl, topperProperties } from "../../data/pages";
-import { LogoLink, Contact } from "..";
+import { topperProperties } from '../../data/pages'
+import { LogoLink, Contact } from '..'
 
 import './header.sass'
 
-
-
 export const Header: React.FC = () => {
-    const { pathname } = useLocation();
+    const { pathname } = useLocation()
 
     const topper = (
-        <div className={`topper ${PageUrl.About === pathname ? 'about' : ''}`}>
-            {Object.entries(topperProperties).map(([key, {src, alt, link}]) => (
+        <div className='topper'>
+            {Object.entries(topperProperties).map(([key, { src, alt, link }]) => (
                 <Link key={key} className={key} to={link}>
                     <img
-                        className={`${key} ${link === pathname ? 'active' : ''}`}
+                        className={`${key} ${pathname.includes(link) ? 'active' : ''}`}
                         src={src}
                         alt={alt}
                     />
@@ -26,7 +24,7 @@ export const Header: React.FC = () => {
     )
 
     return (
-        <header>
+        <header className='page-header'>
             <div className="info">
                 <LogoLink />
                 <Contact />

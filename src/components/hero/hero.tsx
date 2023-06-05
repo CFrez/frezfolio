@@ -1,11 +1,10 @@
-import React, { useCallback, useMemo, useRef, type WheelEvent } from 'react'
+import React, {  useRef, type WheelEvent } from 'react'
 import { Link } from 'react-router-dom'
 
 import { topperProperties } from '../../data/pages'
 
 import './hero.sass'
 
-const widthHeightRatio = 3.5
 
 export const Hero: React.FC = () => {
     const ref = useRef<HTMLDivElement>(null)
@@ -20,26 +19,6 @@ export const Hero: React.FC = () => {
         }
     }
 
-    // const height = useMemo(() => {
-    //     const windowHeight =
-    //         window.screen.height < window.outerHeight
-    //             ? window.screen.height
-    //             : window.outerHeight
-    //     if (windowHeight > 800) {
-    //         return windowHeight * 0.67
-    //     } else {
-    //         return 800
-    //     }
-    // }, [])
-
-    // const determineStyle = useCallback(
-    //     (percentage: number) => {
-    //         const width = height * widthHeightRatio
-    //         const left = `${width * percentage}px`
-    //         return { left, height, width }
-    //     },
-    //     [height],
-    // )
 
     return (
         <div className="hero" ref={ref} onWheel={onWheel}>

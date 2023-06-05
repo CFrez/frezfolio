@@ -1,40 +1,32 @@
 import React from 'react'
-import { Switch, Route, useLocation } from 'react-router'
+import { Routes, Route } from 'react-router'
 
-import { Footer, Header, Nav } from './components'
-import { About, Home } from './pages'
+import { PageUrl } from './data/pages'
+import {
+    Layout,
+    Home,
+    ArchDesign,
+    ArchEng,
+    HumanFactors,
+    Software,
+    UserExperience,
+} from './pages'
 
 import './App.sass'
 
 export const App: React.FC = () => {
-    const { pathname } = useLocation()
-
-    const isHome = pathname === '/'
-
-    if (isHome) {
-        return (
-            <div className="app">
-                <Switch>
-                    <Route exact path="/">
-                        <Home />
-                    </Route>
-                </Switch>
-            </div>
-        )
-    }
-
     return (
         <div className="app">
-            <div className="container">
-                <Header />
-                <Nav />
-                <Switch>
-                    <Route path="/about">
-                        <About />
-                    </Route>
-                </Switch>
-                <Footer />
-            </div>
+            <Routes>
+                <Route path={PageUrl.Home} element={<Home/>}/>
+                <Route element={<Layout/>}>
+                    <Route path={`${PageUrl.ArchDesign}/*`} element={<ArchDesign/>}/>
+                    <Route path={`${PageUrl.ArchEngineering}/*`} element={<ArchEng/>}/>
+                    <Route path={PageUrl.HumanFactors} element={<HumanFactors/>}/>
+                    <Route path={`${PageUrl.SoftwareEngineering}/*`} element={<Software/>}/>
+                    <Route path={PageUrl.UserExperience} element={<UserExperience/>}/>
+                </Route>
+            </Routes>
         </div>
     )
 }
