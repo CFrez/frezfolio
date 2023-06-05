@@ -10,7 +10,7 @@ import './logo.sass'
 export const LogoLink: React.FC = () => {
     return (
         <div className="logo-link">
-            <Link to={PageUrl.Home} >
+            <Link to={PageUrl.Home}>
                 <Logo />
             </Link>
         </div>

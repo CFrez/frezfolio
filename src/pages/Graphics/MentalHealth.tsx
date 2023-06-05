@@ -2,7 +2,6 @@ import React from 'react'
 
 import { PageTitle } from '../../components'
 
-
 export const MentalHealth: React.FC = () => {
     return (
         <>

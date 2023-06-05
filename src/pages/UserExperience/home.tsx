@@ -9,14 +9,10 @@ import hiring1 from '/images/projects/zirtual/hiring1.png'
 export const UserExperienceHome: React.FC = () => {
     return (
         <>
-            <p className='info'>
-                User Experience and Human Factors
-            </p>
+            <p className="info">User Experience and Human Factors</p>
 
-            - for Arch
-            - for CS
-            - design of everyday things
-            - motorcycle project
+            - for Arch - for CS
+            - design of everyday things - motorcycle project
             <ul>
                 <li>Fitt's Law - target distance and size</li>
                 <li>Hick's Law - decision time increases with number and complexity</li>
@@ -26,18 +22,26 @@ export const UserExperienceHome: React.FC = () => {
             </ul>
 
             <LinkCard
-                title='Zirtual Hiring'
+                title="Zirtual Hiring"
                 url={UserExperienceUrl.Zirtual}
-                className='zirtual'
-                graphic={<img className='zirtual' src={hiring1} alt="Hiring Initial Analysis" />}
-            />
+                className="zirtual"
+                graphic={
+                    <img
+                        className="zirtual"
+                        src={hiring1}
+                        alt="Hiring Initial Analysis"
+                    />
+                }
+                notes="2014"
+            >
+                <p>
+                    Zirtual is a virtual assistant company that was acquired by Startups.co in 2016. I worked on the
+                    hiring process for Zirtual, which included a web application for applicants to apply to be a
+                    virtual assistant. I worked on the initial analysis of the hiring process, and then worked on
+                    improving the process.
+                </p>
+            </LinkCard>
 
-            <LinkCard
-                title='Laws of Human Factors?'
-                url={UserExperienceUrl.Laws}
-                className='recipez'
-                graphic={<img className='recipez' src={''} alt="Something" />}
-            />
         </>
     )
 }

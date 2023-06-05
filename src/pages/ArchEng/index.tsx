@@ -14,8 +14,8 @@ export const ArchEng: React.FC = () => {
     return (
         <main id="arch-eng">
             <Routes>
-                <Route index element={<ArchEngHome />}/>
-                <Route path={ArchEngUrl.Labview} element={<Labview />}/>
+                <Route index element={<ArchEngHome />} />
+                <Route path={ArchEngUrl.Labview} element={<Labview />} />
             </Routes>
         </main>
     )

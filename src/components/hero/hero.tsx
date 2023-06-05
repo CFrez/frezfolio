@@ -1,10 +1,9 @@
-import React, {  useRef, type WheelEvent } from 'react'
+import React, { useRef, type WheelEvent } from 'react'
 import { Link } from 'react-router-dom'
 
 import { topperProperties } from '../../data/pages'
 
 import './hero.sass'
-
 
 export const Hero: React.FC = () => {
     const ref = useRef<HTMLDivElement>(null)
@@ -18,7 +17,6 @@ export const Hero: React.FC = () => {
             })
         }
     }
-
 
     return (
         <div className="hero" ref={ref} onWheel={onWheel}>

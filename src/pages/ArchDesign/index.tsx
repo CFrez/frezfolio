@@ -9,17 +9,16 @@ import './index.sass'
 
 export enum ArchDesignUrl {
     TexasAM = 'texas-am',
-    AirForce = 'air-force'
+    AirForce = 'air-force',
 }
 
 export const ArchDesign: React.FC = () => {
-
     return (
         <main id="arch-design">
             <Routes>
-                <Route index element={<ArchDesignHome />}/>
-                <Route path={ArchDesignUrl.TexasAM} element={<TexasAM />}/>
-                <Route path={ArchDesignUrl.AirForce} element={<NellisOR />}/>
+                <Route index element={<ArchDesignHome />} />
+                <Route path={ArchDesignUrl.TexasAM} element={<TexasAM />} />
+                <Route path={ArchDesignUrl.AirForce} element={<NellisOR />} />
             </Routes>
         </main>
     )

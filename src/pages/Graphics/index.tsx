@@ -16,9 +16,9 @@ export const Graphics: React.FC = () => {
     return (
         <main id="graphics">
             <Routes>
-                <Route index element={<GraphicsHome />}/>
-                <Route path={GraphicsUrl.UnbTrees} element={<UnbTrees />}/>
-                <Route path={GraphicsUrl.MentalHealth} element={<MentalHealth />}/>
+                <Route index element={<GraphicsHome />} />
+                <Route path={GraphicsUrl.UnbTrees} element={<UnbTrees />} />
+                <Route path={GraphicsUrl.MentalHealth} element={<MentalHealth />} />
             </Routes>
         </main>
     )

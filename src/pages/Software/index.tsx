@@ -16,9 +16,9 @@ export const Software: React.FC = () => {
     return (
         <main id="software">
             <Routes>
-                <Route index element={<SoftwareHome />}/>
-                <Route path={SoftwareUrl.Animals} element={<Animals />}/>
-                <Route path={SoftwareUrl.RecipEz} element={<RecipEz />}/>
+                <Route index element={<SoftwareHome />} />
+                <Route path={SoftwareUrl.Animals} element={<Animals />} />
+                <Route path={SoftwareUrl.RecipEz} element={<RecipEz />} />
             </Routes>
         </main>
     )

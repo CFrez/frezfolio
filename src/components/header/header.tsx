@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
     const { pathname } = useLocation()
 
     const topper = (
-        <div className='topper'>
+        <div className="topper">
             {Object.entries(topperProperties).map(([key, { src, alt, link }]) => (
                 <Link key={key} className={key} to={link}>
                     <img
@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
     )
 
     return (
-        <header className='page-header'>
+        <header className="page-header">
             <div className="info">
                 <LogoLink />
                 <Contact />

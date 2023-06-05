@@ -16,9 +16,9 @@ export const UserExperience: React.FC = () => {
     return (
         <main id="user-experience">
             <Routes>
-                <Route index element={<UserExperienceHome />}/>
-                <Route path={UserExperienceUrl.Laws} element={<Laws />}/>
-                <Route path={UserExperienceUrl.Zirtual} element={<Zirtual />}/>
+                <Route index element={<UserExperienceHome />} />
+                <Route path={UserExperienceUrl.Laws} element={<Laws />} />
+                <Route path={UserExperienceUrl.Zirtual} element={<Zirtual />} />
             </Routes>
         </main>
     )

@@ -1,8 +1,6 @@
-
 import React from 'react'
 
 import { PageTitle } from '../../components'
-
 
 export const Laws: React.FC = () => {
     return (
