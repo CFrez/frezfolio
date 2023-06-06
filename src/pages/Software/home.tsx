@@ -25,8 +25,9 @@ export const SoftwareHome: React.FC = () => {
                 }
             >
                 <p>
-                    Pet Rescue is a web application that allows animal shelters to manage their animals, volunteers, and
-                    events. I worked on the front end of the application, which was built with React and Typescript.
+                    While working with a foster based pet rescue in Las Vegas, Nevada I realized the need for better
+                    tracking and monitoring of the animals. This was a design exercise to determine what that might look
+                    like.
                 </p>
             </LinkCard>
 
@@ -43,9 +44,9 @@ export const SoftwareHome: React.FC = () => {
                 }
             >
                 <p>
-                    RecipEz is a web application that allows users to search for recipes, save recipes, and create
-                    shopping lists. I worked on the front end of the application, which was built with React and
-                    Typescript.
+                    RecipEZ is recipe app that allows for version control. It is a work in progress, but the goal is to
+                    allow users to create recipes and then make changes to them without losing the original recipe. This
+                    is useful for recipes that are constantly being tweaked.
                 </p>
             </LinkCard>
         </>

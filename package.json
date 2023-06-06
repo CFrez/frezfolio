@@ -11,6 +11,7 @@
         "prettify": "prettier . --write"
     },
     "dependencies": {
+        "@floating-ui/react": "^0.24.2",
         "@fontsource/josefin-sans": "^4.5.11",
         "@fontsource/material-icons": "^4.5.4",
         "@fontsource/source-sans-pro": "^4.5.11",
