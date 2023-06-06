@@ -9,17 +9,10 @@ import hiring1 from '/images/projects/zirtual/hiring1.png'
 export const UserExperienceHome: React.FC = () => {
     return (
         <>
-            <p className="info">User Experience and Human Factors</p>
-
-            - for Arch - for CS
-            - design of everyday things - motorcycle project
-            <ul>
-                <li>Fitt's Law - target distance and size</li>
-                <li>Hick's Law - decision time increases with number and complexity</li>
-                <li>Miller's Law - 7 +/- 2</li>
-                <li>Jakob's Law - work the same as known things</li>
-                <li>...</li>
-            </ul>
+            <p className="info">
+                Architecture Design led to me to persue a Human Factors Master's degree. My original intent was to utilize
+                it towards the design of healthcare facilities but instead my interest shifted to the design of software.
+            </p>
 
             <LinkCard
                 title="Zirtual Hiring"

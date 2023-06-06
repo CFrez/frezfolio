@@ -31,7 +31,7 @@ export const SoftwareHome: React.FC = () => {
             </LinkCard>
 
             <LinkCard
-                title="RecipEz"
+                title="RecipEZ"
                 url={SoftwareUrl.RecipEz}
                 className="recipez"
                 graphic={
