@@ -22,10 +22,16 @@ a.link-card
                 column: 1 / 2
                 row: 1 / 1
 
+            h2
+                border-bottom: 1.5px solid $color-secondary
+
         div.details
             grid:
                 column: 1 / 2
                 row: 2 / 2
+
+            @include verticalStart
+            gap: 16px
 
         footer
             grid:
@@ -38,6 +44,8 @@ a.link-card
             grid:
                 column: 2 / 2
                 row: 1 / -1
+
+            align-self: center
 
             img
                 object-fit: contain

@@ -16,12 +16,28 @@ html
 body
     margin: 0
     padding: 0
+    width: 100vw
+    height: 100vh
 
 div#root
     width: 100vw
     height: 100vh
     overflow-y: auto
     overflow-x: hidden
+
+button
+    border: none
+    background-color: unset
+    @include horizontalCenter
+    width: unset
+    padding: 0
+    cursor: pointer
+
+    &:disabled
+        cursor: unset
+
+    &:hover:not([disabled])
+        color: $color-secondary-dark
 
 p, ul, li
     font-size: 1.25rem

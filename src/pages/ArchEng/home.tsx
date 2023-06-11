@@ -4,19 +4,21 @@ import { LinkCard } from '../../components'
 
 import { ArchEngUrl } from '.'
 
-import labview from '/images/projects/labview/gui.png'
+import labview from '/projects/labview/gui.png'
 
 export const ArchEngHome: React.FC = () => {
     return (
         <>
             <p className="info">
-                Architectural Engineering is a special interest with a lot of value, especially since I live in a 100
-                year old house. While I worked my way through my Master's degree, I was able to experiment with many
-                different scientific programming languages and tools, including Ansys, Matlab, Labiew, Jupyter, and Python.
+                Architectural Engineering has captivated my interest due to its inherent value and practical
+                applications, espcially given my residence in a century-old house. During the pursuit of this Master's
+                degree, I had the opportunity to delve into the realm of this field and explore a range of scientific
+                programming languages and tools. These included Ansys, Matlab, LabVIEW, Jupyter, and Python, enabling me
+                to conduct experiments and analysis with versatility and precision.
             </p>
 
             <LinkCard
-                title="Labview"
+                title="LabVIEW"
                 url={ArchEngUrl.Labview}
                 className="labview"
                 subtitle="MSOE Master's Project"
@@ -24,12 +26,18 @@ export const ArchEngHome: React.FC = () => {
                     <img
                         className="labview"
                         src={labview}
-                        alt="Main user interface of labview structural program."
+                        alt="Main user interface of LabVIEW structural program."
                     />
                 }
                 notes=""
             >
-                <p>For my Master's Project I worked on remaking the software used by undergraduates in the Materials and Method's Lab.</p>
+                <p>
+                    For the Structural Analysis Lab, I undertook the task of revamping the software utilized by
+                    undergraduate students. With the equipment undergoing updates, it was essential to ensure that the
+                    accompanying software was also brought up to date. Leveraging LabVIEW, I developed a program that
+                    enabled students to conduct tests on various materials and seamlessly generate data for subsequent
+                    analysis.
+                </p>
             </LinkCard>
         </>
     )

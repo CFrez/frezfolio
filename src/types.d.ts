@@ -3,7 +3,8 @@ import { Process } from './constants'
 export interface ImageData {
     src: string
     alt: string
-    primary?: boolean
+    caption?: string
+    className?: string;
 }
 
 export interface CategoryData {

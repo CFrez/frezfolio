@@ -2,7 +2,7 @@ import React from 'react'
 
 import { PageTitle } from '../../components'
 
-import dashboard from '/images/projects/recipez/recipe-main.png'
+import dashboard from '/projects/recipez/recipe-main.png'
 
 export const RecipEz: React.FC = () => {
     return (

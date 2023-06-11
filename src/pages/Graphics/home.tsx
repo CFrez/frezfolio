@@ -4,8 +4,8 @@ import { LinkCard } from '../../components'
 
 import { GraphicsUrl } from '.'
 
-import treeslogo from '/images/projects/unbtrees/citylogo.png'
-import fearful from '/images/projects/emotions/all.jpg'
+import treeslogo from '/projects/unbtrees/citylogo.png'
+import fearful from '/projects/emotions/all.jpg'
 
 export const GraphicsHome: React.FC = () => {
     return (

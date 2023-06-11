@@ -4,7 +4,7 @@ import { LinkCard } from '../../components'
 
 import { UserExperienceUrl } from '.'
 
-import hiring1 from '/images/projects/zirtual/hiring1.png'
+import hiring1 from '/projects/zirtual/hiring1.png'
 
 export const UserExperienceHome: React.FC = () => {
     return (

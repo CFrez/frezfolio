@@ -2,8 +2,8 @@ import React from 'react'
 
 import { PageTitle } from '../../components'
 
-import hiring1 from '/images/projects/zirtual/hiring1.png'
-import hiring2 from '/images/projects/zirtual/hiring2.png'
+import hiring1 from '/projects/zirtual/hiring1.png'
+import hiring2 from '/projects/zirtual/hiring2.png'
 
 export const Zirtual: React.FC = () => {
     return (

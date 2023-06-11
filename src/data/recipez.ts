@@ -1,11 +1,12 @@
 import type { ImageData } from '../types'
 
-export const recipezImages: ImageData[] = [
+
+const baseFolder = '/projects/recipez/'
+
+
+export const recipezPhotos: ImageData[] = [
     {
-        src: 'recipe-main',
+        src: `${baseFolder}recipe-main.png`,
         alt: 'Main Recipe Page Mockup',
-        primary: true,
     },
 ]
-
-export default recipezImages

@@ -4,19 +4,17 @@ import { LinkCard } from '../../components'
 
 import { ArchDesignUrl } from '.'
 
-import cosc from '/images/projects/cosc/perspective.jpg'
-import orFinal from '/images/projects/nellis/final.jpg'
+import cosc from '/projects/cosc/perspective.jpg'
+import orFinal from '/projects/nellis/final.jpg'
 
 export const ArchDesignHome: React.FC = () => {
     return (
         <>
             <p className="info">
-                My passion for architecture started during high school when I took a
-                drafting class. Then, while attending Texas A&M University, my passion
-                narrowed to Healthcare Design. This led me to a career as an officer in
-                the Air Force, where I was part of the team that was responsible for the
-                planning, design, and construction for all healthcare facilities in the
-                Air Force.
+                My fascination with architecture first ignited during my high school years when I enrolled in a drafting
+                class. However, it was during my time at Texas A&M University that my passion became focused on the
+                captivating realm of Healthcare Design. This newfound interest paved the way for my career path as an
+                officer in the Air Force.
             </p>
 
             <LinkCard
@@ -34,8 +32,16 @@ export const ArchDesignHome: React.FC = () => {
                 notes="July 2010 - December 2016"
             >
                 <p>
-                    This is a small sample of part of one of the projects I worked on. I does a
-                    a good job representing the type of work I did while in the Air Force.
+                    During my career in the Air Force, I had the opportunity to engage in a diverse range of projects,
+                    encompassing both minor renovations and ambitious new constructions. From the initial stages of
+                    planning to the final stages of construction, I was actively involved in various project lifecycles,
+                    gaining valuable experience and insight at every step.
+                </p>
+                <p>
+                    I was afforded the privilege of collaborating with a multitude of professionals, including medical
+                    staff, architects, engineers, and contractors. This rich and dynamic exchange of ideas and expertise
+                    fostered a truly multidisciplinary approach, ensuring that the healthcare facilities we developed
+                    addressed the distinct requirements of our esteemed servicemen and women.
                 </p>
             </LinkCard>
 
@@ -54,7 +60,11 @@ export const ArchDesignHome: React.FC = () => {
                 notes="August 2005 - May 2009"
             >
                 <p>
-                    I graduated from Texas A&M University with a Bachelor's of Environmental Design.
+                    The Bachelor of Environmental Design program at Texas A&M University is an interdisciplinary
+                    undergraduate degree focused on architecture. It offers a comprehensive education in design
+                    thinking, problem-solving, and architectural principles. Students engage in studio-based courses,
+                    explore sustainability and cultural context, and gain practical experience through a study abroad
+                    program.
                 </p>
             </LinkCard>
 

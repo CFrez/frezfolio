@@ -1,23 +1,24 @@
 import type { ImageData } from '../types'
 
-export const mindlogImages: ImageData[] = [
+
+const baseFolder = '/projects/mindlog/'
+
+export const mindlogPhotos: ImageData[] = [
     {
-        src: 'today',
+        src: `${baseFolder}today.png`,
         alt: 'Actual Today Page',
-        primary: true,
     },
     {
-        src: 'summary',
+        src: `${baseFolder}summary.png`,
         alt: 'Summary Page',
     },
     {
-        src: 'new_log',
+        src: `${baseFolder}new_log.png`,
         alt: 'New Entry Page',
     },
     {
-        src: 'edit_log',
+        src: `${baseFolder}edit_log.png`,
         alt: 'Edit Entry Page',
     },
 ]
 
-export default mindlogImages

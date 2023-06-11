@@ -4,8 +4,8 @@ import { LinkCard } from '../../components'
 
 import { SoftwareUrl } from '.'
 
-import quickAnimals from '/images/projects/animals/quick.png'
-import recipEzDashboard from '/images/projects/recipez/recipe-main.png'
+import quickAnimals from '/projects/animals/quick.png'
+import recipEzDashboard from '/projects/recipez/recipe-main.png'
 
 export const SoftwareHome: React.FC = () => {
     return (

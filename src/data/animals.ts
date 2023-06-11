@@ -1,43 +1,43 @@
 import type { ImageData } from '../types'
 
-export const animalsImages: ImageData[] = [
+
+const baseFolder = '/projects/animals/'
+
+export const animalsPhotos: ImageData[] = [
     {
-        src: 'dashboard',
+        src: `${baseFolder}dashboard.png`,
         alt: 'Main Animal Dashboard',
     },
     {
-        src: 'home',
+        src: `${baseFolder}home.png`,
         alt: 'Expanded Home Page',
     },
     {
-        src: 'new-animal',
+        src: `${baseFolder}new-animal.png`,
         alt: 'Create New Animal',
     },
     {
-        src: 'edit-animal',
+        src: `${baseFolder}edit-animal.png`,
         alt: 'Update Animal',
     },
     {
-        src: 'stats',
+        src: `${baseFolder}stats.png`,
         alt: 'Statistics Page',
     },
     {
-        src: 'history',
+        src: `${baseFolder}history.png`,
         alt: 'Animal History List',
     },
     {
-        src: 'new-record',
+        src: `${baseFolder}new-record.png`,
         alt: 'New Record for Animal',
     },
     {
-        src: 'edit-record',
+        src: `${baseFolder}edit-record.png`,
         alt: 'Edit Record for Animal',
     },
     {
-        src: 'quick',
+        src: `${baseFolder}quick.png`,
         alt: 'Animal Quick View',
-        primary: true,
     },
 ]
-
-export default animalsImages

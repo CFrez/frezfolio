@@ -5,3 +5,21 @@ section.page-section
 
     h2
         font-size: 1.75rem
+
+    figure
+        @include verticalCenter
+        gap: 8px
+        margin: 0 auto
+        max-width: 600px
+        max-height: 400px
+
+        img
+            min-height: 0 // To prevent image from overflowing
+            object-fit: contain
+
+            &:hover
+                cursor: pointer
+                @include elevel-2
+
+        figcaption
+            cursor: default

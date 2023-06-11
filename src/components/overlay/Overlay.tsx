@@ -5,12 +5,15 @@ import { FloatingFocusManager, FloatingOverlay } from '@floating-ui/react';
 import { OverlayWrapper } from './OverlayWrapper';
 import type { UseOverlayInterface} from './useOverlay'
 
+import './Overlay.sass';
+
 
 
 export const Overlay: React.FC<UseOverlayInterface> = ({
     content,
     floatingUi,
     id,
+    className,
     isOpen,
     toggleClose,
 }) => {
@@ -25,13 +28,14 @@ export const Overlay: React.FC<UseOverlayInterface> = ({
                     <div
                         ref={data.refs.setFloating}
                         {...getFloatingProps({
+                            className,
                             id,
                         })}
                     >
                         <header>
                             {content.header && <h3>{content.header}</h3>}
                             <button type="button" onClick={toggleClose}>
-                            <span className="material-symbols-outlined">
+                            <span className="material-icons">
                                 close
                             </span>
                             </button>

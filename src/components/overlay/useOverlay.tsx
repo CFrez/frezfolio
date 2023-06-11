@@ -1,4 +1,4 @@
-import React, { useState, type ReactNode } from 'react';
+import React, { useState, type ReactNode, useCallback } from 'react';
 import type {  HTMLProps } from 'react';
 
 import {
@@ -16,6 +16,11 @@ export interface UseOverlayProps {
         header?: string;
         body: ReactNode;
         footer?: ReactNode;
+    }
+    className?: string;
+    visibility?: {
+        isVisible: boolean;
+        setIsVisible: (isOpen: boolean) => void;
     }
 }
 
@@ -36,11 +41,41 @@ export interface UseOverlayInterface extends UseOverlayProps {
 
 
 export function useOverlay(props: UseOverlayProps): UseOverlayInterface {
-    const [isOpen, setIsOpen] = useState(false);
+    const { visibility } = props;
+    const [isVisible, setIsVisible] = useState(false);
+
+    const isOpen = visibility ? visibility.isVisible : isVisible;
+
+    const toggleOpen = useCallback(() => {
+        if (visibility) {
+            visibility.setIsVisible(true);
+        } else {
+            setIsVisible(true);
+        }
+    }, [visibility]);
+
+    const toggleClose = useCallback(() => {
+        if (visibility) {
+            visibility.setIsVisible(false);
+        } else {
+            setIsVisible(false);
+        }
+    }, [ visibility]);
+
+    const onOpenChange = useCallback(
+        (open: boolean) => {
+            if (open) {
+                toggleOpen();
+            } else {
+                toggleClose();
+            }
+        },
+        [toggleOpen, toggleClose]
+    );
 
     const data = useFloating({
         open: isOpen,
-        onOpenChange: setIsOpen,
+        onOpenChange,
     });
 
     const click = useClick(data.context);
@@ -56,7 +91,7 @@ export function useOverlay(props: UseOverlayProps): UseOverlayInterface {
             data,
             ...interactions,
         },
-        toggleOpen: () => setIsOpen(true),
-        toggleClose: () => setIsOpen(false),
+        toggleOpen,
+        toggleClose,
     };
 }

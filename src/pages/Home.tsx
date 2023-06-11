@@ -13,7 +13,7 @@ export const Home: React.FC = () => {
             <h1>
                 Designer & Engineer
                 <br />
-                with any medium
+                in any medium
             </h1>
             <Hero />
         </main>

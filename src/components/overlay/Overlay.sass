@@ -1,0 +1,49 @@
+@import '../../assets/variables.sass'
+
+div#FrezPortal
+    > div > div
+        background-color: rgba(0, 0, 0, .4)
+        @include verticalCenter
+        height: 100vh
+        width: 100vw
+
+        div.photo-modal
+            @include verticalStart
+            gap: 0
+            height: 100%
+            width: 100%
+            overflow: hidden
+            background-color: $color-white
+            border-radius: 8px
+            width: 90vw
+            height: 90vh
+
+            header
+                @include horizontalSpaced
+                padding: 16px 24px
+                border-bottom: 1.5px solid $color-primary-dark
+
+                h3
+                    font-size: 1.5rem
+
+                span.material-icons
+                    font-size: 2rem
+
+            div.content
+                flex-grow: 1
+                @include horizontalCenter
+                height: 100%
+                gap: 0
+
+                button
+                    flex-grow: 1
+                    height: 100%
+                    width: 100%
+
+                    span.material-icons
+                        font-size: 3rem
+
+                img
+                    height: 100%
+                    width: 90%
+                    object-fit: contain
