@@ -5,7 +5,7 @@ import { Avatar } from '../../assets/avatar'
 
 export const Footer: React.FC = () => {
     return (
-        <footer className='page-footer'>
+        <footer className="page-footer">
             <Avatar />
             <p>© Christina Frezynski</p>
         </footer>

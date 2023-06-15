@@ -1,3 +1,30 @@
 @import '../../assets/variables.sass'
 
-// main#graphics
+main#graphics
+
+    section.emotions
+        @include horizontalCenter
+        gap: 48px
+        flex-wrap: wrap
+
+        figure
+            height: 300px
+            width: 300px
+            background-color: $color-white
+            padding: 32px
+            @include elevel-1
+
+            figcaption
+                display: none
+
+            &:hover
+                figcaption
+                    display: unset
+
+    section.trees-graphics
+        figure.business-card
+            width: 320px
+
+        figure.flyer
+            width: 420px
+            max-height: unset

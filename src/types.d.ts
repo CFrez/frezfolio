@@ -4,7 +4,7 @@ export interface ImageData {
     src: string
     alt: string
     caption?: string
-    className?: string;
+    className?: string
 }
 
 export interface CategoryData {
@@ -29,4 +29,21 @@ export interface TopperProperties {
     alt: string
     link: string
     percentage: number
+}
+
+export interface AnimalFeature {
+    feature?: string
+    element?: string
+    detail?: string
+    purpose?: string
+    reason?: string
+    mvp?: boolean
+}
+
+export interface AnimalRole {
+    role?: string
+    element?: string
+    detail?: string
+    action?: string
+    storage?: string
 }

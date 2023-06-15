@@ -11,7 +11,6 @@ export const labViewPhotos: Record<LabViewImage, ImageData> = {
     [LabViewImage.Initial]: {
         src: `${baseFolder}${LabViewImage.Initial}`,
         alt: 'Initial GUI Design',
-
     },
     [LabViewImage.GUI]: {
         src: `${baseFolder}${LabViewImage.GUI}`,

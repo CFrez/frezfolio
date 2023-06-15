@@ -1,19 +1,25 @@
 import React from 'react'
 
-import { PageTitle } from '../../components'
+import { PageTitle, PageSection, Overlay, usePhotoModal } from '../../components'
 
-import dashboard from '/projects/recipez/recipe-main.png'
+import { RecipezImage, recipezPhotos } from '../../data'
 
 export const RecipEz: React.FC = () => {
+    const { photoHook, generateTriggerFigure } = usePhotoModal({
+        id: 'recipez',
+        images: Object.values(RecipezImage),
+        photos: recipezPhotos,
+    })
+
     return (
         <>
-            <PageTitle title="RecipEz" subtitle="Version Control Recipe Manager" />
-            More Content
-            <img
-                className="dashboard"
-                src={dashboard}
-                alt="Main page of a single recipe."
-            />
+            <PageTitle title="RecipEz" subtitle="Version Control Recipe Manager">
+                <p>More Content</p>
+            </PageTitle>
+            <PageSection title="Only Page">
+                {generateTriggerFigure({ image: RecipezImage.Main })}
+            </PageSection>
+            <Overlay {...photoHook} />
         </>
     )
 }

@@ -1,6 +1,24 @@
 @import '../../assets/variables.sass'
 
 main#arch-eng
+
+    section.documentation
+        div.documents
+            @include horizontalCenter
+            flex-wrap: wrap
+
+            figure
+                height: 420px
+                max-width: 320px
+                iframe
+                    flex-grow: 1
+
+            a
+                text-decoration: underline
+
+                &:hover
+                    color: $color-secondary-dark
+
     section.graphics
         div.icon
             @include horizontalCenter

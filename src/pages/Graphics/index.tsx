@@ -3,13 +3,13 @@ import { Routes, Route } from 'react-router-dom'
 
 import { GraphicsHome } from './home'
 import { UnbTrees } from './UnbTrees'
-import { MentalHealth } from './MentalHealth'
+import { Emotions } from './Emotions'
 
 import './index.sass'
 
 export enum GraphicsUrl {
     UnbTrees = 'unb-trees',
-    MentalHealth = 'mental-health',
+    Emotions = 'emotions',
 }
 
 export const Graphics: React.FC = () => {
@@ -18,7 +18,7 @@ export const Graphics: React.FC = () => {
             <Routes>
                 <Route index element={<GraphicsHome />} />
                 <Route path={GraphicsUrl.UnbTrees} element={<UnbTrees />} />
-                <Route path={GraphicsUrl.MentalHealth} element={<MentalHealth />} />
+                <Route path={GraphicsUrl.Emotions} element={<Emotions />} />
             </Routes>
         </main>
     )

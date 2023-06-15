@@ -1,13 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import { FloatingFocusManager, FloatingOverlay } from '@floating-ui/react';
+import { FloatingFocusManager, FloatingOverlay } from '@floating-ui/react'
 
-import { OverlayWrapper } from './OverlayWrapper';
-import type { UseOverlayInterface} from './useOverlay'
+import { OverlayWrapper } from './OverlayWrapper'
+import type { UseOverlayInterface } from './useOverlay'
 
-import './Overlay.sass';
-
-
+import './Overlay.sass'
 
 export const Overlay: React.FC<UseOverlayInterface> = ({
     content,
@@ -17,7 +15,7 @@ export const Overlay: React.FC<UseOverlayInterface> = ({
     isOpen,
     toggleClose,
 }) => {
-    const { data, getFloatingProps } = floatingUi;
+    const { data, getFloatingProps } = floatingUi
     return (
         <OverlayWrapper open={isOpen}>
             <FloatingOverlay lockScroll>
@@ -35,22 +33,16 @@ export const Overlay: React.FC<UseOverlayInterface> = ({
                         <header>
                             {content.header && <h3>{content.header}</h3>}
                             <button type="button" onClick={toggleClose}>
-                            <span className="material-icons">
-                                close
-                            </span>
+                                <span className="material-icons">close</span>
                             </button>
                         </header>
-                        <div className="content">
-                            {content.body}
-                        </div>
+                        <div className="content">{content.body}</div>
                         {content.footer && (
-                            <footer data-testid="footer">
-                                {content.footer}
-                            </footer>
+                            <footer data-testid="footer">{content.footer}</footer>
                         )}
                     </div>
                 </FloatingFocusManager>
             </FloatingOverlay>
         </OverlayWrapper>
-    );
-};
+    )
+}

@@ -11,10 +11,11 @@ export const ArchDesignHome: React.FC = () => {
     return (
         <>
             <p className="info">
-                My fascination with architecture first ignited during my high school years when I enrolled in a drafting
-                class. However, it was during my time at Texas A&M University that my passion became focused on the
-                captivating realm of Healthcare Design. This newfound interest paved the way for my career path as an
-                officer in the Air Force.
+                My fascination with architecture first ignited during my high school
+                years when I enrolled in a drafting class. However, it was during my
+                time at Texas A&M University that my passion became focused on the
+                captivating realm of Healthcare Design. This newfound interest paved the
+                way for my career path as an officer in the Air Force.
             </p>
 
             <LinkCard
@@ -32,16 +33,20 @@ export const ArchDesignHome: React.FC = () => {
                 notes="July 2010 - December 2016"
             >
                 <p>
-                    During my career in the Air Force, I had the opportunity to engage in a diverse range of projects,
-                    encompassing both minor renovations and ambitious new constructions. From the initial stages of
-                    planning to the final stages of construction, I was actively involved in various project lifecycles,
-                    gaining valuable experience and insight at every step.
+                    During my career in the Air Force, I had the opportunity to engage
+                    in a diverse range of projects, encompassing both minor renovations
+                    and ambitious new constructions. From the initial stages of planning
+                    to the final stages of construction, I was actively involved in
+                    various project lifecycles, gaining valuable experience and insight
+                    at every step.
                 </p>
                 <p>
-                    I was afforded the privilege of collaborating with a multitude of professionals, including medical
-                    staff, architects, engineers, and contractors. This rich and dynamic exchange of ideas and expertise
-                    fostered a truly multidisciplinary approach, ensuring that the healthcare facilities we developed
-                    addressed the distinct requirements of our esteemed servicemen and women.
+                    I was afforded the privilege of collaborating with a multitude of
+                    professionals, including medical staff, architects, engineers, and
+                    contractors. This rich and dynamic exchange of ideas and expertise
+                    fostered a truly multidisciplinary approach, ensuring that the
+                    healthcare facilities we developed addressed the distinct
+                    requirements of our esteemed servicemen and women.
                 </p>
             </LinkCard>
 
@@ -60,14 +65,15 @@ export const ArchDesignHome: React.FC = () => {
                 notes="August 2005 - May 2009"
             >
                 <p>
-                    The Bachelor of Environmental Design program at Texas A&M University is an interdisciplinary
-                    undergraduate degree focused on architecture. It offers a comprehensive education in design
-                    thinking, problem-solving, and architectural principles. Students engage in studio-based courses,
-                    explore sustainability and cultural context, and gain practical experience through a study abroad
+                    The Bachelor of Environmental Design program at Texas A&M University
+                    is an interdisciplinary undergraduate degree focused on
+                    architecture. It offers a comprehensive education in design
+                    thinking, problem-solving, and architectural principles. Students
+                    engage in studio-based courses, explore sustainability and cultural
+                    context, and gain practical experience through a study abroad
                     program.
                 </p>
             </LinkCard>
-
         </>
     )
 }

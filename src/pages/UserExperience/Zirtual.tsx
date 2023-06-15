@@ -1,25 +1,25 @@
 import React from 'react'
 
-import { PageTitle } from '../../components'
+import { PageTitle, PageSection, Overlay, usePhotoModal } from '../../components'
 
-import hiring1 from '/projects/zirtual/hiring1.png'
-import hiring2 from '/projects/zirtual/hiring2.png'
+import { ZirtualImage, zirtualPhotos } from '../../data'
 
 export const Zirtual: React.FC = () => {
+    const { photoHook, generateTriggerFigure } = usePhotoModal({
+        id: 'zirtual-hiring',
+        images: Object.values(ZirtualImage),
+        photos: zirtualPhotos,
+    })
     return (
         <>
-            <PageTitle title="Zirtual" subtitle="Version Control Recipe Manager" />
-            More Content
-            <img
-                className="hiring"
-                src={hiring1}
-                alt="Hiring workload prior to process improvement"
-            />
-            <img
-                className="hiring"
-                src={hiring2}
-                alt="Hiring workload after process improvement"
-            />
+            <PageTitle title="Zirtual" subtitle="Version Control Recipe Manager">
+                <p>More Content</p>
+            </PageTitle>
+            <PageSection title="Hiring Process">
+                {generateTriggerFigure({ image: ZirtualImage.Initial })}
+                {generateTriggerFigure({ image: ZirtualImage.Final })}
+            </PageSection>
+            <Overlay {...photoHook} />
         </>
     )
 }

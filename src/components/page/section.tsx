@@ -1,4 +1,4 @@
-import React, {type ReactNode} from 'react'
+import React, { type ReactNode } from 'react'
 
 import './section.sass'
 
@@ -11,7 +11,7 @@ interface PageSectionProps {
 export const PageSection: React.FC<PageSectionProps> = ({
     title,
     children,
-    className
+    className,
 }) => {
     return (
         <section className={`page-section ${className}`}>

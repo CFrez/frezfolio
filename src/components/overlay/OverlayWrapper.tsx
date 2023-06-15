@@ -1,4 +1,4 @@
-import React, {type ReactNode} from 'react';
+import React, { type ReactNode } from 'react'
 
 import {
     FloatingPortal,
@@ -6,8 +6,7 @@ import {
     FloatingTree,
     useFloatingNodeId,
     useFloatingParentNodeId,
-} from '@floating-ui/react';
-
+} from '@floating-ui/react'
 
 /**
  * This should be used in place of the FloatingPortal component.
@@ -21,20 +20,20 @@ export const OverlayWrapper: React.FC<{ open: boolean; children: ReactNode }> = 
     open,
     children,
 }) => {
-    const nodeId = useFloatingNodeId();
-    const parentId = useFloatingParentNodeId();
+    const nodeId = useFloatingNodeId()
+    const parentId = useFloatingParentNodeId()
 
-    const nested = parentId != null;
+    const nested = parentId != null
 
     const floatingNode = (
         <FloatingNode id={nodeId}>
             <FloatingPortal id="FrezPortal">{open ? children : <></>}</FloatingPortal>
         </FloatingNode>
-    );
+    )
 
     if (nested) {
-        return <FloatingTree>{floatingNode}</FloatingTree>;
+        return <FloatingTree>{floatingNode}</FloatingTree>
     }
 
-    return floatingNode;
-};
+    return floatingNode
+}
