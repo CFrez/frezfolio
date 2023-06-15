@@ -30,7 +30,7 @@ export const Zirtual: React.FC = () => {
                     improvement.
                 </p>
             </PageTitle>
-            <PageSection title="Hiring Process">
+            <PageSection title="Hiring Process Analysis">
                 {generateTriggerFigure({ image: ZirtualImage.Initial })}
                 {generateTriggerFigure({ image: ZirtualImage.Final })}
             </PageSection>
