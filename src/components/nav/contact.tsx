@@ -12,7 +12,7 @@ export const Contact: React.FC = () => {
             <a href="https://www.linkedin.com/in/cfrezynski/">
                 <img src={linkedin} alt="LinkedIn logo" />
             </a>
-            <a href="https://github.com/RedFrez/">
+            <a href="https://github.com/CFrez/">
                 <img src={github} alt="Github logo" />
             </a>
             <a href="https://www.printables.com/@RedFrez">
