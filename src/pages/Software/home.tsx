@@ -11,19 +11,23 @@ export const SoftwareHome: React.FC = () => {
     return (
         <>
             <p className="info">
-                The field of software development has become a passion of mine, to the point where it no longer feels
-                like work, but rather an engaging and fulfilling pursuit. The intricate nature of software development
-                continuously presents me with a diverse range of challenges and problems to solve, igniting my curiosity
-                and driving my motivation. From unraveling complex algorithms to designing user-friendly interfaces,
-                every step in the software development process offers its own set of unique hurdles and opportunities
-                for growth.
+                The field of software development has become a passion of mine, to the
+                point where it no longer feels like work, but rather an engaging and
+                fulfilling pursuit. The intricate nature of software development
+                continuously presents me with a diverse range of challenges and problems
+                to solve, igniting my curiosity and driving my motivation. From
+                unraveling complex algorithms to designing user-friendly interfaces,
+                every step in the software development process offers its own set of
+                unique hurdles and opportunities for growth.
             </p>
 
             <p className="info">
-                The dynamic nature of the software development landscape ensures that I am constantly learning and
-                evolving. As technology evolves and new paradigms emerge, I am driven to stay at the forefront of these
-                advancements, embracing new frameworks, languages, and tools. This constant state of learning and growth
-                keeps me engaged and motivated, propelling me forward in my journey as a software developer.
+                The dynamic nature of the software development landscape ensures that I
+                am constantly learning and evolving. As technology evolves and new
+                paradigms emerge, I am driven to stay at the forefront of these
+                advancements, embracing new frameworks, languages, and tools. This
+                constant state of learning and growth keeps me engaged and motivated,
+                propelling me forward in my journey as a software developer.
             </p>
 
             <LinkCard
