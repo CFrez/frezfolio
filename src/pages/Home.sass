@@ -1,0 +1,20 @@
+@import '../assets/variables.sass'
+
+main#home
+    @include verticalCenter
+    width: 100vw
+    height: 100vh
+    overflow: hidden
+    background: $color-linear-background
+
+    div.links
+        @include horizontalSpaced
+        align-items: flex-start
+        width: clamp(320px, 100vw, $max)
+        padding: 16px 24px
+
+    h1
+        @include verticalCenter
+        box-shadow: none
+        font-size: clamp(2rem, 5vh, 3rem)
+        flex-grow: 1

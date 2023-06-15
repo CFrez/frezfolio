@@ -1,0 +1,59 @@
+@import '../../assets/variables.sass'
+
+$widthHeightRatio: 3.8684
+$width: clamp(320px, 100vw, 742.7328px)
+$height: clamp(82.72154px, 25.85048vw, 192px)
+
+header.page-header
+    @include verticalCenter
+    gap: 0
+    background: $color-linear-background
+
+    div.info
+        @include horizontalSpaced
+        align-items: flex-start
+        padding: 16px 24px 0px 24px
+
+    div.topper
+        position: sticky
+        bottom: 0
+        height: $height
+        width: $width
+        margin-top: -48px
+
+        @media (max-width: $laptop)
+            margin-top: 0px
+
+        img
+            position: absolute
+            bottom: 0
+            height: 100%
+            filter: saturate(0)
+
+            &.active
+                filter: saturate(1)
+
+            &:hover
+                filter: saturate(.75)
+
+            &.BG
+                left: 0
+
+            &.GD
+                left: calc(966 / 1470 * 100%)
+
+            &.SE
+                left: calc(1143 / 1470 * 100%)
+
+            &.UX
+                left: calc(715 / 1470 * 100%)
+
+            &.AE
+                left: calc(435 / 1470 * 100%)
+
+            &.AD
+                left: calc(58 / 1470 * 100%)
+
+        &.about
+            img
+                filter: saturate(1)

@@ -1,0 +1,78 @@
+@import '../../assets/variables.sass'
+
+main#software
+
+    figure
+        &.modal
+            width: 320px
+        &.animal
+            width: 420px
+            max-height: unset
+
+    table.animal
+        width: 100%
+        background-color: $color-white
+        border-collapse: collapse
+        border: 1px solid $color-primary
+        border-radius: 8px
+
+        thead
+            tr
+                background-color: $color-primary-dark
+                color: $color-white
+                font-weight: bold
+                font-size: 1.2rem
+                text-align: left
+
+                th
+                    padding: 4px 8px
+
+        tbody
+            tr
+
+                td
+                    padding: 4px 8px
+
+                    &.mvp
+                        text-align: center
+                        color: green
+
+                &.primary
+                    font-weight: bold
+                    background-color: $color-primary-light
+
+                &.element
+                    border-top: 1px solid $color-primary-light
+                    td.main
+                        padding-left: 24px
+
+                &.detail
+                    font-size: .9rem
+                    td.main
+                        padding-left: 36px
+
+    details
+        > summary
+            list-style: none
+            cursor: pointer
+            line-height: 30px
+            @include horizontalStart
+
+            &::after
+                font-family: $font-icons
+                content: 'unfold_more'
+
+            &:hover
+                &::after
+                    color: $color-secondary
+
+        ul
+            margin: 8px 0
+            li
+                font-size: 1rem
+
+    details[open] > summary
+        border-bottom: 1px solid $color-primary
+
+        &::after
+            content: 'unfold_less'
