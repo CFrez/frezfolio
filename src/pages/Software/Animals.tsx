@@ -20,8 +20,8 @@ export const Animals: React.FC = () => {
                 subtitle="Foreclosed Upon Pets, Inc"
             >
                 <p>
-                    As a volunteer and foster for FUPI (Foreclosed Upon Pets, Inc),
-                    I actively participated in various aspects of the organization. I
+                    As a volunteer and foster for FUPI (Foreclosed Upon Pets, Inc), I
+                    actively participated in various aspects of the organization. I
                     noticed that much of their tracking and documentation relied on
                     manual paper forms and spreadsheets. To address this inefficiency
                     and enhance their operations, I took the initiative to design a
@@ -49,11 +49,13 @@ export const Animals: React.FC = () => {
             </PageTitle>
             <PageSection title="Data Gathering">
                 <p>
-                    Data for the project was collected through interviews with board members of the organization and
-                    supplemented by personal experience.
+                    Data for the project was collected through interviews with board
+                    members of the organization and supplemented by personal experience.
                 </p>
                 <details>
-                    <summary>Process of how an animal gets received through adoption</summary>
+                    <summary>
+                        Ideal process of how an animal gets received through adoption
+                    </summary>
                     <AnimalProcess />
                 </details>
                 <details>
@@ -75,24 +77,42 @@ export const Animals: React.FC = () => {
                     management.
                 </p>
                 {generateTriggerFigure({ image: AnimalsImage.Dashboard })}
+                <div className="set">
+                    {generateTriggerFigure({
+                        image: AnimalsImage.NewAnimal,
+                        className: 'modal',
+                    })}
+                    {generateTriggerFigure({
+                        image: AnimalsImage.EditAnimal,
+                        className: 'modal',
+                    })}
+                </div>
             </PageSection>
             <PageSection title="Animal Page">
                 {generateTriggerFigure({
                     image: AnimalsImage.AnimalHome,
-                    className: ' home',
+                    className: 'animal',
                 })}
-                {/* TODO: Find a better way to create a set that doesn't rely on using an accurate className */}
+                {/* TODO: Is this worth creating a component vs relying on className? */}
                 <div className="set">
-                    {generateTriggerFigure({ image: AnimalsImage.AnimalHomeExpanded })}
-                    {generateTriggerFigure({ image: AnimalsImage.AnimalVetExpanded })}
+                    {generateTriggerFigure({
+                        image: AnimalsImage.AnimalHomeExpanded,
+                        className: 'animal',
+                    })}
+                    {generateTriggerFigure({
+                        image: AnimalsImage.AnimalVetExpanded,
+                        className: 'animal',
+                    })}
                 </div>
                 <div className="set">
-                    {generateTriggerFigure({ image: AnimalsImage.NewAnimal })}
-                    {generateTriggerFigure({ image: AnimalsImage.EditAnimal })}
-                </div>
-                <div className="set">
-                    {generateTriggerFigure({ image: AnimalsImage.NewRecord })}
-                    {generateTriggerFigure({ image: AnimalsImage.EditRecord })}
+                    {generateTriggerFigure({
+                        image: AnimalsImage.NewRecord,
+                        className: 'modal',
+                    })}
+                    {generateTriggerFigure({
+                        image: AnimalsImage.EditRecord,
+                        className: 'modal',
+                    })}
                 </div>
             </PageSection>
             <Overlay {...photoHook} />

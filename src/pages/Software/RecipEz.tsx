@@ -13,8 +13,10 @@ export const RecipEz: React.FC = () => {
 
     return (
         <>
-            <PageTitle title="RecipEz" subtitle="Version Control Recipe Manager">
-                <p>More Content</p>
+            <PageTitle title="RecipEZ" subtitle="Version Control Recipe Manager">
+                <p>
+                    This is the one app that I am determined to build one day, unless someone else creates it first.
+                </p>
             </PageTitle>
             <PageSection title="Only Page">
                 {generateTriggerFigure({ image: RecipezImage.Main })}

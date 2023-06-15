@@ -201,252 +201,251 @@ export const animalsFeatures: AnimalFeature[] = [
     { detail: 'Pet Finder' },
 ]
 
-
 export const animalRoles: AnimalRole[] = [
     {
-        role: "Dogs/Cats",
-        action: "Admin Action",
-        storage: "Animal Profile"
+        role: 'Dogs/Cats',
+        action: 'Admin Action',
+        storage: 'Animal Profile',
     },
-    { element: "Vet" },
-    { element: "Vet Records" },
-    { detail: "Microchip" },
-    { element: "Breed" },
-    { element: "Pictures" },
-    { element: "Behavioral Information" },
+    { element: 'Vet' },
+    { element: 'Vet Records' },
+    { detail: 'Microchip' },
+    { element: 'Breed' },
+    { element: 'Pictures' },
+    { element: 'Behavioral Information' },
     {
-        element: "Foster History",
-        action: "Transfer",
-        storage: "Foster Log"
-    },
-    {
-        element: "Applications",
-        action: "Adopter Application"
+        element: 'Foster History',
+        action: 'Transfer',
+        storage: 'Foster Log',
     },
     {
-        element: "Fee",
-        action: "Transaction"
+        element: 'Applications',
+        action: 'Adopter Application',
     },
     {
-        element: "Adoption Location",
-        action: "Admin Action/Default"
+        element: 'Fee',
+        action: 'Transaction',
     },
     {
-        role: "Fosters",
-        action: "Application/Referral/Lead",
-        storage: "Admin/User Profile"
+        element: 'Adoption Location',
+        action: 'Admin Action/Default',
     },
     {
-        element: "Contact Information",
-        action: "Initial/Delayed/Profile/Update"
-    },
-    { detail: "Name" },
-    { detail: "Address" },
-    { detail: "Phone" },
-    { detail: "Background?" },
-    { detail: "Email" },
-    { detail: "Method Preference" },
-    {
-        element: "Foster Dog History",
-        action: "Dog Transfer"
+        role: 'Fosters',
+        action: 'Application/Referral/Lead',
+        storage: 'Admin/User Profile',
     },
     {
-        element: "Preferences",
-        action: "Application/Profile/Update"
+        element: 'Contact Information',
+        action: 'Initial/Delayed/Profile/Update',
     },
-    { detail: "breed" },
-    { detail: "size" },
-    { detail: "age" },
+    { detail: 'Name' },
+    { detail: 'Address' },
+    { detail: 'Phone' },
+    { detail: 'Background?' },
+    { detail: 'Email' },
+    { detail: 'Method Preference' },
     {
-        element: "Home check time restrictions",
-        action: "Application/Profile/Update"
-    },
-    {
-        role: "Volunteers",
-        action: "Application/Referral/Lead",
-        storage: "Admin/User Profile"
+        element: 'Foster Dog History',
+        action: 'Dog Transfer',
     },
     {
-        element: "Name",
-        action: "Initial/Delayed/Profile/Update"
+        element: 'Preferences',
+        action: 'Application/Profile/Update',
+    },
+    { detail: 'breed' },
+    { detail: 'size' },
+    { detail: 'age' },
+    {
+        element: 'Home check time restrictions',
+        action: 'Application/Profile/Update',
     },
     {
-        element: "Contact Information",
-        action: "Initial/Delayed/Profile/Update"
+        role: 'Volunteers',
+        action: 'Application/Referral/Lead',
+        storage: 'Admin/User Profile',
     },
     {
-        element: "Title/Authorization/Responsibility",
-        action: "Admin Action"
+        element: 'Name',
+        action: 'Initial/Delayed/Profile/Update',
     },
     {
-        element: "Emergency Contact",
-        action: "Initial/Delayed/Profile/Update"
+        element: 'Contact Information',
+        action: 'Initial/Delayed/Profile/Update',
     },
     {
-        element: "Organization Contact",
-        action: "Admin Action"
-    },
-    { detail: "Authorization for Vet" },
-    { detail: "Incident with Animal" },
-    { detail: "On-Call Contact" },
-    {
-        role: "Admins",
-        action: "Request/Referral",
-        storage: "Admin/User Profile"
+        element: 'Title/Authorization/Responsibility',
+        action: 'Admin Action',
     },
     {
-        element: "Name",
-        action: "Initial/Delayed/Profile/Update"
+        element: 'Emergency Contact',
+        action: 'Initial/Delayed/Profile/Update',
     },
     {
-        element: "Title",
-        action: "Admin Action"
+        element: 'Organization Contact',
+        action: 'Admin Action',
+    },
+    { detail: 'Authorization for Vet' },
+    { detail: 'Incident with Animal' },
+    { detail: 'On-Call Contact' },
+    {
+        role: 'Admins',
+        action: 'Request/Referral',
+        storage: 'Admin/User Profile',
     },
     {
-        element: "Contact Information",
-        action: "Initial/Delayed/Profile/Update"
+        element: 'Name',
+        action: 'Initial/Delayed/Profile/Update',
     },
     {
-        element: "Authorizations",
-        action: "Admin Action",
-        storage: "Admin Profile only?"
+        element: 'Title',
+        action: 'Admin Action',
     },
     {
-        element: "Responsibilities",
-        action: "Admin Action"
+        element: 'Contact Information',
+        action: 'Initial/Delayed/Profile/Update',
     },
     {
-        role: "Adopters",
-        storage: "Admin/User? Profile"
+        element: 'Authorizations',
+        action: 'Admin Action',
+        storage: 'Admin Profile only?',
     },
     {
-        element: "Name",
-        action: "Application/Referral/Lead"
+        element: 'Responsibilities',
+        action: 'Admin Action',
     },
     {
-        element: "Contact Information",
-        action: "Application/Referral/Lead"
+        role: 'Adopters',
+        storage: 'Admin/User? Profile',
     },
     {
-        element: "About",
-        action: "Application"
-    },
-    { detail: "Occupation" },
-    { detail: "Vet" },
-    { detail: "Travel?" },
-    {
-        element: "Preferences",
-        action: "Application"
+        element: 'Name',
+        action: 'Application/Referral/Lead',
     },
     {
-        element: "Household",
-        action: "Application"
-    },
-    { detail: "members (humans, animals)" },
-    { detail: "type" },
-    { detail: "yard info" },
-    { detail: "own/rent" },
-    { detail: "history/future (move/transfer)" },
-    {
-        element: "Pet",
-        action: "Application"
-    },
-    { detail: "Who for?/Responsible" },
-    { detail: "Reason" },
-    { detail: "Pet location day/night" },
-    { detail: "Pet - time alone" },
-    { detail: "Behavioral issues?" },
-    {
-        element: "Pet History",
-        action: "Application"
-    },
-    { detail: "given away to shelter or other?" },
-    {
-        element: "Allowed to Adopt?",
-        action: "Admin Action",
-        storage: "Admin Profile"
+        element: 'Contact Information',
+        action: 'Application/Referral/Lead',
     },
     {
-        element: "Accepted/Denied?",
-        action: "Admin Action"
+        element: 'About',
+        action: 'Application',
+    },
+    { detail: 'Occupation' },
+    { detail: 'Vet' },
+    { detail: 'Travel?' },
+    {
+        element: 'Preferences',
+        action: 'Application',
     },
     {
-        element: "Notes",
-        action: "Admin Action",
-        storage: "Admin Profile"
+        element: 'Household',
+        action: 'Application',
+    },
+    { detail: 'members (humans, animals)' },
+    { detail: 'type' },
+    { detail: 'yard info' },
+    { detail: 'own/rent' },
+    { detail: 'history/future (move/transfer)' },
+    {
+        element: 'Pet',
+        action: 'Application',
+    },
+    { detail: 'Who for?/Responsible' },
+    { detail: 'Reason' },
+    { detail: 'Pet location day/night' },
+    { detail: 'Pet - time alone' },
+    { detail: 'Behavioral issues?' },
+    {
+        element: 'Pet History',
+        action: 'Application',
+    },
+    { detail: 'given away to shelter or other?' },
+    {
+        element: 'Allowed to Adopt?',
+        action: 'Admin Action',
+        storage: 'Admin Profile',
     },
     {
-        role: "Vets",
-        action: "Admin Action/Lead",
-        storage: "Admin/Org Profile"
-    },
-    { element: "Contact Information" },
-    { element: "Price" },
-    {
-        element: "Availability",
-        action: "Admin/User Input"
+        element: 'Accepted/Denied?',
+        action: 'Admin Action',
     },
     {
-        role: "Locations",
-        action: "Admin Action/Lead",
-        storage: "Admin/Org Profile"
-    },
-    { element: "Store Number" },
-    { element: "Store Address" },
-    { element: "Store Name/Label" },
-    { element: "Store Manager/Contacts" },
-    { element: "Adoption Events" },
-    { detail: "Time" },
-    { detail: "Restrictions (qty/type)" },
-    { detail: "Compensation" },
-    { detail: "Inventory" },
-    { element: "Top Dog" },
-    { detail: "Contact Information" },
-    {
-        role: "Sponsors",
-        action: "Admin Action/Donate",
-        storage: "Admin/Org Profile"
-    },
-    { element: "Contact Information" },
-    { element: "Person" },
-    {
-        element: "Donation History",
-        action: "Transaction",
-        storage: "Donation Log"
-    },
-    { detail: "amount" },
-    { detail: "type" },
-    { detail: "collection means" },
-    { element: "Contact Schedule/Reminder" },
-    {
-        role: "Boarding Locations",
-        action: "Admin Action/Lead",
-        storage: "Admin/Org Profile"
-    },
-    { element: "Contact Information" },
-    { element: "Price" },
-    {
-        element: "Availability",
-        action: "Admin/User Input"
+        element: 'Notes',
+        action: 'Admin Action',
+        storage: 'Admin Profile',
     },
     {
-        role: "Relinquishers",
-        action: "Form/Admin Action",
-        storage: "Admin/User Profile"
+        role: 'Vets',
+        action: 'Admin Action/Lead',
+        storage: 'Admin/Org Profile',
     },
-    { element: "Contact Information" },
-    { element: "Type" },
-    { detail: "Random person" },
-    { detail: "Previous owner" },
-    { detail: "Trapper" },
-    { element: "Found" },
-    { detail: "how" },
-    { detail: "where" },
-    { detail: "when" },
-    { element: "Any Information?" },
-    { detail: "sick/injured" },
-    { detail: "behavior" },
-    { detail: "vet/records" },
-    { element: "Fee?" },
-    { element: "Reason?"  }
+    { element: 'Contact Information' },
+    { element: 'Price' },
+    {
+        element: 'Availability',
+        action: 'Admin/User Input',
+    },
+    {
+        role: 'Locations',
+        action: 'Admin Action/Lead',
+        storage: 'Admin/Org Profile',
+    },
+    { element: 'Store Number' },
+    { element: 'Store Address' },
+    { element: 'Store Name/Label' },
+    { element: 'Store Manager/Contacts' },
+    { element: 'Adoption Events' },
+    { detail: 'Time' },
+    { detail: 'Restrictions (qty/type)' },
+    { detail: 'Compensation' },
+    { detail: 'Inventory' },
+    { element: 'Top Dog' },
+    { detail: 'Contact Information' },
+    {
+        role: 'Sponsors',
+        action: 'Admin Action/Donate',
+        storage: 'Admin/Org Profile',
+    },
+    { element: 'Contact Information' },
+    { element: 'Person' },
+    {
+        element: 'Donation History',
+        action: 'Transaction',
+        storage: 'Donation Log',
+    },
+    { detail: 'amount' },
+    { detail: 'type' },
+    { detail: 'collection means' },
+    { element: 'Contact Schedule/Reminder' },
+    {
+        role: 'Boarding Locations',
+        action: 'Admin Action/Lead',
+        storage: 'Admin/Org Profile',
+    },
+    { element: 'Contact Information' },
+    { element: 'Price' },
+    {
+        element: 'Availability',
+        action: 'Admin/User Input',
+    },
+    {
+        role: 'Relinquishers',
+        action: 'Form/Admin Action',
+        storage: 'Admin/User Profile',
+    },
+    { element: 'Contact Information' },
+    { element: 'Type' },
+    { detail: 'Random person' },
+    { detail: 'Previous owner' },
+    { detail: 'Trapper' },
+    { element: 'Found' },
+    { detail: 'how' },
+    { detail: 'where' },
+    { detail: 'when' },
+    { element: 'Any Information?' },
+    { detail: 'sick/injured' },
+    { detail: 'behavior' },
+    { detail: 'vet/records' },
+    { element: 'Fee?' },
+    { element: 'Reason?' },
 ]

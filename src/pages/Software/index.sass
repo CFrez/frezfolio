@@ -2,6 +2,13 @@
 
 main#software
 
+    figure
+        &.modal
+            width: 320px
+        &.animal
+            width: 420px
+            max-height: unset
+
     table.animal
         width: 100%
         background-color: $color-white
@@ -37,9 +44,35 @@ main#software
                 &.element
                     border-top: 1px solid $color-primary-light
                     td.main
-                        padding-left: 16px
+                        padding-left: 24px
 
                 &.detail
                     font-size: .9rem
                     td.main
-                        padding-left: 32px
+                        padding-left: 36px
+
+    details
+        > summary
+            list-style: none
+            cursor: pointer
+            line-height: 30px
+            @include horizontalStart
+
+            &::after
+                font-family: $font-icons
+                content: 'unfold_more'
+
+            &:hover
+                &::after
+                    color: $color-secondary
+
+        ul
+            margin: 8px 0
+            li
+                font-size: 1rem
+
+    details[open] > summary
+        border-bottom: 1px solid $color-primary
+
+        &::after
+            content: 'unfold_less'
