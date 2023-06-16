@@ -2,13 +2,14 @@ import type { ImageData, AnimalFeature, AnimalRole } from '../types'
 
 const baseFolder = '/projects/animals/'
 
+// Sorted by order photos are on page
 export enum AnimalsImage {
     Dashboard = 'dashboard.png',
+    NewAnimal = 'new-animal.png',
+    EditAnimal = 'edit-animal.png',
     AnimalHome = 'home.png',
     AnimalHomeExpanded = 'home-exp.png',
     AnimalVetExpanded = 'vet-exp.png',
-    NewAnimal = 'new-animal.png',
-    EditAnimal = 'edit-animal.png',
     NewRecord = 'new-record.png',
     EditRecord = 'edit-record.png',
 }

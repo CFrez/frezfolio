@@ -5,9 +5,22 @@ import { PageTitle, PageSection, Overlay, usePhotoModal } from '../../components
 import { unbtreesPhotos, UnbtreesImage } from '../../data'
 
 export const UnbTrees: React.FC = () => {
+    // TODO: Determine if it is better to create array or just order enum correctly
+    // Reorder the photos to match the order photos are used on page
+    const photoSet = [
+        UnbtreesImage.Logo,
+        UnbtreesImage.BCFront,
+        UnbtreesImage.BCBack,
+        UnbtreesImage.FlyerFront,
+        UnbtreesImage.FlyerBack,
+        UnbtreesImage.Contract,
+        UnbtreesImage.YardSign,
+        UnbtreesImage.WoodSign,
+    ]
+
     const { photoHook, generateTriggerFigure } = usePhotoModal({
         id: 'unbtrees',
-        images: Object.values(UnbtreesImage),
+        images: photoSet,
         photos: unbtreesPhotos,
     })
 
@@ -60,7 +73,7 @@ export const UnbTrees: React.FC = () => {
                     legibility. The front side of the flyer presented a concise overview
                     of the company and its range of services. On the back, a selection
                     of photographs provided visual examples of the quality and outcomes
-                    customers could expect. The flyer was printed on sturdy cardstock,
+                    customers could expect. The flyer was printed on sturdy card stock,
                     measuring 8.5 x 5.5 inches, ensuring durability and a professional
                     appearance.
                 </p>
