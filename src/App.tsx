@@ -45,7 +45,7 @@ export const App: React.FC = () => {
                             element={<Software />}
                         />
                     </Route>
-                    <Route path={`${PageUrl.System}/*`} element={<System />} />
+                    <Route path={`${PageUrl.System}`} element={<System />} />
                 </Routes>
             </div>
         </MantineProvider>
