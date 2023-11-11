@@ -1,17 +1,15 @@
 @import '../../assets/variables.sass'
 
-div.app
+main#system
     width: clamp(320px, 100vw, $max)
     min-height: 100vh
     height: 100%
     margin: 0 auto
     background-color: $color-background
 
-    padding: 32px
-
-main#system
     @include verticalStart
     gap: 32px
+    padding: 32px
 
     div.mantine-Tabs-root
         width: 100%

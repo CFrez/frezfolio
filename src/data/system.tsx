@@ -35,7 +35,7 @@ export const alters: Alter[] = [
     },
     {
         name: 'Pen',
-        description: `Pen is short for Penelope. She is our performer.`,
+        description: `Pen is short for Penelope. She is our performer. More info coming soon.`,
         avatar: <Pen />,
     },
     {
