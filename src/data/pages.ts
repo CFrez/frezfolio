@@ -22,6 +22,7 @@ export enum PageUrl {
     GraphicDesign = '/graphics',
     ArchEngineering = '/archeng',
     ArchDesign = '/archdesign',
+    System = '/system',
 }
 
 export enum Topper {

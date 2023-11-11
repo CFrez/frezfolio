@@ -1,0 +1,76 @@
+@import '../../assets/variables.sass'
+
+div.app
+    width: clamp(320px, 100vw, $max)
+    min-height: 100vh
+    height: 100%
+    margin: 0 auto
+    background-color: $color-background
+
+    padding: 32px
+
+main#system
+    @include verticalStart
+    gap: 32px
+
+    div.mantine-Tabs-root
+        width: 100%
+
+        div.mantine-Tabs-list
+            @include horizontalCenter
+            gap: 32px
+            justify-content: center
+            flex-wrap: wrap
+
+            border-bottom: 2px solid $color-secondary-dark
+            padding-bottom: 16px
+
+            button
+                filter: grayscale(75%)
+
+                &:hover
+                    filter: grayscale(0%)
+
+                &[aria-selected="true"]
+                    filter: grayscale(0%)
+                    color: $color-secondary-dark
+
+                span.mantine-Tabs-tabLabel
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    font-size: 36px
+
+                    svg
+                        height: 64px
+                        width: 64px
+
+        div.mantine-Tabs-panel
+            display: grid
+            grid-template-columns: 300px 1fr
+            grid-template-rows: 50px 1fr
+            gap: 32px
+
+            padding-top: 32px
+
+            svg
+                grid:
+                    row: 1 / 3
+                    column: 1 / 2
+
+                height: 300px
+                width: 300px
+
+            h2
+                grid:
+                    row: 1 / 2
+                    column: 2 / 3
+                font-size: 48px
+                color: $color-secondary-dark
+
+            p
+                grid:
+                    row: 2 / 3
+                    column: 2 / 3
+                font-size: 24px
+                margin: 0
