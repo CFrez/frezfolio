@@ -1,16 +1,13 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
+import { ArchDesignUrl } from '../urls'
+
 import { ArchDesignHome } from './home'
 import { TexasAM } from './TexasAM'
 import { NellisOR } from './NellisOR'
 
 import './index.sass'
-
-export enum ArchDesignUrl {
-    TexasAM = 'texas-am',
-    AirForce = 'air-force',
-}
 
 export const ArchDesign: React.FC = () => {
     return (

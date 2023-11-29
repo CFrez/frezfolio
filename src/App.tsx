@@ -1,9 +1,9 @@
 import React from 'react'
-import { Routes, Route } from 'react-router'
+import { Routes, Route } from 'react-router-dom'
 
 import { MantineProvider } from '@mantine/core'
 
-import { PageUrl } from './data/pages'
+import { PageUrl } from './pages/urls'
 import {
     Layout,
     Home,

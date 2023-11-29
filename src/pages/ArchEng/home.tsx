@@ -2,21 +2,19 @@ import React from 'react'
 
 import { LinkCard } from '../../components'
 
-import { ArchEngUrl } from '.'
-
-import labview from '/projects/labview/gui.png'
+import { ArchEngUrl } from '../urls'
 
 export const ArchEngHome: React.FC = () => {
     return (
         <>
             <p className="info">
                 Architectural Engineering has captivated my interest due to its inherent
-                value and practical applications, espcially given my residence in a
-                century-old house. During the pursuit of this Master's degree, I had the
-                opportunity to delve into the realm of this field and explore a range of
-                scientific programming languages and tools. These included Ansys,
-                Matlab, LabVIEW, Jupyter, and Python, enabling me to conduct experiments
-                and analysis with versatility and precision.
+                value and practical applications, especially given my residence in a
+                century-old house. During the pursuit of this Master&apos;s degree, I
+                had the opportunity to delve into the realm of this field and explore a
+                range of scientific programming languages and tools. These included
+                Ansys, Matlab, LabVIEW, Jupyter, and Python, enabling me to conduct
+                experiments and analysis with versatility and precision.
             </p>
 
             <LinkCard
@@ -27,7 +25,7 @@ export const ArchEngHome: React.FC = () => {
                 graphic={
                     <img
                         className="labview"
-                        src={labview}
+                        src="/projects/labview/gui.png"
                         alt="Main user interface of LabVIEW structural program."
                     />
                 }

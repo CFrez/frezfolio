@@ -27,7 +27,7 @@ export const OverlayWrapper: React.FC<{ open: boolean; children: ReactNode }> = 
 
     const floatingNode = (
         <FloatingNode id={nodeId}>
-            <FloatingPortal id="FrezPortal">{open ? children : <></>}</FloatingPortal>
+            <FloatingPortal id="FrezPortal">{open ? children : null}</FloatingPortal>
         </FloatingNode>
     )
 

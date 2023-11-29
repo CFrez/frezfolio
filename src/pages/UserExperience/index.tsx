@@ -1,14 +1,12 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
+import { UserExperienceUrl } from '../urls'
+
 import { UserExperienceHome } from './home'
 import { Zirtual } from './Zirtual'
 
 import './index.sass'
-
-export enum UserExperienceUrl {
-    Zirtual = 'zirtual',
-}
 
 export const UserExperience: React.FC = () => {
     return (

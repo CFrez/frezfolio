@@ -1,5 +1,3 @@
-import { Process } from './constants'
-
 export interface ImageData {
     src: string
     alt: string
@@ -19,7 +17,6 @@ export interface ProjectData {
     imageSet: ImageData[]
     name: string
     tags?: string[]
-    process?: Process
     type?: string
 }
 

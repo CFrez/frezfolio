@@ -1,16 +1,13 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
+import { GraphicsUrl } from '../urls'
+
 import { GraphicsHome } from './home'
 import { UnbTrees } from './UnbTrees'
 import { Emotions } from './Emotions'
 
 import './index.sass'
-
-export enum GraphicsUrl {
-    UnbTrees = 'unb-trees',
-    Emotions = 'emotions',
-}
 
 export const Graphics: React.FC = () => {
     return (

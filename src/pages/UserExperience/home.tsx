@@ -2,18 +2,17 @@ import React from 'react'
 
 import { LinkCard } from '../../components'
 
-import { UserExperienceUrl } from '.'
-
-import hiring1 from '/projects/zirtual/hiring1.png'
+import { UserExperienceUrl } from '../urls'
 
 export const UserExperienceHome: React.FC = () => {
     return (
         <>
             <p className="info">
-                Architecture Design inspired me to pursue a Master's degree in Human
-                Factors. Initially, my intention was to apply this expertise to the
-                design of healthcare facilities. However, as I delved deeper into the
-                field, my interests took a slight shift towards software design instead.
+                Architecture Design inspired me to pursue a Master&apos;s degree in
+                Human Factors. Initially, my intention was to apply this expertise to
+                the design of healthcare facilities. However, as I delved deeper into
+                the field, my interests took a slight shift towards software design
+                instead.
             </p>
 
             <LinkCard
@@ -23,7 +22,7 @@ export const UserExperienceHome: React.FC = () => {
                 graphic={
                     <img
                         className="zirtual"
-                        src={hiring1}
+                        src="projects/zirtual/hiring1.png"
                         alt="Hiring Initial Analysis"
                     />
                 }

@@ -2,10 +2,7 @@ import React from 'react'
 
 import { LinkCard } from '../../components'
 
-import { SoftwareUrl } from '.'
-
-import quickAnimals from '/projects/animals/quick.png'
-// import recipEzDashboard from '/projects/recipez/recipe-main.png'
+import { SoftwareUrl } from '../urls'
 
 export const SoftwareHome: React.FC = () => {
     return (
@@ -37,7 +34,7 @@ export const SoftwareHome: React.FC = () => {
                 graphic={
                     <img
                         className="animals"
-                        src={quickAnimals}
+                        src="projects/animals/quick.png"
                         alt="Partial interface of an Animal's dashboard page."
                     />
                 }
@@ -50,8 +47,8 @@ export const SoftwareHome: React.FC = () => {
                     gap, I undertook a design exercise aimed at conceptualizing and
                     visualizing potential solutions to address this issue. The primary
                     objective was to envision a comprehensive and efficient tracking and
-                    monitoring system that would enhance the organization's ability to
-                    manage and care for the animals under its care.
+                    monitoring system that would enhance the organization&apos;s ability
+                    to manage and care for the animals under its care.
                 </p>
             </LinkCard>
 
@@ -63,7 +60,7 @@ export const SoftwareHome: React.FC = () => {
                 graphic={
                     <img
                         className="recipez"
-                        src={recipEzDashboard}
+                        src='projects/recipez/recipe-main.png'
                         alt="Main page of a single recipe."
                     />
                 }

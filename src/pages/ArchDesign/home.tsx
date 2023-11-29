@@ -2,10 +2,7 @@ import React from 'react'
 
 import { LinkCard } from '../../components'
 
-import { ArchDesignUrl } from '.'
-
-import cosc from '/projects/cosc/perspective.jpg'
-import orFinal from '/projects/nellis/final.jpg'
+import { ArchDesignUrl } from '../urls'
 
 export const ArchDesignHome: React.FC = () => {
     return (
@@ -26,8 +23,8 @@ export const ArchDesignHome: React.FC = () => {
                 graphic={
                     <img
                         className="nellis-or"
-                        src={orFinal}
-                        alt="Picture of the Nellis Operating Room at completion."
+                        src="projects/nellis/final.jpg"
+                        alt="Nellis Operating Room at completion."
                     />
                 }
                 notes="July 2010 - December 2016"
@@ -37,7 +34,7 @@ export const ArchDesignHome: React.FC = () => {
                     in a diverse range of projects, encompassing both minor renovations
                     and ambitious new constructions. From the initial stages of planning
                     to the final stages of construction, I was actively involved in
-                    various project lifecycles, gaining valuable experience and insight
+                    various project life cycles, gaining valuable experience and insight
                     at every step.
                 </p>
                 <p>
@@ -58,7 +55,7 @@ export const ArchDesignHome: React.FC = () => {
                 graphic={
                     <img
                         className="cosc"
-                        src={cosc}
+                        src="projects/cosc/perspective.jpg"
                         alt="Rendering of a potential design for the College of Construction Science building at Texas A&M University."
                     />
                 }

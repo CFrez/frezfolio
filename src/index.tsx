@@ -7,7 +7,7 @@ import './index.sass'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
-        <HashRouter basename=''>
+        <HashRouter basename="">
             <App />
         </HashRouter>
     </React.StrictMode>,

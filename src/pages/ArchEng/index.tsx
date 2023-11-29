@@ -1,14 +1,12 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
+import { ArchEngUrl } from '../urls'
+
 import { ArchEngHome } from './home'
 import { Labview } from './Labview'
 
 import './index.sass'
-
-export enum ArchEngUrl {
-    Labview = 'labview',
-}
 
 export const ArchEng: React.FC = () => {
     return (

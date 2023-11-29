@@ -38,14 +38,21 @@ export function usePhotoModal({
 
     const generateTriggerFigure = useCallback(
         ({ image, className }: { image: string; className?: string }) => (
-            <figure
+            <div
                 key={image}
-                className={className}
+                role="button"
+                className='photo-trigger'
                 onClick={() => togglePhoto(image)}
+                onKeyUp={() => togglePhoto(image)}
+                tabIndex={0}
             >
-                <img src={photos[image].src} alt={photos[image].alt} />
-                <figcaption>{photos[image].caption || photos[image].alt}</figcaption>
-            </figure>
+                <figure className={className}>
+                    <img src={photos[image].src} alt={photos[image].alt} />
+                    <figcaption>
+                        {photos[image].caption || photos[image].alt}
+                    </figcaption>
+                </figure>
+            </div>
         ),
         [togglePhoto, photos],
     )
@@ -53,6 +60,7 @@ export function usePhotoModal({
     const modalBody = (
         <>
             <button
+                type="button"
                 onClick={() => setImageIndex((prev) => prev - 1)}
                 disabled={imageIndex === 0}
             >
@@ -64,6 +72,7 @@ export function usePhotoModal({
                 className={photos[currentPhotoKey].className}
             />
             <button
+                type="button"
                 onClick={() => setImageIndex((prev) => prev + 1)}
                 disabled={imageIndex === imagesCount - 1}
             >

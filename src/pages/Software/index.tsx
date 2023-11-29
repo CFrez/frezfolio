@@ -1,16 +1,13 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
+import { SoftwareUrl } from '../urls'
+
 import { SoftwareHome } from './home'
 import { Animals } from './Animals'
 import { RecipEz } from './RecipEz'
 
 import './index.sass'
-
-export enum SoftwareUrl {
-    Animals = 'animals',
-    RecipEz = 'recipez',
-}
 
 export const Software: React.FC = () => {
     return (

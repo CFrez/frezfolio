@@ -1,5 +1,4 @@
-import { useState, type ReactNode, useCallback } from 'react'
-import type { HTMLProps } from 'react'
+import { useState, type ReactNode, useCallback, HTMLProps } from 'react'
 
 import {
     useFloating,

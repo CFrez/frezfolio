@@ -37,11 +37,11 @@ export const UnbTrees: React.FC = () => {
                     Throughout the evolution of the logo, a noticeable progression
                     occurred in the size and visibility of the leaves on the tree. Over
                     time, this iterative process resulted in larger and more prominent
-                    leaves within the design. To further emphasize the company's
+                    leaves within the design. To further emphasize the company&apos;s
                     location and affiliation with the city, the Milwaukee skyline was
                     incorporated as the roots of the tree. This addition served as a
-                    symbolic representation of the company's connection to its local
-                    surroundings and its presence within the community.
+                    symbolic representation of the company&apos;s connection to its
+                    local surroundings and its presence within the community.
                 </p>
                 {generateTriggerFigure({ image: UnbtreesImage.Logo })}
             </PageSection>
@@ -105,22 +105,22 @@ export const UnbTrees: React.FC = () => {
                 <p>
                     The yard signs were designed to be easily visible and legible from a
                     distance and aimed to create a lasting impression and effectively
-                    communicate the company's message to passersby and potential
+                    communicate the company&apos;s message to passersby and potential
                     customers. The signs were printed on durable corrugated plastic,
                     measuring 18 x 24 inches, ensuring a professional appearance and
                     long-lasting quality.
                 </p>
                 {generateTriggerFigure({ image: UnbtreesImage.YardSign })}
                 <p>
-                    The "Free Wood" sign served as a valuable tool for customers who
-                    wished to keep the cut wood on their property and allow their
-                    neighbors to take it. This sign not only provided an opportunity for
-                    the customer to receive a discount but also generated additional
-                    business through positive word-of-mouth. By offering this service,
-                    the company fostered a sense of community engagement and goodwill,
-                    creating a mutually beneficial arrangement where customers could
-                    benefit from a reduced cost while expanding the company's reach
-                    through organic referrals.
+                    The &quot;Free Wood&quot; sign served as a valuable tool for
+                    customers who wished to keep the cut wood on their property and
+                    allow their neighbors to take it. This sign not only provided an
+                    opportunity for the customer to receive a discount but also
+                    generated additional business through positive word-of-mouth. By
+                    offering this service, the company fostered a sense of community
+                    engagement and goodwill, creating a mutually beneficial arrangement
+                    where customers could benefit from a reduced cost while expanding
+                    the company&apos;s reach through organic referrals.
                 </p>
                 {generateTriggerFigure({ image: UnbtreesImage.WoodSign })}
             </PageSection>

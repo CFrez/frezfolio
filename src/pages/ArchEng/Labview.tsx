@@ -3,8 +3,6 @@ import React from 'react'
 import { PageTitle, PageSection, usePhotoModal, Overlay } from '../../components'
 import { LabViewImage, labViewPhotos } from '../../data'
 
-import icon from '/projects/labview/icon.svg'
-import inspiration from '/projects/labview/testing.jpg'
 
 export const Labview: React.FC = () => {
     const { photoHook, generateTriggerFigure } = usePhotoModal({
@@ -41,9 +39,9 @@ export const Labview: React.FC = () => {
                 </p>
                 <p>
                     When considering the programming language for this project, LabVIEW
-                    was deliberately chosen due to its alignment with the lab's standard
-                    practices. Moreover, as LabVIEW was developed by the same company
-                    responsible for the hardware in use, it ensured a seamless
+                    was deliberately chosen due to its alignment with the lab&apos;s
+                    standard practices. Moreover, as LabVIEW was developed by the same
+                    company responsible for the hardware in use, it ensured a seamless
                     integration between the software and hardware components. Opting for
                     LabVIEW also provides the advantage of potential future support from
                     NI, further enhancing the reliability and longevity of the program.
@@ -55,13 +53,13 @@ export const Labview: React.FC = () => {
                 <p>
                     In order to establish the desired functionality of the program, I
                     collaborated closely with professors and lab technicians to gain a
-                    comprehensive understanding of the lab's workflow. This involved
-                    reviewing the existing programs and identifying the essential
-                    features that needed to be incorporated. Given the program's
-                    complexity, it was crucial to step outside of the LabVIEW
-                    environment and meticulously plan and strategize the program's
-                    logic. This thoughtful approach ensured a robust and effective
-                    implementation of the program.
+                    comprehensive understanding of the lab&apos;s workflow. This
+                    involved reviewing the existing programs and identifying the
+                    essential features that needed to be incorporated. Given the
+                    program&apos;s complexity, it was crucial to step outside of the
+                    LabVIEW environment and meticulously plan and strategize the
+                    program&apos;s logic. This thoughtful approach ensured a robust and
+                    effective implementation of the program.
                 </p>
                 {generateTriggerFigure({ image: LabViewImage.GUI })}
             </PageSection>
@@ -83,6 +81,7 @@ export const Labview: React.FC = () => {
                 <div className="documents">
                     <figure>
                         <iframe
+                            title="Student Instructions"
                             src="https://indd.adobe.com/embed/89ab3bbf-a322-4a5b-a108-bd9217de7f44?startpage=1&allowFullscreen=true"
                             allowFullScreen
                         />
@@ -90,6 +89,7 @@ export const Labview: React.FC = () => {
                     </figure>
                     <figure>
                         <iframe
+                            title="LabVIEW Guide"
                             src="https://indd.adobe.com/embed/68e996d3-5954-4ffc-97f5-6f740da7b179?startpage=1&allowFullscreen=true"
                             allowFullScreen
                         />
@@ -97,6 +97,7 @@ export const Labview: React.FC = () => {
                     </figure>
                     <figure>
                         <iframe
+                            title="Final Report"
                             src="https://indd.adobe.com/embed/9fb33c5d-c375-486e-bbd0-34a061c808db?startpage=1&allowFullscreen=true"
                             allowFullScreen
                         />
@@ -109,12 +110,12 @@ export const Labview: React.FC = () => {
                 <p>
                     This was possibly my favorite part of the program, which is not
                     actually part of the program. I created this icon character based on
-                    the test equipment used for the lab. I don't know how I never gave
-                    him a name, but he still makes me smile.
+                    the test equipment used for the lab. I don&apos;t know how I never
+                    gave him a name, but he still makes me smile.
                 </p>
                 <div className="icon">
-                    <img src={inspiration} alt="testing equipment that inspired icon" />
-                    <img src={icon} alt="icon" />
+                    <img src='projects/labview/testing.jpg' alt="testing equipment that inspired icon" />
+                    <img src='projects/labview/icon.svg' alt="icon" />
                 </div>
             </PageSection>
             <Overlay {...photoHook} />

@@ -28,7 +28,7 @@ export const System: React.FC = () => {
                         characteristics that belong to new people or some of the ones
                         below. Some of our discovery was sabotaged by one member making
                         up people... so we kinda took a break and reset and these are
-                        the ones that have been more "formalized" since.
+                        the ones that have been more &quot;formalized&quot; since.
                     </p>
                 </Tabs.Panel>
 

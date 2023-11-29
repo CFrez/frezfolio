@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { PageUrl } from '../../data/pages'
+import { PageUrl } from '../../pages/urls'
 
 import './nav.sass'
 

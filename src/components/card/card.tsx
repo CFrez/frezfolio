@@ -21,18 +21,16 @@ export const LinkCard: React.FC<LinkCardProps> = ({
     subtitle,
     title,
     url,
-}) => {
-    return (
-        <Link to={url} className={`link-card ${className}`}>
-            <article>
-                <header>
-                    <h2>{title}</h2>
-                    {subtitle && <p className="subtitle">{subtitle}</p>}
-                </header>
-                {<div className="details">{children}</div>}
-                {notes && <footer>{notes}</footer>}
-                <div className="graphic">{graphic}</div>
-            </article>
-        </Link>
-    )
-}
+}) => (
+    <Link to={url} className={`link-card ${className}`}>
+        <article>
+            <header>
+                <h2>{title}</h2>
+                {subtitle && <p className="subtitle">{subtitle}</p>}
+            </header>
+            <div className="details">{children}</div>
+            {notes && <footer>{notes}</footer>}
+            <div className="graphic">{graphic}</div>
+        </article>
+    </Link>
+)

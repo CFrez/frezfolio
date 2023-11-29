@@ -68,7 +68,7 @@ export const alters: Alter[] = [
         avatar: <Hands />,
     },
     {
-        name: 'coder',
+        name: 'Riley',
         description: `She is our programmer, designer, builder. She sometimes has
             a hand stim similar to hands, but "gentler". This may be due to a blend
             or something? For better or worse, she is good at tuning out the entire
@@ -76,7 +76,7 @@ export const alters: Alter[] = [
         avatar: <Coder />,
     },
     {
-        name: 'foodie',
+        name: 'Frankie',
         description: `He is the one that actually tastes our food, which unfortunately
             doesn't happen often enough. There is high probability that he is a bear.
             He is not very verbal, and may have tried to eat Ella once....`,

@@ -20,7 +20,7 @@ export const NellisOR: React.FC = () => {
                     The Nellis Air Force Base Medical Center realignment project was a
                     $100M project to renovate the existing medical center. The project
                     included 30 departments and 25 phases of construction over 3 years.
-                    I acted as the owner's representative for the project and was a
+                    I acted as the owner&apos;s representative for the project and was a
                     liaison between the contractor and the medical center.
                 </p>
                 <p>
@@ -73,10 +73,10 @@ export const NellisOR: React.FC = () => {
                     feedback and input from the users are gathered and carefully
                     considered to inform subsequent refinements of the floor plans. This
                     collaborative approach ensures that the final design aligns
-                    precisely with the users' requirements, preferences, and operational
-                    needs. The iterative nature of the process enables a thorough
-                    exploration of various design possibilities and ensures that the end
-                    result is a well-optimized and user-centric solution.
+                    precisely with the users&apos; requirements, preferences, and
+                    operational needs. The iterative nature of the process enables a
+                    thorough exploration of various design possibilities and ensures
+                    that the end result is a well-optimized and user-centric solution.
                 </p>
             </PageSection>
 
@@ -97,8 +97,8 @@ export const NellisOR: React.FC = () => {
                     Through the iterative design process it will hopefully reduce
                     changes during construction. However, there can always be unforeseen
                     issues that arise. The design team must be flexible and work with
-                    the contractor to find solutions that meet the user's needs and the
-                    requirements of the project.
+                    the contractor to find solutions that meet the user&apos;s needs and
+                    the requirements of the project.
                 </p>
                 {generateTriggerFigure({ image: NellisImage.HybridFinal })}
                 {generateTriggerFigure({ image: NellisImage.Final })}
