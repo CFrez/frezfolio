@@ -3,7 +3,6 @@ import React from 'react'
 import { PageTitle, PageSection, usePhotoModal, Overlay } from '../../components'
 import { LabViewImage, labViewPhotos } from '../../data'
 
-
 export const Labview: React.FC = () => {
     const { photoHook, generateTriggerFigure } = usePhotoModal({
         id: 'labview',
@@ -114,8 +113,11 @@ export const Labview: React.FC = () => {
                     gave him a name, but he still makes me smile.
                 </p>
                 <div className="icon">
-                    <img src='projects/labview/testing.jpg' alt="testing equipment that inspired icon" />
-                    <img src='projects/labview/icon.svg' alt="icon" />
+                    <img
+                        src="projects/labview/testing.jpg"
+                        alt="testing equipment that inspired icon"
+                    />
+                    <img src="projects/labview/icon.svg" alt="icon" />
                 </div>
             </PageSection>
             <Overlay {...photoHook} />

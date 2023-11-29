@@ -1,6 +1,5 @@
 import { TopperProperties } from '../types'
 
-
 export enum PageUrl {
     Home = '/',
     About = '/about',

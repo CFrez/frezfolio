@@ -9,11 +9,11 @@ export const Hero: React.FC = () => {
     const ref = useRef<HTMLDivElement>(null)
 
     const onWheel = (e: WheelEvent<HTMLDivElement>) => {
-        const elelemnt = ref.current
-        if (elelemnt) {
-            if (e.deltaY == 0) return
-            elelemnt.scrollTo({
-                left: elelemnt.scrollLeft + e.deltaY,
+        const element = ref.current
+        if (element) {
+            if (e.deltaY === 0) return
+            element.scrollTo({
+                left: element.scrollLeft + e.deltaY,
             })
         }
     }

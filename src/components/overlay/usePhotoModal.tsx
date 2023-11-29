@@ -41,7 +41,7 @@ export function usePhotoModal({
             <div
                 key={image}
                 role="button"
-                className='photo-trigger'
+                className="photo-trigger"
                 onClick={() => togglePhoto(image)}
                 onKeyUp={() => togglePhoto(image)}
                 tabIndex={0}

@@ -2,7 +2,8 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 import { topperProperties } from '../../data/pages'
-import { LogoLink, Contact } from '..'
+import { LogoLink } from '../nav/logo'
+import { Contact } from '../nav/contact'
 
 import './header.sass'
 
