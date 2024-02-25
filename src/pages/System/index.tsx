@@ -10,7 +10,7 @@ import './index.sass'
 export const System: React.FC = () => {
     return (
         <main id="system">
-            <p>
+            <p className='info'>
                 Some people have names and then I started getting lazy and so
                 others are only letters. As a system, we go by Christina. Some
                 of our discovery was sabotaged by one member making up people...
