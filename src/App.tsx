@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import { MantineProvider } from '@mantine/core'
+import { HeadlessMantineProvider as MantineProvider } from '@mantine/core'
 
 import { PageUrl } from './pages/urls'
 import {
