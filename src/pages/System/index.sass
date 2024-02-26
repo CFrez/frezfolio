@@ -11,10 +11,10 @@ main#system
     gap: 32px
     padding: 32px
 
-    div.mantine-Tabs-root
+    div.tabs
         width: 100%
 
-        div.mantine-Tabs-list
+        div.tab-list
             width: 100%
             gap: 32px
             display: flex
@@ -23,9 +23,6 @@ main#system
 
             border-bottom: 2px solid $color-secondary-dark
             padding-bottom: 16px
-
-            @media screen and (max-width: 900px)
-                justify-content: flex-start
 
             button
                 filter: grayscale(75%)
@@ -37,7 +34,7 @@ main#system
                     filter: grayscale(0%)
                     color: $color-secondary-dark
 
-                span.mantine-Tabs-tabLabel
+                span
                     display: flex
                     flex-direction: column
                     align-items: center
@@ -47,7 +44,10 @@ main#system
                         height: 64px
                         width: 64px
 
-        div.mantine-Tabs-panel
+            @media screen and (max-width: 900px)
+                justify-content: flex-start
+
+        div[role="tabpanel"]
             display: grid
             grid-template-columns: 300px 1fr
             grid-template-rows: 50px 1fr

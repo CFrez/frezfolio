@@ -10,8 +10,8 @@ import './index.sass'
 export const System: React.FC = () => {
     return (
         <main id="system">
-            <Tabs unstyled defaultValue='system'>
-                <Tabs.List>
+            <Tabs unstyled defaultValue='system' className='tabs'>
+                <Tabs.List className='tab-list'>
                     {alters.map((alter: Alter) => (
                         <Tabs.Tab key={alter.name} value={alter.name}>
                             {alter.avatar}
