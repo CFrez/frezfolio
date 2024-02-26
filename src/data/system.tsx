@@ -20,7 +20,7 @@ export const alters: Alter[] = [
     {
         name: 'tina',
         description: `She is our most noticeably autistic person. She is around 6
-            years old. She stutters as the beginning of most sentences, especially
+            years old. She stutters at the beginning of most sentences, especially
             when she is feeling overwhelmed. Two "coping" mechanisms to try and not
             stutter are to talk really fast or have a hand stim while she organizes
             the words in her head. She has extreme anxiety and is very sensitive to
