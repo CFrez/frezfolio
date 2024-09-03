@@ -37,7 +37,9 @@ export interface UseOverlayInterface extends UseOverlayProps {
     toggleClose: () => void
 }
 
+/** This is a hook that wraps FloatingUI to provide simplicity and flexibility of state management. */
 export function useOverlay(props: UseOverlayProps): UseOverlayInterface {
+    // This is pulled out here so that when props are passed on visibility is included.
     const { visibility } = props
     const [isVisible, setIsVisible] = useState(false)
 

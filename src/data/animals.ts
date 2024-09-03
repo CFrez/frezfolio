@@ -1,50 +1,38 @@
-import type { ImageData, AnimalFeature, AnimalRole } from '../types'
+import type { AnimalFeature, AnimalRole } from '../types'
 
-const baseFolder = '/projects/animals/'
+const baseFolder = '/projects/animals'
 
-// Sorted by order photos are on page
-export enum AnimalsImage {
-    Dashboard = 'dashboard.png',
-    NewAnimal = 'new-animal.png',
-    EditAnimal = 'edit-animal.png',
-    AnimalHome = 'home.png',
-    AnimalHomeExpanded = 'home-exp.png',
-    AnimalVetExpanded = 'vet-exp.png',
-    NewRecord = 'new-record.png',
-    EditRecord = 'edit-record.png',
-}
-
-export const animalsPhotos: Record<AnimalsImage, ImageData> = {
-    [AnimalsImage.Dashboard]: {
-        src: `${baseFolder}${AnimalsImage.Dashboard}`,
+export const animalsPhotos = {
+    dashboard: {
+        src: `${baseFolder}/dashboard.png`,
         alt: 'Main Animal Dashboard',
     },
-    [AnimalsImage.AnimalHome]: {
-        src: `${baseFolder}${AnimalsImage.AnimalHome}`,
+    animalHome: {
+        src: `${baseFolder}/home.png`,
         alt: "Animal's Home Page",
     },
-    [AnimalsImage.AnimalHomeExpanded]: {
-        src: `${baseFolder}${AnimalsImage.AnimalHomeExpanded}`,
+    animalHomeExpanded: {
+        src: `${baseFolder}/home-exp.png`,
         alt: "Animal's Home Page History Expanded",
     },
-    [AnimalsImage.AnimalVetExpanded]: {
-        src: `${baseFolder}${AnimalsImage.AnimalVetExpanded}`,
+    animalVetExpanded: {
+        src: `${baseFolder}/vet-exp.png`,
         alt: "Animal's Vet History Expanded",
     },
-    [AnimalsImage.NewAnimal]: {
-        src: `${baseFolder}${AnimalsImage.NewAnimal}`,
+    newAnimal: {
+        src: `${baseFolder}/new-animal.png`,
         alt: 'Create Animal',
     },
-    [AnimalsImage.EditAnimal]: {
-        src: `${baseFolder}${AnimalsImage.EditAnimal}`,
+    editAnimal: {
+        src: `${baseFolder}/edit-animal.png`,
         alt: 'Update Animal',
     },
-    [AnimalsImage.NewRecord]: {
-        src: `${baseFolder}${AnimalsImage.NewRecord}`,
+    newRecord: {
+        src: `${baseFolder}/new-record.png`,
         alt: 'Create Record for Animal',
     },
-    [AnimalsImage.EditRecord]: {
-        src: `${baseFolder}${AnimalsImage.EditRecord}`,
+    editRecord: {
+        src: `${baseFolder}/edit-record.png`,
         alt: 'Update Record for Animal',
     },
 }

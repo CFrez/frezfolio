@@ -4,9 +4,8 @@ import { PageTitle, PageSection, usePhotoModal, Overlay } from '../../components
 import { LabViewImage, labViewPhotos } from '../../data'
 
 export const Labview: React.FC = () => {
-    const { photoHook, generateTriggerFigure } = usePhotoModal({
+    const { photoHook, generateTriggerFigure } = usePhotoModal<typeof labViewPhotos>({
         id: 'labview',
-        images: Object.values(LabViewImage),
         photos: labViewPhotos,
     })
 
@@ -45,7 +44,7 @@ export const Labview: React.FC = () => {
                     LabVIEW also provides the advantage of potential future support from
                     NI, further enhancing the reliability and longevity of the program.
                 </p>
-                {generateTriggerFigure({ image: LabViewImage.Initial })}
+                {generateTriggerFigure('initial')}
             </PageSection>
 
             <PageSection title="Design">
@@ -60,7 +59,7 @@ export const Labview: React.FC = () => {
                     program&apos;s logic. This thoughtful approach ensured a robust and
                     effective implementation of the program.
                 </p>
-                {generateTriggerFigure({ image: LabViewImage.GUI })}
+                {generateTriggerFigure('gui')}
             </PageSection>
 
             <PageSection title="Documentation" className="documentation">

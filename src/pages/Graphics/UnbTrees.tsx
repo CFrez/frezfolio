@@ -2,25 +2,12 @@ import React from 'react'
 
 import { PageTitle, PageSection, Overlay, usePhotoModal } from '../../components'
 
-import { unbtreesPhotos, UnbtreesImage } from '../../data'
+import { unbtreesPhotos } from '../../data'
 
 export const UnbTrees: React.FC = () => {
-    // TODO: Determine if it is better to create array or just order enum correctly
-    // Reorder the photos to match the order photos are used on page
-    const photoSet = [
-        UnbtreesImage.Logo,
-        UnbtreesImage.BCFront,
-        UnbtreesImage.BCBack,
-        UnbtreesImage.FlyerFront,
-        UnbtreesImage.FlyerBack,
-        UnbtreesImage.Contract,
-        UnbtreesImage.YardSign,
-        UnbtreesImage.WoodSign,
-    ]
 
-    const { photoHook, generateTriggerFigure } = usePhotoModal({
+    const { photoHook, generateTriggerFigure } = usePhotoModal<typeof unbtreesPhotos>({
         id: 'unbtrees',
-        images: photoSet,
         photos: unbtreesPhotos,
     })
 
@@ -43,7 +30,7 @@ export const UnbTrees: React.FC = () => {
                     symbolic representation of the company&apos;s connection to its
                     local surroundings and its presence within the community.
                 </p>
-                {generateTriggerFigure({ image: UnbtreesImage.Logo })}
+                {generateTriggerFigure('logo')}
             </PageSection>
             <PageSection title="Business Card" className="trees-graphics">
                 <p>
@@ -57,12 +44,10 @@ export const UnbTrees: React.FC = () => {
                     cardholder.
                 </p>
                 <div className="set">
-                    {generateTriggerFigure({
-                        image: UnbtreesImage.BCFront,
+                    {generateTriggerFigure('bCFront', {
                         className: 'business-card',
                     })}
-                    {generateTriggerFigure({
-                        image: UnbtreesImage.BCBack,
+                    {generateTriggerFigure('bCBack', {
                         className: 'business-card',
                     })}
                 </div>
@@ -78,12 +63,10 @@ export const UnbTrees: React.FC = () => {
                     appearance.
                 </p>
                 <div className="set">
-                    {generateTriggerFigure({
-                        image: UnbtreesImage.FlyerFront,
+                    {generateTriggerFigure('flyerFront', {
                         className: 'flyer',
                     })}
-                    {generateTriggerFigure({
-                        image: UnbtreesImage.FlyerBack,
+                    {generateTriggerFigure('flyerBack', {
                         className: 'flyer',
                     })}
                 </div>
@@ -99,7 +82,7 @@ export const UnbTrees: React.FC = () => {
                     aimed to promote a smooth and efficient agreement process while
                     maintaining a professional and organized approach.
                 </p>
-                {generateTriggerFigure({ image: UnbtreesImage.Contract })}
+                {generateTriggerFigure('contract')}
             </PageSection>
             <PageSection title="Yard Signs" className="trees-graphics">
                 <p>
@@ -110,7 +93,7 @@ export const UnbTrees: React.FC = () => {
                     measuring 18 x 24 inches, ensuring a professional appearance and
                     long-lasting quality.
                 </p>
-                {generateTriggerFigure({ image: UnbtreesImage.YardSign })}
+                {generateTriggerFigure('yardSign')}
                 <p>
                     The &quot;Free Wood&quot; sign served as a valuable tool for
                     customers who wished to keep the cut wood on their property and
@@ -122,7 +105,7 @@ export const UnbTrees: React.FC = () => {
                     where customers could benefit from a reduced cost while expanding
                     the company&apos;s reach through organic referrals.
                 </p>
-                {generateTriggerFigure({ image: UnbtreesImage.WoodSign })}
+                {generateTriggerFigure('woodSign')}
             </PageSection>
             <Overlay {...photoHook} />
         </>

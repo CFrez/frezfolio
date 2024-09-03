@@ -1,49 +1,36 @@
-import type { ImageData } from '../types'
+const baseFolder = '/projects/unbtrees'
 
-const baseFolder = '/projects/unbtrees/'
-
-export enum UnbtreesImage {
-    Logo = 'citylogo.png',
-    Contract = 'contract.svg',
-    FlyerFront = 'flyer-front.svg',
-    FlyerBack = 'flyer-back.svg',
-    WoodSign = 'free-wood.svg',
-    BCFront = 'SqBC_Front.png',
-    BCBack = 'SqBC_Back.png',
-    YardSign = 'yard-sign.svg',
-}
-
-export const unbtreesPhotos: Record<UnbtreesImage, ImageData> = {
-    [UnbtreesImage.Logo]: {
-        src: `${baseFolder}${UnbtreesImage.Logo}`,
+export const unbtreesPhotos = {
+    logo: {
+        src: `${baseFolder}/citylogo.png`,
         alt: 'Primary Logo with City Roots',
     },
-    [UnbtreesImage.Contract]: {
-        src: `${baseFolder}${UnbtreesImage.Contract}`,
-        alt: 'Contract',
-    },
-    [UnbtreesImage.FlyerFront]: {
-        src: `${baseFolder}${UnbtreesImage.FlyerFront}`,
-        alt: 'Flyer Front',
-    },
-    [UnbtreesImage.FlyerBack]: {
-        src: `${baseFolder}${UnbtreesImage.FlyerBack}`,
-        alt: 'Flyer Back',
-    },
-    [UnbtreesImage.WoodSign]: {
-        src: `${baseFolder}${UnbtreesImage.WoodSign}`,
-        alt: 'Free Wood Sign',
-    },
-    [UnbtreesImage.BCFront]: {
-        src: `${baseFolder}${UnbtreesImage.BCFront}`,
+    bCFront: {
+        src: `${baseFolder}/SqBC_Front.png`,
         alt: 'Business Card Front',
     },
-    [UnbtreesImage.BCBack]: {
-        src: `${baseFolder}${UnbtreesImage.BCBack}`,
+    bCBack: {
+        src: `${baseFolder}/SqBC_Back.png`,
         alt: 'Business Card Back',
     },
-    [UnbtreesImage.YardSign]: {
-        src: `${baseFolder}${UnbtreesImage.YardSign}`,
+    flyerFront: {
+        src: `${baseFolder}/flyer-front.svg`,
+        alt: 'Flyer Front',
+    },
+    flyerBack: {
+        src: `${baseFolder}/flyer-back.svg`,
+        alt: 'Flyer Back',
+    },
+    contract: {
+        src: `${baseFolder}/contract.svg`,
+        alt: 'Contract',
+    },
+    yardSign: {
+        src: `${baseFolder}/yard-sign.svg`,
         alt: 'Yard Sign',
+    },
+    woodSign: {
+        src: `${baseFolder}/free-wood.svg`,
+        alt: 'Free Wood Sign',
     },
 }

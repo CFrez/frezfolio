@@ -1,109 +1,84 @@
-import type { ImageData } from '../types'
+const baseFolder = '/projects/emotions'
 
-const baseFolder = '/projects/emotions/'
-
-export enum EmotionsImage {
-    Angry = 'angry.svg',
-    Annoyed = 'annoyed.svg',
-    Bored = 'bored.svg',
-    Confused = 'confused.svg',
-    Curious = 'curious.svg',
-    Discomfort = 'discomfort.svg',
-    Distracted = 'distracted.svg',
-    Empty = 'empty.svg',
-    Excited = 'excited.svg',
-    Fearful = 'fearful.svg',
-    Focused = 'focused.svg',
-    Happy = 'happy.svg',
-    Hopeful = 'hopeful.svg',
-    Lonely = 'lonely.svg',
-    Overwhelmed = 'overwhelmed.svg',
-    Peaceful = 'peaceful.svg',
-    Sad = 'sad.svg',
-    Stressed = 'stressed.svg',
-    Surprised = 'surprised.svg',
-    Vulnerable = 'vulnerable.svg',
-}
-
-export const emotionsPhotos: Record<EmotionsImage, ImageData> = {
-    [EmotionsImage.Angry]: {
-        src: `${baseFolder}${EmotionsImage.Angry}`,
+export const emotionsPhotos = {
+    angry: {
+        src: `${baseFolder}/angry.svg`,
         alt: 'Angry',
     },
-    [EmotionsImage.Annoyed]: {
-        src: `${baseFolder}${EmotionsImage.Annoyed}`,
+    annoyed: {
+        src: `${baseFolder}/annoyed.svg`,
         alt: 'Annoyed',
     },
-    [EmotionsImage.Bored]: {
-        src: `${baseFolder}${EmotionsImage.Bored}`,
+    bored: {
+        src: `${baseFolder}/bored.svg`,
         alt: 'Bored',
     },
-    [EmotionsImage.Confused]: {
-        src: `${baseFolder}${EmotionsImage.Confused}`,
+    confused: {
+        src: `${baseFolder}/confused.svg`,
         alt: 'Confused',
     },
-    [EmotionsImage.Curious]: {
-        src: `${baseFolder}${EmotionsImage.Curious}`,
+    curious: {
+        src: `${baseFolder}/curious.svg`,
         alt: 'Curious',
     },
-    [EmotionsImage.Discomfort]: {
-        src: `${baseFolder}${EmotionsImage.Discomfort}`,
+    discomfort: {
+        src: `${baseFolder}/discomfort.svg`,
         alt: 'Discomfort',
     },
-    [EmotionsImage.Distracted]: {
-        src: `${baseFolder}${EmotionsImage.Distracted}`,
+    distracted: {
+        src: `${baseFolder}/distracted.svg`,
         alt: 'Distracted',
     },
-    [EmotionsImage.Empty]: {
-        src: `${baseFolder}${EmotionsImage.Empty}`,
+    empty: {
+        src: `${baseFolder}/empty.svg`,
         alt: 'Empty',
     },
-    [EmotionsImage.Excited]: {
-        src: `${baseFolder}${EmotionsImage.Excited}`,
+    excited: {
+        src: `${baseFolder}/excited.svg`,
         alt: 'Excited',
     },
-    [EmotionsImage.Fearful]: {
-        src: `${baseFolder}${EmotionsImage.Fearful}`,
+    fearful: {
+        src: `${baseFolder}/fearful.svg`,
         alt: 'Fearful',
     },
-    [EmotionsImage.Focused]: {
-        src: `${baseFolder}${EmotionsImage.Focused}`,
+    focused: {
+        src: `${baseFolder}/focused.svg`,
         alt: 'Focused',
     },
-    [EmotionsImage.Happy]: {
-        src: `${baseFolder}${EmotionsImage.Happy}`,
+    happy: {
+        src: `${baseFolder}/happy.svg`,
         alt: 'Happy',
     },
-    [EmotionsImage.Hopeful]: {
-        src: `${baseFolder}${EmotionsImage.Hopeful}`,
+    hopeful: {
+        src: `${baseFolder}/hopeful.svg`,
         alt: 'Hopeful',
     },
-    [EmotionsImage.Lonely]: {
-        src: `${baseFolder}${EmotionsImage.Lonely}`,
+    lonely: {
+        src: `${baseFolder}/lonely.svg`,
         alt: 'Lonely',
     },
-    [EmotionsImage.Overwhelmed]: {
-        src: `${baseFolder}${EmotionsImage.Overwhelmed}`,
+    overwhelmed: {
+        src: `${baseFolder}/overwhelmed.svg`,
         alt: 'Overwhelmed',
     },
-    [EmotionsImage.Peaceful]: {
-        src: `${baseFolder}${EmotionsImage.Peaceful}`,
+    peaceful: {
+        src: `${baseFolder}/peaceful.svg`,
         alt: 'Peaceful',
     },
-    [EmotionsImage.Sad]: {
-        src: `${baseFolder}${EmotionsImage.Sad}`,
+    sad: {
+        src: `${baseFolder}/sad.svg`,
         alt: 'Sad',
     },
-    [EmotionsImage.Stressed]: {
-        src: `${baseFolder}${EmotionsImage.Stressed}`,
+    stressed: {
+        src: `${baseFolder}/stressed.svg`,
         alt: 'Stressed',
     },
-    [EmotionsImage.Surprised]: {
-        src: `${baseFolder}${EmotionsImage.Surprised}`,
+    surprised: {
+        src: `${baseFolder}/surprised.svg`,
         alt: 'Surprised',
     },
-    [EmotionsImage.Vulnerable]: {
-        src: `${baseFolder}${EmotionsImage.Vulnerable}`,
+    vulnerable: {
+        src: `${baseFolder}/vulnerable.svg`,
         alt: 'Vulnerable',
     },
 }
