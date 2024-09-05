@@ -2,12 +2,11 @@ import React from 'react'
 
 import { PageTitle, PageSection, Overlay, usePhotoModal } from '../../components'
 
-import { ZirtualImage, zirtualPhotos } from '../../data'
+import { zirtualPhotos } from '../../data'
 
 export const Zirtual: React.FC = () => {
-    const { photoHook, generateTriggerFigure } = usePhotoModal({
+    const { photoHook, generateTriggerFigure } = usePhotoModal<typeof zirtualPhotos>({
         id: 'zirtual-hiring',
-        images: Object.values(ZirtualImage),
         photos: zirtualPhotos,
     })
     return (
@@ -31,8 +30,8 @@ export const Zirtual: React.FC = () => {
                 </p>
             </PageTitle>
             <PageSection title="Hiring Process Analysis">
-                {generateTriggerFigure({ image: ZirtualImage.Initial })}
-                {generateTriggerFigure({ image: ZirtualImage.Final })}
+                {generateTriggerFigure('initial')}
+                {generateTriggerFigure('final')}
             </PageSection>
             <Overlay {...photoHook} />
         </>

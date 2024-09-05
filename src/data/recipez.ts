@@ -1,14 +1,8 @@
-import type { ImageData } from '../types'
+const baseFolder = '/projects/recipez'
 
-const baseFolder = '/projects/recipez/'
-
-export enum RecipezImage {
-    Main = 'recipe-main.png',
-}
-
-export const recipezPhotos: Record<RecipezImage, ImageData> = {
-    [RecipezImage.Main]: {
-        src: `${baseFolder}${RecipezImage.Main}`,
+export const recipezPhotos = {
+    main: {
+        src: `${baseFolder}/recipe-main.png`,
         alt: 'Main Recipe Page Mockup',
     },
 }

@@ -1,29 +1,20 @@
-import type { ImageData } from '../types'
+const baseFolder = '/projects/mindlog'
 
-const baseFolder = '/projects/mindlog/'
-
-export enum MindlogImage {
-    Today = 'today.png',
-    Summary = 'summary.png',
-    NewLog = 'new_log.png',
-    EditLog = 'edit_log.png',
-}
-
-export const mindlogPhotos: Record<MindlogImage, ImageData> = {
-    [MindlogImage.Today]: {
-        src: `${baseFolder}${MindlogImage.Today}`,
+export const mindlogPhotos = {
+    today: {
+        src: `${baseFolder}/today.png`,
         alt: 'Actual Today Page',
     },
-    [MindlogImage.Summary]: {
-        src: `${baseFolder}${MindlogImage.Summary}`,
+    summary: {
+        src: `${baseFolder}/summary.png`,
         alt: 'Summary Page',
     },
-    [MindlogImage.NewLog]: {
-        src: `${baseFolder}${MindlogImage.NewLog}`,
+    newLog: {
+        src: `${baseFolder}/new_log.png`,
         alt: 'New Entry Page',
     },
-    [MindlogImage.EditLog]: {
-        src: `${baseFolder}${MindlogImage.EditLog}`,
+    editLog: {
+        src: `${baseFolder}/edit_log.png`,
         alt: 'Edit Entry Page',
     },
 }

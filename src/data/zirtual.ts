@@ -1,19 +1,12 @@
-import type { ImageData } from '../types'
+const baseFolder = '/projects/zirtual'
 
-const baseFolder = '/projects/zirtual/'
-
-export enum ZirtualImage {
-    Initial = 'hiring1.png',
-    Final = 'hiring2.png',
-}
-
-export const zirtualPhotos: Record<ZirtualImage, ImageData> = {
-    [ZirtualImage.Initial]: {
-        src: `${baseFolder}${ZirtualImage.Initial}`,
+export const zirtualPhotos = {
+    initial: {
+        src: `${baseFolder}/hiring1.png`,
         alt: 'Initial Hiring Workload',
     },
-    [ZirtualImage.Final]: {
-        src: `${baseFolder}${ZirtualImage.Final}`,
+    final: {
+        src: `${baseFolder}/hiring2.png`,
         alt: 'Projected Hiring Workload',
     },
 }

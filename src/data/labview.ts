@@ -1,19 +1,12 @@
-import type { ImageData } from '../types'
+const baseFolder = '/projects/labview'
 
-const baseFolder = '/projects/labview/'
-
-export enum LabViewImage {
-    Initial = 'initial.svg',
-    GUI = 'gui.png',
-}
-
-export const labViewPhotos: Record<LabViewImage, ImageData> = {
-    [LabViewImage.Initial]: {
-        src: `${baseFolder}${LabViewImage.Initial}`,
+export const labViewPhotos = {
+    initial: {
+        src: `${baseFolder}/initial.svg`,
         alt: 'Initial GUI Design',
     },
-    [LabViewImage.GUI]: {
-        src: `${baseFolder}${LabViewImage.GUI}`,
+    gui: {
+        src: `${baseFolder}/gui.png`,
         alt: 'Final GUI Design',
     },
 }

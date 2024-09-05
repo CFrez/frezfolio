@@ -2,12 +2,11 @@ import React from 'react'
 
 import { PageTitle, PageSection, Overlay, usePhotoModal } from '../../components'
 
-import { RecipezImage, recipezPhotos } from '../../data'
+import { recipezPhotos } from '../../data'
 
 export const RecipEz: React.FC = () => {
-    const { photoHook, generateTriggerFigure } = usePhotoModal({
+    const { photoHook, generateTriggerFigure } = usePhotoModal<typeof recipezPhotos>({
         id: 'recipez',
-        images: Object.values(RecipezImage),
         photos: recipezPhotos,
     })
 
@@ -20,7 +19,7 @@ export const RecipEz: React.FC = () => {
                 </p>
             </PageTitle>
             <PageSection title="Only Page">
-                {generateTriggerFigure({ image: RecipezImage.Main })}
+                {generateTriggerFigure('main')}
             </PageSection>
             <Overlay {...photoHook} />
         </>

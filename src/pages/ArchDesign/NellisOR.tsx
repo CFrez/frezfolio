@@ -1,12 +1,11 @@
 import React from 'react'
 
 import { PageTitle, PageSection, usePhotoModal, Overlay } from '../../components'
-import { nellisPhotos, NellisImage } from '../../data'
+import { nellisPhotos } from '../../data'
 
 export const NellisOR: React.FC = () => {
-    const { photoHook, generateTriggerFigure } = usePhotoModal({
+    const { photoHook, generateTriggerFigure } = usePhotoModal<typeof nellisPhotos>({
         id: 'nellis-or',
-        images: Object.values(NellisImage),
         photos: nellisPhotos,
     })
 
@@ -39,7 +38,7 @@ export const NellisOR: React.FC = () => {
                     adequately equipped or optimized for the contemporary equipment and
                     procedures in use.
                 </p>
-                {generateTriggerFigure({ image: NellisImage.Initial })}
+                {generateTriggerFigure('initial')}
             </PageSection>
 
             <PageSection title="Understanding Requirements">
@@ -52,9 +51,9 @@ export const NellisOR: React.FC = () => {
                     procedures, output, and control (SIPOC) mapping to comprehend the
                     underlying process.
                 </p>
-                {generateTriggerFigure({ image: NellisImage.SIPOC })}
-                {generateTriggerFigure({ image: NellisImage.SurgerySIPOC })}
-                {generateTriggerFigure({ image: NellisImage.ORSIPOC })}
+                {generateTriggerFigure('SIPOC')}
+                {generateTriggerFigure('surgerySIPOC')}
+                {generateTriggerFigure('ORSIPOC')}
             </PageSection>
 
             <PageSection title="Requirements & Design">
@@ -89,7 +88,7 @@ export const NellisOR: React.FC = () => {
                     particularly significant step, especially in cases where there is no
                     existing space available as a point of reference.
                 </p>
-                {generateTriggerFigure({ image: NellisImage.HybridMockup })}
+                {generateTriggerFigure('hybridMockup')}
             </PageSection>
 
             <PageSection title="Constructions & Final Solution">
@@ -100,8 +99,8 @@ export const NellisOR: React.FC = () => {
                     the contractor to find solutions that meet the user&apos;s needs and
                     the requirements of the project.
                 </p>
-                {generateTriggerFigure({ image: NellisImage.HybridFinal })}
-                {generateTriggerFigure({ image: NellisImage.Final })}
+                {generateTriggerFigure('hybridFinal')}
+                {generateTriggerFigure('final')}
             </PageSection>
             <Overlay {...photoHook} />
         </>

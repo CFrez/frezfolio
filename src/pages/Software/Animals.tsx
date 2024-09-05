@@ -2,14 +2,13 @@ import React from 'react'
 
 import { PageTitle, PageSection, Overlay, usePhotoModal } from '../../components'
 
-import { AnimalsImage, animalsPhotos } from '../../data'
+import { animalsPhotos } from '../../data'
 import { AnimalProcess } from './AnimalProcess'
 import { AnimalRoles, AnimalFeatures } from './AnimalTables'
 
 export const Animals: React.FC = () => {
-    const { photoHook, generateTriggerFigure } = usePhotoModal({
+    const { photoHook, generateTriggerFigure } = usePhotoModal<typeof animalsPhotos>({
         id: 'animals',
-        images: Object.values(AnimalsImage),
         photos: animalsPhotos,
     })
 
@@ -76,41 +75,36 @@ export const Animals: React.FC = () => {
                     other relevant details, allowing for quick assessment and efficient
                     management.
                 </p>
-                {generateTriggerFigure({ image: AnimalsImage.Dashboard })}
+                {generateTriggerFigure('dashboard')}
                 <div className="set">
-                    {generateTriggerFigure({
-                        image: AnimalsImage.NewAnimal,
-                        className: 'modal',
-                    })}
-                    {generateTriggerFigure({
-                        image: AnimalsImage.EditAnimal,
+                    {generateTriggerFigure(
+                        'newAnimal',
+                        {className: 'modal'},
+                    )}
+                    {generateTriggerFigure('editAnimal',
+                    {
                         className: 'modal',
                     })}
                 </div>
             </PageSection>
             <PageSection title="Animal Page">
-                {generateTriggerFigure({
-                    image: AnimalsImage.AnimalHome,
+                {generateTriggerFigure('animalHome',{
                     className: 'animal',
                 })}
                 {/* TODO: Is this worth creating a component vs relying on className? */}
                 <div className="set">
-                    {generateTriggerFigure({
-                        image: AnimalsImage.AnimalHomeExpanded,
+                    {generateTriggerFigure('animalHomeExpanded',{
                         className: 'animal',
                     })}
-                    {generateTriggerFigure({
-                        image: AnimalsImage.AnimalVetExpanded,
+                    {generateTriggerFigure('animalVetExpanded',{
                         className: 'animal',
                     })}
                 </div>
                 <div className="set">
-                    {generateTriggerFigure({
-                        image: AnimalsImage.NewRecord,
+                    {generateTriggerFigure('newRecord',{
                         className: 'modal',
                     })}
-                    {generateTriggerFigure({
-                        image: AnimalsImage.EditRecord,
+                    {generateTriggerFigure('editRecord',{
                         className: 'modal',
                     })}
                 </div>
