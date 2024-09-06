@@ -11,22 +11,22 @@ export interface PhotoModalProps {
 export interface PhotoModalInterface<K extends string> {
     photoHook: UseOverlayInterface
     togglePhoto: (image: string) => void
-    generateTriggerFigure: (image: K, optional?: {className?: string}) => JSX.Element
+    generateTriggerFigure: (image: K, optional?: { className?: string }) => JSX.Element
 }
 
 /**
- * This hook is used to create an overlay that displays images, 
+ * This hook is used to create an overlay that displays images,
  * and allows the user to cycle through them.
- * 
+ *
  * @param id The unique id of the modal.
- * @param photos The images to display in the modal. 
+ * @param photos The images to display in the modal.
  * All photos will be displayed even if a trigger image isn't generated.
- * 
- * @returns 
+ *
+ * @returns
  * `photoHook` The hook to display the modal.
- * 
+ *
  * `togglePhoto` A function to toggle the modal to a specific photo.
- * 
+ *
  * `generateTriggerFigure` A function to generate a trigger figure that will open the modal when clicked.
  */
 export function usePhotoModal<T, K extends string = Extract<keyof T, string>>({
@@ -50,7 +50,7 @@ export function usePhotoModal<T, K extends string = Extract<keyof T, string>>({
     )
 
     const generateTriggerFigure = useCallback(
-        (image: K, optional?: {className?: string}) => (
+        (image: K, optional?: { className?: string }) => (
             <div
                 key={image}
                 role="button"

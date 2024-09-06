@@ -7,7 +7,7 @@ import { UserExperienceUrl } from '../urls'
 export const UserExperienceHome: React.FC = () => {
     return (
         <>
-            <p className="info">
+            <p className="w-full text-center">
                 Architecture Design inspired me to pursue a Master&apos;s degree in
                 Human Factors. Initially, my intention was to apply this expertise to
                 the design of healthcare facilities. However, as I delved deeper into
@@ -19,12 +19,9 @@ export const UserExperienceHome: React.FC = () => {
                 title="Zirtual Hiring"
                 url={UserExperienceUrl.Zirtual}
                 className="zirtual"
-                graphic={
-                    <img
-                        className="zirtual"
-                        src="projects/zirtual/hiring1.png"
-                        alt="Hiring Initial Analysis"
-                    />
+                graphic={{
+                    src:"projects/zirtual/hiring1.png",
+                    alt:"Hiring Initial Analysis"}
                 }
                 notes="2014"
             >

@@ -18,9 +18,7 @@ export const RecipEz: React.FC = () => {
                     someone else creates it first.
                 </p>
             </PageTitle>
-            <PageSection title="Only Page">
-                {generateTriggerFigure('main')}
-            </PageSection>
+            <PageSection title="Only Page">{generateTriggerFigure('main')}</PageSection>
             <Overlay {...photoHook} />
         </>
     )

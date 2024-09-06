@@ -7,7 +7,7 @@ import { ArchDesignUrl } from '../urls'
 export const ArchDesignHome: React.FC = () => {
     return (
         <>
-            <p className="info">
+            <p className="w-full text-center">
                 My fascination with architecture first ignited during my high school
                 years when I enrolled in a drafting class. However, it was during my
                 time at Texas A&M University that my passion became focused on the
@@ -20,13 +20,10 @@ export const ArchDesignHome: React.FC = () => {
                 url={ArchDesignUrl.AirForce}
                 className="air-force"
                 subtitle="United States Air Force"
-                graphic={
-                    <img
-                        className="nellis-or"
-                        src="projects/nellis/final.jpg"
-                        alt="Nellis Operating Room at completion."
-                    />
-                }
+                graphic={{
+                    src: "projects/nellis/final.jpg",
+                    alt: "Nellis Operating Room at completion."
+                }}
                 notes="July 2010 - December 2016"
             >
                 <p>
@@ -52,13 +49,10 @@ export const ArchDesignHome: React.FC = () => {
                 url={ArchDesignUrl.TexasAM}
                 className="texas-am"
                 subtitle="Texas A&M University"
-                graphic={
-                    <img
-                        className="cosc"
-                        src="projects/cosc/perspective.jpg"
-                        alt="Rendering of a potential design for the College of Construction Science building at Texas A&M University."
-                    />
-                }
+                graphic={{
+                    src:"projects/cosc/perspective.jpg",
+                    alt:"Rendering of a potential design for the College of Construction Science building at Texas A&M University.",
+                }}
                 notes="August 2005 - May 2009"
             >
                 <p>

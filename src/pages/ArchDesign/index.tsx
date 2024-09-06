@@ -7,8 +7,6 @@ import { ArchDesignHome } from './home'
 import { TexasAM } from './TexasAM'
 import { NellisOR } from './NellisOR'
 
-import './index.sass'
-
 export const ArchDesign: React.FC = () => {
     return (
         <main id="arch-design">

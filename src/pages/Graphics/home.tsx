@@ -7,7 +7,7 @@ import { GraphicsUrl } from '../urls'
 export const GraphicsHome: React.FC = () => {
     return (
         <>
-            <p className="info">
+            <p className="w-full text-center">
                 Graphic design is a hobby more than anything, but it seems like no
                 matter what I am working on I can&apos;t help but create graphics for
                 it. I have created logos, business cards, and other graphics for a few
@@ -19,12 +19,9 @@ export const GraphicsHome: React.FC = () => {
                 url={GraphicsUrl.UnbTrees}
                 className="trees"
                 subtitle="Milwaukee Based Tree Service"
-                graphic={
-                    <img
-                        className="trees"
-                        src="projects/unbtrees/citylogo.png"
-                        alt="Logo with milwaukee skyline roots."
-                    />
+                graphic={{
+                    src:"projects/unbtrees/citylogo.png",
+                    alt:"Logo with milwaukee skyline roots."}
                 }
                 notes="Illustrator, InDesign, Photoshop"
             >
@@ -40,13 +37,10 @@ export const GraphicsHome: React.FC = () => {
                 url={GraphicsUrl.Emotions}
                 className="emotions"
                 subtitle="Emotions and Mental Health"
-                graphic={
-                    <img
-                        className="emotions"
-                        src="projects/emotions/all.png"
-                        alt="All Emotions"
-                    />
-                }
+                graphic={{
+                    src:"projects/emotions/all.png",
+                    alt:"All Emotions"
+                }}
                 notes="Illustrator"
             >
                 <p>

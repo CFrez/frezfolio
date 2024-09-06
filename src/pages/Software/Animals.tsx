@@ -77,34 +77,30 @@ export const Animals: React.FC = () => {
                 </p>
                 {generateTriggerFigure('dashboard')}
                 <div className="set">
-                    {generateTriggerFigure(
-                        'newAnimal',
-                        {className: 'modal'},
-                    )}
-                    {generateTriggerFigure('editAnimal',
-                    {
+                    {generateTriggerFigure('newAnimal', { className: 'modal' })}
+                    {generateTriggerFigure('editAnimal', {
                         className: 'modal',
                     })}
                 </div>
             </PageSection>
             <PageSection title="Animal Page">
-                {generateTriggerFigure('animalHome',{
+                {generateTriggerFigure('animalHome', {
                     className: 'animal',
                 })}
                 {/* TODO: Is this worth creating a component vs relying on className? */}
                 <div className="set">
-                    {generateTriggerFigure('animalHomeExpanded',{
+                    {generateTriggerFigure('animalHomeExpanded', {
                         className: 'animal',
                     })}
-                    {generateTriggerFigure('animalVetExpanded',{
+                    {generateTriggerFigure('animalVetExpanded', {
                         className: 'animal',
                     })}
                 </div>
                 <div className="set">
-                    {generateTriggerFigure('newRecord',{
+                    {generateTriggerFigure('newRecord', {
                         className: 'modal',
                     })}
-                    {generateTriggerFigure('editRecord',{
+                    {generateTriggerFigure('editRecord', {
                         className: 'modal',
                     })}
                 </div>

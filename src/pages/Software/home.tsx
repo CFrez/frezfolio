@@ -7,7 +7,7 @@ import { SoftwareUrl } from '../urls'
 export const SoftwareHome: React.FC = () => {
     return (
         <>
-            <p className="info">
+            <p className="w-full text-center">
                 The field of software development has become a passion of mine, to the
                 point where it no longer feels like work, but rather an engaging and
                 fulfilling pursuit. The intricate nature of software development
@@ -18,7 +18,7 @@ export const SoftwareHome: React.FC = () => {
                 unique hurdles and opportunities for growth.
             </p>
 
-            <p className="info">
+            <p className="w-full text-center">
                 The dynamic nature of the software development landscape ensures that I
                 am constantly learning and evolving. As technology evolves and new
                 paradigms emerge, I am driven to stay at the forefront of these
@@ -31,12 +31,9 @@ export const SoftwareHome: React.FC = () => {
                 title="Pet Rescue"
                 url={SoftwareUrl.Animals}
                 className="animals"
-                graphic={
-                    <img
-                        className="animals"
-                        src="projects/animals/quick.png"
-                        alt="Partial interface of an Animal's dashboard page."
-                    />
+                graphic={{
+                    src:"projects/animals/quick.png",
+                    alt:"Partial interface of an Animal's dashboard page."}
                 }
                 notes="2014-2016"
             >

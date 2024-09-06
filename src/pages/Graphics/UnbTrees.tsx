@@ -5,7 +5,6 @@ import { PageTitle, PageSection, Overlay, usePhotoModal } from '../../components
 import { unbtreesPhotos } from '../../data'
 
 export const UnbTrees: React.FC = () => {
-
     const { photoHook, generateTriggerFigure } = usePhotoModal<typeof unbtreesPhotos>({
         id: 'unbtrees',
         photos: unbtreesPhotos,

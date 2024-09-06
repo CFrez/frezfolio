@@ -7,7 +7,7 @@ import { ArchEngUrl } from '../urls'
 export const ArchEngHome: React.FC = () => {
     return (
         <>
-            <p className="info">
+            <p className="w-full text-center">
                 Architectural Engineering has captivated my interest due to its inherent
                 value and practical applications, especially given my residence in a
                 century-old house. During the pursuit of this Master&apos;s degree, I
@@ -22,14 +22,10 @@ export const ArchEngHome: React.FC = () => {
                 url={ArchEngUrl.Labview}
                 className="labview"
                 subtitle="MSOE Master's Project"
-                graphic={
-                    <img
-                        className="labview"
-                        src="/projects/labview/gui.png"
-                        alt="Main user interface of LabVIEW structural program."
-                    />
+                graphic={{
+                    src:"/projects/labview/gui.png",
+                    alt:"Main user interface of LabVIEW structural program."}
                 }
-                notes=""
             >
                 <p>
                     For the Materials and Methods Lab, I undertook the task of revamping
