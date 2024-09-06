@@ -4,6 +4,7 @@ export default {
         require('./src/assets/presets/color.ts'),
         require('./src/assets/presets/layout.ts'),
         require('./src/assets/presets/size.ts'),
+        require('./src/assets/presets/shadow.ts'),
         require('./src/assets/presets/typography.ts'),
     ],
     darkMode: 'selector',
