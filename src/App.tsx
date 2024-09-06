@@ -10,7 +10,6 @@ import {
     Graphics,
     Software,
     UserExperience,
-    System,
 } from './pages'
 
 import './App.sass'
@@ -36,7 +35,6 @@ export const App: React.FC = () => {
                         element={<Software />}
                     />
                 </Route>
-                <Route path={`${PageUrl.System}`} element={<System />} />
             </Routes>
         </div>
     )
