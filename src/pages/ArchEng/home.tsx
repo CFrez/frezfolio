@@ -23,9 +23,9 @@ export const ArchEngHome: React.FC = () => {
                 className="labview"
                 subtitle="MSOE Master's Project"
                 graphic={{
-                    src:"/projects/labview/gui.png",
-                    alt:"Main user interface of LabVIEW structural program."}
-                }
+                    src: '/projects/labview/gui.png',
+                    alt: 'Main user interface of LabVIEW structural program.',
+                }}
             >
                 <p>
                     For the Materials and Methods Lab, I undertook the task of revamping

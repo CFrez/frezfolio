@@ -20,9 +20,9 @@ export const UserExperienceHome: React.FC = () => {
                 url={UserExperienceUrl.Zirtual}
                 className="zirtual"
                 graphic={{
-                    src:"projects/zirtual/hiring1.png",
-                    alt:"Hiring Initial Analysis"}
-                }
+                    src: 'projects/zirtual/hiring1.png',
+                    alt: 'Hiring Initial Analysis',
+                }}
                 notes="2014"
             >
                 <p>

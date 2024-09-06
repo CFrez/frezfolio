@@ -20,9 +20,9 @@ export const GraphicsHome: React.FC = () => {
                 className="trees"
                 subtitle="Milwaukee Based Tree Service"
                 graphic={{
-                    src:"projects/unbtrees/citylogo.png",
-                    alt:"Logo with milwaukee skyline roots."}
-                }
+                    src: 'projects/unbtrees/citylogo.png',
+                    alt: 'Logo with milwaukee skyline roots.',
+                }}
                 notes="Illustrator, InDesign, Photoshop"
             >
                 <p>
@@ -38,8 +38,8 @@ export const GraphicsHome: React.FC = () => {
                 className="emotions"
                 subtitle="Emotions and Mental Health"
                 graphic={{
-                    src:"projects/emotions/all.png",
-                    alt:"All Emotions"
+                    src: 'projects/emotions/all.png',
+                    alt: 'All Emotions',
                 }}
                 notes="Illustrator"
             >

@@ -41,7 +41,11 @@ export const LinkCard: React.FC<LinkCardProps> = ({
                 row-start-1
             `}
             >
-                <CardTitle className={`text-base md:text-xl border-b-2 border-secondary `}>{title}</CardTitle>
+                <CardTitle
+                    className={`text-base md:text-xl border-b-2 border-secondary `}
+                >
+                    {title}
+                </CardTitle>
                 {subtitle && <h3 className={`text-sm md:text-lg`}>{subtitle}</h3>}
             </CardHeader>
             <div
@@ -52,10 +56,16 @@ export const LinkCard: React.FC<LinkCardProps> = ({
                     place-content-center
                 `}
             >
-                <img className={`w-full object-contain`} src={graphic.src} alt={graphic.alt} />
+                <img
+                    className={`w-full object-contain`}
+                    src={graphic.src}
+                    alt={graphic.alt}
+                />
             </div>
             {notes && (
-                <CardFooter className={`col-start-1 row-start-3 text-base`}>{notes}</CardFooter>
+                <CardFooter className={`col-start-1 row-start-3 text-base`}>
+                    {notes}
+                </CardFooter>
             )}
             <CardContent
                 className={`

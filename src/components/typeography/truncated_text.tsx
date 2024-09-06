@@ -8,15 +8,20 @@ interface ExpandableTruncatedTextProps {
     splitOn?: string
 }
 
-export const ExpandableTruncatedText = ({ children, className, defaultOpen = false, splitOn = '. ' }: ExpandableTruncatedTextProps) => {
+export const ExpandableTruncatedText = ({
+    children,
+    className,
+    defaultOpen = false,
+    splitOn = '. ',
+}: ExpandableTruncatedTextProps) => {
     const [isExpanded, setIsExpanded] = useState(defaultOpen)
 
-    const truncatedText = children.split(splitOn)[0]+'...'
+    const truncatedText = children.split(splitOn)[0] + '...'
 
     const switchExpanded = (e: React.MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault();
-        e.stopPropagation();
-        e.nativeEvent.stopImmediatePropagation();
+        e.preventDefault()
+        e.stopPropagation()
+        e.nativeEvent.stopImmediatePropagation()
         setIsExpanded((prev) => !prev)
     }
 
@@ -31,9 +36,7 @@ export const ExpandableTruncatedText = ({ children, className, defaultOpen = fal
 
     return (
         <div className={cn('whitespace-pre-line' + className)}>
-            {isExpanded ? children : truncatedText}
-            {' '}
-            {expansionButton}
+            {isExpanded ? children : truncatedText} {expansionButton}
         </div>
     )
 }

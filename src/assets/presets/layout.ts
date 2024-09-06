@@ -4,7 +4,7 @@ module.exports = {
             gridTemplateRows: {
                 'grow-middle': {
                     DEFAULT: 'max-content 1fr max-content',
-                }
+                },
             },
         },
     },

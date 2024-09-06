@@ -14,10 +14,15 @@ export const PageSection: React.FC<PageSectionProps> = ({
     className,
 }) => {
     return (
-        <section className={cn(`
-            flex flex-col gap-4
-        `, className)}>
-            <h2 className='text-2xl'>{title}</h2>
+        <section
+            className={cn(
+                `
+                    flex flex-col gap-4
+                `,
+                className,
+            )}
+        >
+            <h2 className="text-2xl">{title}</h2>
             {children}
         </section>
     )

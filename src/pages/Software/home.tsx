@@ -32,9 +32,9 @@ export const SoftwareHome: React.FC = () => {
                 url={SoftwareUrl.Animals}
                 className="animals"
                 graphic={{
-                    src:"projects/animals/quick.png",
-                    alt:"Partial interface of an Animal's dashboard page."}
-                }
+                    src: 'projects/animals/quick.png',
+                    alt: "Partial interface of an Animal's dashboard page.",
+                }}
                 notes="2014-2016"
             >
                 <p>
