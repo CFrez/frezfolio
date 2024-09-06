@@ -1,11 +1,39 @@
+import { cn } from '@/lib/tailwind.utils'
 import React, { useState } from 'react'
 
-export const ExpandableTruncatedSentence: React.FC<{ children: string, defaultOpen: boolean }> = ({ children, defaultOpen = false }) => {
+interface ExpandableTruncatedTextProps {
+    children: string
+    className?: string
+    defaultOpen?: boolean
+    splitOn?: string
+}
+
+export const ExpandableTruncatedText = ({ children, className, defaultOpen = false, splitOn = '. ' }: ExpandableTruncatedTextProps) => {
     const [isExpanded, setIsExpanded] = useState(defaultOpen)
 
-    const firstSentence = children.split('. ')[0]
-    
+    const truncatedText = children.split(splitOn)[0]+'...'
+
+    const switchExpanded = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        e.stopPropagation();
+        e.nativeEvent.stopImmediatePropagation();
+        setIsExpanded((prev) => !prev)
+    }
+
+    const expansionButton = (
+        <button
+            className="text-sm text-muted-foreground inline-block"
+            onClick={switchExpanded}
+        >
+            {isExpanded ? 'less' : 'more'}
+        </button>
+    )
+
     return (
-        <p className="truncate">{children}</p>
+        <div className={cn('whitespace-pre-line' + className)}>
+            {isExpanded ? children : truncatedText}
+            {' '}
+            {expansionButton}
+        </div>
     )
 }

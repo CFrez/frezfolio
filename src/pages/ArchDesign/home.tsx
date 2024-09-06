@@ -1,10 +1,13 @@
 import React from 'react'
+import { useMediaQuery } from 'react-responsive'
 
-import { LinkCard } from '../../components'
+import { ExpandableTruncatedText, LinkCard } from '../../components'
 
 import { ArchDesignUrl } from '../urls'
 
 export const ArchDesignHome: React.FC = () => {
+    const isMobile = useMediaQuery({ query: '(max-width: 640px)' })
+
     return (
         <>
             <p className="w-full text-center">
@@ -26,22 +29,36 @@ export const ArchDesignHome: React.FC = () => {
                 }}
                 notes="July 2010 - December 2016"
             >
-                <p>
-                    During my career in the Air Force, I had the opportunity to engage
-                    in a diverse range of projects, encompassing both minor renovations
-                    and ambitious new constructions. From the initial stages of planning
-                    to the final stages of construction, I was actively involved in
-                    various project life cycles, gaining valuable experience and insight
-                    at every step.
-                </p>
-                <p>
-                    I was afforded the privilege of collaborating with a multitude of
-                    professionals, including medical staff, architects, engineers, and
-                    contractors. This rich and dynamic exchange of ideas and expertise
-                    fostered a truly multidisciplinary approach, ensuring that the
-                    healthcare facilities we developed addressed the distinct
-                    requirements of our esteemed servicemen and women.
-                </p>
+                {isMobile ? (
+                    <ExpandableTruncatedText>
+                        During my career in the Air Force, I had the opportunity to engage
+                        in a diverse range of projects, encompassing both minor renovations
+                        and ambitious new constructions. From the initial stages of planning
+                        to the final stages of construction, I was actively involved in
+                        various project life cycles, gaining valuable experience and insight
+                        at every step.
+                    </ExpandableTruncatedText>
+                ) : (
+                    <>
+                        <p>
+                            During my career in the Air Force, I had the opportunity to engage
+                            in a diverse range of projects, encompassing both minor renovations
+                            and ambitious new constructions. From the initial stages of planning
+                            to the final stages of construction, I was actively involved in
+                            various project life cycles, gaining valuable experience and insight
+                            at every step.
+                        </p>
+                        <p>
+                            I was afforded the privilege of collaborating with a multitude of
+                            professionals, including medical staff, architects, engineers, and
+                            contractors. This rich and dynamic exchange of ideas and expertise
+                            fostered a truly multidisciplinary approach, ensuring that the
+                            healthcare facilities we developed addressed the distinct
+                            requirements of our esteemed servicemen and women.
+                        </p>
+                    </>
+                )}
+
             </LinkCard>
 
             <LinkCard
@@ -55,6 +72,17 @@ export const ArchDesignHome: React.FC = () => {
                 }}
                 notes="August 2005 - May 2009"
             >
+            {isMobile ? (
+                <ExpandableTruncatedText>
+                    The Bachelor of Environmental Design program at Texas A&M University
+                    is an interdisciplinary undergraduate degree focused on
+                    architecture. It offers a comprehensive education in design
+                    thinking, problem-solving, and architectural principles. Students
+                    engage in studio-based courses, explore sustainability and cultural
+                    context, and gain practical experience through a study abroad
+                    program.
+                </ExpandableTruncatedText>
+            ) : (
                 <p>
                     The Bachelor of Environmental Design program at Texas A&M University
                     is an interdisciplinary undergraduate degree focused on
@@ -64,6 +92,7 @@ export const ArchDesignHome: React.FC = () => {
                     context, and gain practical experience through a study abroad
                     program.
                 </p>
+            )}
             </LinkCard>
         </>
     )
