@@ -2,6 +2,7 @@ import React, { useMemo, useCallback } from 'react'
 
 import { type UseOverlayInterface, useOverlay } from './useOverlay'
 import type { ImageData } from '../../types'
+import { cn } from '@/lib/tailwind.utils'
 
 export interface PhotoModalProps {
     id: string
@@ -10,7 +11,7 @@ export interface PhotoModalProps {
 
 export interface PhotoModalInterface<K extends string> {
     photoHook: UseOverlayInterface
-    togglePhoto: (image: string) => void
+    togglePhoto: (image: K) => void
     generateTriggerFigure: (image: K, optional?: { className?: string }) => JSX.Element
 }
 
@@ -54,14 +55,23 @@ export function usePhotoModal<T, K extends string = Extract<keyof T, string>>({
             <div
                 key={image}
                 role="button"
-                className="photo-trigger"
+                className={cn("self-center min-w-[33%]", optional?.className)}
                 onClick={() => togglePhoto(image)}
                 onKeyUp={() => togglePhoto(image)}
                 tabIndex={0}
             >
-                <figure className={optional?.className}>
-                    <img src={photos[image].src} alt={photos[image].alt} />
-                    <figcaption>
+                <figure className={`
+                    flex flex-col gap-2
+                    items-center justify-center
+                    mx-auto my-0
+                    max-w-xl max-h-96
+                `}>
+                    <img className={`
+                        min-h-0 object-cover 
+                        hover:cursor-pointer
+                        hover:shadow-md
+                    `} src={photos[image].src} alt={photos[image].alt} />
+                    <figcaption className='cursor-default'>
                         {photos[image].caption || photos[image].alt}
                     </figcaption>
                 </figure>
