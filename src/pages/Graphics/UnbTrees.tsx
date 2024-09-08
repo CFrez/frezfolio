@@ -1,17 +1,20 @@
 import React from 'react'
 
-import { PageTitle, PageSection, Overlay, usePhotoModal } from '../../components'
+import { Dialog } from '@/components/ui'
 
+import { PageTitle, PageSection, usePhotoModal } from '../../components'
 import { unbtreesPhotos } from '../../data'
 
 export const UnbTrees: React.FC = () => {
-    const { photoHook, generateTriggerFigure } = usePhotoModal<typeof unbtreesPhotos>({
+    const { generatePhotoModal, generateTriggerFigure } = usePhotoModal<
+        typeof unbtreesPhotos
+    >({
         id: 'unbtrees',
         photos: unbtreesPhotos,
     })
 
     return (
-        <>
+        <Dialog>
             <PageTitle title="UNB Trees">
                 <p>
                     The tree service was a family-owned and operated business that
@@ -106,7 +109,7 @@ export const UnbTrees: React.FC = () => {
                 </p>
                 {generateTriggerFigure('woodSign')}
             </PageSection>
-            <Overlay {...photoHook} />
-        </>
+            {generatePhotoModal()}
+        </Dialog>
     )
 }

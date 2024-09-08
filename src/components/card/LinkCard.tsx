@@ -28,18 +28,18 @@ export const LinkCard: React.FC<LinkCardProps> = ({
     <Link to={url} className={`w-full ${className}`}>
         <Card
             className={`
-            flex flex-col gap-2
-            md:grid md:gap-4
-            grid-cols-2 
-            grid-rows-grow-middle
-            p-6
-        `}
+                flex flex-col gap-2
+                md:grid md:gap-4
+                grid-cols-2 
+                grid-rows-grow-middle
+                p-6
+            `}
         >
             <CardHeader
                 className={`
-                col-start-1
-                row-start-1
-            `}
+                    col-start-1
+                    row-start-1
+                `}
             >
                 <CardTitle
                     className={`text-base md:text-xl border-b-2 border-secondary `}
@@ -69,11 +69,11 @@ export const LinkCard: React.FC<LinkCardProps> = ({
             )}
             <CardContent
                 className={`
-                col-start-1
-                row-start-2
-                flex flex-col gap-2
-                [&>p]:text-base
-            `}
+                    col-start-1
+                    row-start-2
+                    flex flex-col gap-2
+                    [&>p]:text-base
+                `}
             >
                 {children}
             </CardContent>

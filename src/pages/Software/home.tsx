@@ -1,10 +1,13 @@
 import React from 'react'
+import { useMediaQuery } from 'react-responsive'
 
-import { LinkCard } from '../../components'
+import { ExpandableTruncatedText, LinkCard } from '../../components'
 
 import { SoftwareUrl } from '../urls'
 
 export const SoftwareHome: React.FC = () => {
+    const isMobile = useMediaQuery({ query: '(max-width: 640px)' })
+
     return (
         <>
             <p className="w-full text-center">
@@ -37,16 +40,31 @@ export const SoftwareHome: React.FC = () => {
                 }}
                 notes="2014-2016"
             >
-                <p>
-                    During my involvement with a foster-based pet rescue organization in
-                    Las Vegas, Nevada, I became aware of the pressing need for improved
-                    tracking and monitoring systems for the animals. Recognizing this
-                    gap, I undertook a design exercise aimed at conceptualizing and
-                    visualizing potential solutions to address this issue. The primary
-                    objective was to envision a comprehensive and efficient tracking and
-                    monitoring system that would enhance the organization&apos;s ability
-                    to manage and care for the animals under its care.
-                </p>
+                {isMobile ? (
+                    <ExpandableTruncatedText>
+                        During my involvement with a foster-based pet rescue
+                        organization in Las Vegas, Nevada, I became aware of the
+                        pressing need for improved tracking and monitoring systems for
+                        the animals. Recognizing this gap, I undertook a design exercise
+                        aimed at conceptualizing and visualizing potential solutions to
+                        address this issue. The primary objective was to envision a
+                        comprehensive and efficient tracking and monitoring system that
+                        would enhance the organization&apos;s ability to manage and care
+                        for the animals under its care.
+                    </ExpandableTruncatedText>
+                ) : (
+                    <p>
+                        During my involvement with a foster-based pet rescue
+                        organization in Las Vegas, Nevada, I became aware of the
+                        pressing need for improved tracking and monitoring systems for
+                        the animals. Recognizing this gap, I undertook a design exercise
+                        aimed at conceptualizing and visualizing potential solutions to
+                        address this issue. The primary objective was to envision a
+                        comprehensive and efficient tracking and monitoring system that
+                        would enhance the organization&apos;s ability to manage and care
+                        for the animals under its care.
+                    </p>
+                )}
             </LinkCard>
 
             {/* TODO: Generate More content for this app! */}

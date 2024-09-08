@@ -1,10 +1,13 @@
 import React from 'react'
+import { useMediaQuery } from 'react-responsive'
 
-import { LinkCard } from '../../components'
+import { ExpandableTruncatedText, LinkCard } from '../../components'
 
 import { UserExperienceUrl } from '../urls'
 
 export const UserExperienceHome: React.FC = () => {
+    const isMobile = useMediaQuery({ query: '(max-width: 640px)' })
+
     return (
         <>
             <p className="w-full text-center">
@@ -25,13 +28,23 @@ export const UserExperienceHome: React.FC = () => {
                 }}
                 notes="2014"
             >
-                <p>
-                    Zirtual is a virtual assistant company that was acquired by
-                    Startups.co in 2016. I worked on the hiring process for Zirtual,
-                    which included a web application for applicants to apply to be a
-                    virtual assistant. I worked on the initial analysis of the hiring
-                    process, and then worked on improving the process.
-                </p>
+                {isMobile ? (
+                    <ExpandableTruncatedText>
+                        Zirtual is a virtual assistant company that was acquired by
+                        Startups.co in 2016. I worked on the hiring process for Zirtual,
+                        which included a web application for applicants to apply to be a
+                        virtual assistant. I worked on the initial analysis of the
+                        hiring process, and then worked on improving the process.
+                    </ExpandableTruncatedText>
+                ) : (
+                    <p>
+                        Zirtual is a virtual assistant company that was acquired by
+                        Startups.co in 2016. I worked on the hiring process for Zirtual,
+                        which included a web application for applicants to apply to be a
+                        virtual assistant. I worked on the initial analysis of the
+                        hiring process, and then worked on improving the process.
+                    </p>
+                )}
             </LinkCard>
         </>
     )

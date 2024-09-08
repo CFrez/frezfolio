@@ -1,10 +1,13 @@
 import React from 'react'
+import { useMediaQuery } from 'react-responsive'
 
-import { LinkCard } from '../../components'
+import { ExpandableTruncatedText, LinkCard } from '../../components'
 
 import { ArchEngUrl } from '../urls'
 
 export const ArchEngHome: React.FC = () => {
+    const isMobile = useMediaQuery({ query: '(max-width: 640px)' })
+
     return (
         <>
             <p className="w-full text-center">
@@ -27,15 +30,27 @@ export const ArchEngHome: React.FC = () => {
                     alt: 'Main user interface of LabVIEW structural program.',
                 }}
             >
-                <p>
-                    For the Materials and Methods Lab, I undertook the task of revamping
-                    the software utilized by undergraduate students. With the equipment
-                    undergoing updates, it was essential to ensure that the accompanying
-                    software was also brought up to date. Leveraging LabVIEW, I
-                    developed a program that enabled students to conduct tests on
-                    various materials and seamlessly generate data for subsequent
-                    analysis.
-                </p>
+                {isMobile ? (
+                    <ExpandableTruncatedText>
+                        For the Materials and Methods Lab, I undertook the task of
+                        revamping the software utilized by undergraduate students. With
+                        the equipment undergoing updates, it was essential to ensure
+                        that the accompanying software was also brought up to date.
+                        Leveraging LabVIEW, I developed a program that enabled students
+                        to conduct tests on various materials and seamlessly generate
+                        data for subsequent analysis.
+                    </ExpandableTruncatedText>
+                ) : (
+                    <p>
+                        For the Materials and Methods Lab, I undertook the task of
+                        revamping the software utilized by undergraduate students. With
+                        the equipment undergoing updates, it was essential to ensure
+                        that the accompanying software was also brought up to date.
+                        Leveraging LabVIEW, I developed a program that enabled students
+                        to conduct tests on various materials and seamlessly generate
+                        data for subsequent analysis.
+                    </p>
+                )}
             </LinkCard>
         </>
     )

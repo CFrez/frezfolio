@@ -4,7 +4,7 @@ module.exports = {
             colors: {
                 background: {
                     DEFAULT: 'hsl(var(--background))',
-                    hero: 'linear-gradient(transparent 0px, transparent 87%, hsl(var(--grey-dark)) 87%,  hsl(var(--grey-dark)))'
+                    hero: 'linear-gradient(transparent 0px, transparent 87%, hsl(var(--grey-dark)) 87%,  hsl(var(--grey-dark)))',
                 },
                 foreground: 'hsl(var(--foreground))',
                 card: {

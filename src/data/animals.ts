@@ -7,6 +7,16 @@ export const animalsPhotos = {
         src: `${baseFolder}/dashboard.png`,
         alt: 'Main Animal Dashboard',
     },
+    newAnimal: {
+        src: `${baseFolder}/new-animal.png`,
+        alt: 'Create Animal',
+        className: 'max-h-[600px]',
+    },
+    editAnimal: {
+        src: `${baseFolder}/edit-animal.png`,
+        alt: 'Update Animal',
+        className: 'max-h-[600px]',
+    },
     animalHome: {
         src: `${baseFolder}/home.png`,
         alt: "Animal's Home Page",
@@ -19,21 +29,15 @@ export const animalsPhotos = {
         src: `${baseFolder}/vet-exp.png`,
         alt: "Animal's Vet History Expanded",
     },
-    newAnimal: {
-        src: `${baseFolder}/new-animal.png`,
-        alt: 'Create Animal',
-    },
-    editAnimal: {
-        src: `${baseFolder}/edit-animal.png`,
-        alt: 'Update Animal',
-    },
     newRecord: {
         src: `${baseFolder}/new-record.png`,
         alt: 'Create Record for Animal',
+        className: 'max-h-[600px]',
     },
     editRecord: {
         src: `${baseFolder}/edit-record.png`,
         alt: 'Update Record for Animal',
+        className: 'max-h-[600px]',
     },
 }
 
