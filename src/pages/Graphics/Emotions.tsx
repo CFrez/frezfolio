@@ -1,7 +1,6 @@
 import React, { useCallback } from 'react'
 
 import { PageTitle } from '../../components'
-
 import { emotionsPhotos } from '../../data'
 import { ImageData } from '../../types'
 

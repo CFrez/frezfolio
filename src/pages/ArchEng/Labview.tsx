@@ -1,16 +1,19 @@
 import React from 'react'
 
-import { PageTitle, PageSection, usePhotoModal, Overlay } from '../../components'
-import { LabViewImage, labViewPhotos } from '../../data'
+import { PageTitle, PageSection, usePhotoModal } from '../../components'
+import { labViewPhotos } from '../../data'
+import { Dialog } from '@/components/ui'
 
 export const Labview: React.FC = () => {
-    const { photoHook, generateTriggerFigure } = usePhotoModal<typeof labViewPhotos>({
+    const { generatePhotoModal, generateTriggerFigure } = usePhotoModal<
+        typeof labViewPhotos
+    >({
         id: 'labview',
         photos: labViewPhotos,
     })
 
     return (
-        <>
+        <Dialog>
             <PageTitle
                 title="Materials and Methods Lab"
                 subtitle="Milwaukee School of Engineering"
@@ -113,13 +116,13 @@ export const Labview: React.FC = () => {
                 </p>
                 <div className="icon">
                     <img
-                        src="projects/labview/testing.jpg"
+                        src="/projects/labview/testing.jpg"
                         alt="testing equipment that inspired icon"
                     />
-                    <img src="projects/labview/icon.svg" alt="icon" />
+                    <img src="/projects/labview/icon.svg" alt="icon" />
                 </div>
             </PageSection>
-            <Overlay {...photoHook} />
-        </>
+            {generatePhotoModal()}
+        </Dialog>
     )
 }

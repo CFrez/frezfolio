@@ -1,13 +1,16 @@
 import React from 'react'
+import { useMediaQuery } from 'react-responsive'
 
-import { LinkCard } from '../../components'
+import { ExpandableTruncatedText, LinkCard } from '../../components'
 
 import { ArchEngUrl } from '../urls'
 
 export const ArchEngHome: React.FC = () => {
+    const isMobile = useMediaQuery({ query: '(max-width: 640px)' })
+
     return (
         <>
-            <p className="info">
+            <p className="w-full text-center">
                 Architectural Engineering has captivated my interest due to its inherent
                 value and practical applications, especially given my residence in a
                 century-old house. During the pursuit of this Master&apos;s degree, I
@@ -22,24 +25,32 @@ export const ArchEngHome: React.FC = () => {
                 url={ArchEngUrl.Labview}
                 className="labview"
                 subtitle="MSOE Master's Project"
-                graphic={
-                    <img
-                        className="labview"
-                        src="/projects/labview/gui.png"
-                        alt="Main user interface of LabVIEW structural program."
-                    />
-                }
-                notes=""
+                graphic={{
+                    src: '/projects/labview/gui.png',
+                    alt: 'Main user interface of LabVIEW structural program.',
+                }}
             >
-                <p>
-                    For the Materials and Methods Lab, I undertook the task of revamping
-                    the software utilized by undergraduate students. With the equipment
-                    undergoing updates, it was essential to ensure that the accompanying
-                    software was also brought up to date. Leveraging LabVIEW, I
-                    developed a program that enabled students to conduct tests on
-                    various materials and seamlessly generate data for subsequent
-                    analysis.
-                </p>
+                {isMobile ? (
+                    <ExpandableTruncatedText>
+                        For the Materials and Methods Lab, I undertook the task of
+                        revamping the software utilized by undergraduate students. With
+                        the equipment undergoing updates, it was essential to ensure
+                        that the accompanying software was also brought up to date.
+                        Leveraging LabVIEW, I developed a program that enabled students
+                        to conduct tests on various materials and seamlessly generate
+                        data for subsequent analysis.
+                    </ExpandableTruncatedText>
+                ) : (
+                    <p>
+                        For the Materials and Methods Lab, I undertook the task of
+                        revamping the software utilized by undergraduate students. With
+                        the equipment undergoing updates, it was essential to ensure
+                        that the accompanying software was also brought up to date.
+                        Leveraging LabVIEW, I developed a program that enabled students
+                        to conduct tests on various materials and seamlessly generate
+                        data for subsequent analysis.
+                    </p>
+                )}
             </LinkCard>
         </>
     )

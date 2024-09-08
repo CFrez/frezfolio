@@ -1,6 +1,6 @@
 import React, { type ReactNode } from 'react'
 
-import './section.sass'
+import { cn } from '@/lib/tailwind.utils'
 
 interface PageSectionProps {
     title: string
@@ -14,8 +14,8 @@ export const PageSection: React.FC<PageSectionProps> = ({
     className,
 }) => {
     return (
-        <section className={`page-section ${className}`}>
-            <h2>{title}</h2>
+        <section className={cn(`flex flex-col gap-6`, className)}>
+            <h2 className="text-2xl">{title}</h2>
             {children}
         </section>
     )

@@ -1,16 +1,19 @@
 import React from 'react'
 
-import { PageTitle, PageSection, Overlay, usePhotoModal } from '../../components'
+import { Dialog } from '@/components/ui'
 
+import { PageTitle, PageSection, usePhotoModal } from '../../components'
 import { zirtualPhotos } from '../../data'
 
 export const Zirtual: React.FC = () => {
-    const { photoHook, generateTriggerFigure } = usePhotoModal<typeof zirtualPhotos>({
+    const { generatePhotoModal, generateTriggerFigure } = usePhotoModal<
+        typeof zirtualPhotos
+    >({
         id: 'zirtual-hiring',
         photos: zirtualPhotos,
     })
     return (
-        <>
+        <Dialog>
             <PageTitle title="Zirtual" subtitle="Hiring Process Automation">
                 <p>
                     By conducting user interviews and analyzing the hiring process at
@@ -33,7 +36,7 @@ export const Zirtual: React.FC = () => {
                 {generateTriggerFigure('initial')}
                 {generateTriggerFigure('final')}
             </PageSection>
-            <Overlay {...photoHook} />
-        </>
+            {generatePhotoModal()}
+        </Dialog>
     )
 }

@@ -1,7 +1,12 @@
 import React, { useMemo, useCallback } from 'react'
+import { ChevronLeftIcon, ChevronRightIcon } from '@radix-ui/react-icons'
+import { useMediaQuery } from 'react-responsive'
 
-import { type UseOverlayInterface, useOverlay } from './useOverlay'
 import type { ImageData } from '../../types'
+
+import { Button, DialogDescription, DialogTitle, DialogTrigger } from '../ui'
+import { cn } from '@/lib/tailwind.utils'
+import { Modal } from './Modal'
 
 export interface PhotoModalProps {
     id: string
@@ -9,24 +14,21 @@ export interface PhotoModalProps {
 }
 
 export interface PhotoModalInterface<K extends string> {
-    photoHook: UseOverlayInterface
-    togglePhoto: (image: string) => void
-    generateTriggerFigure: (image: K, optional?: {className?: string}) => JSX.Element
+    generatePhotoModal: () => JSX.Element | undefined
+    generateTriggerFigure: (image: K, optional?: { className?: string }) => JSX.Element
 }
 
 /**
- * This hook is used to create an overlay that displays images, 
+ * This hook is used to create an overlay that displays images,
  * and allows the user to cycle through them.
- * 
+ *
  * @param id The unique id of the modal.
- * @param photos The images to display in the modal. 
+ * @param photos The images to display in the modal.
  * All photos will be displayed even if a trigger image isn't generated.
- * 
- * @returns 
- * `photoHook` The hook to display the modal.
- * 
- * `togglePhoto` A function to toggle the modal to a specific photo.
- * 
+ *
+ * @returns
+ * `generatePhotoModal` A function to generate the modal.
+ *
  * `generateTriggerFigure` A function to generate a trigger figure that will open the modal when clicked.
  */
 export function usePhotoModal<T, K extends string = Extract<keyof T, string>>({
@@ -34,81 +36,128 @@ export function usePhotoModal<T, K extends string = Extract<keyof T, string>>({
     // TODO: instead of sending the type of photos, could we infer it from the photos object?
     photos,
 }: PhotoModalProps): PhotoModalInterface<K> {
-    const [isVisible, setIsVisible] = React.useState(false)
+    const isMobile = useMediaQuery({ query: '(max-width: 640px)' })
     const [imageIndex, setImageIndex] = React.useState(0)
 
     const images = useMemo(() => Object.keys(photos), [photos])
     const imagesCount = useMemo(() => images.length, [images])
-    const currentPhotoKey = useMemo(() => images[imageIndex], [imageIndex, images])
+    const currentPhoto = useMemo(
+        () => photos[images[imageIndex]],
+        [photos, imageIndex, images],
+    )
 
     const togglePhoto = useCallback(
         (image: K) => {
             setImageIndex(images.indexOf(image))
-            setIsVisible(true)
         },
         [images],
     )
+    
 
     const generateTriggerFigure = useCallback(
-        (image: K, optional?: {className?: string}) => (
-            <div
-                key={image}
-                role="button"
-                className="photo-trigger"
-                onClick={() => togglePhoto(image)}
-                onKeyUp={() => togglePhoto(image)}
-                tabIndex={0}
-            >
-                <figure className={optional?.className}>
-                    <img src={photos[image].src} alt={photos[image].alt} />
-                    <figcaption>
-                        {photos[image].caption || photos[image].alt}
+        (imageKey: K, optional?: { className?: string }) => {
+            const image = photos[imageKey]
+            const figure = (
+                <figure
+                    className={`
+                    flex flex-col-reverse sm:flex-col gap-2
+                    items-center justify-center
+                    mx-auto my-0
+                    w-full md:w-unset md:max-w-xl max-h-96
+                `}
+                >
+                    <img
+                        className={`
+                        min-h-0 h-full object-cover 
+                        sm:hover:cursor-pointer
+                        sm:hover:shadow-md
+                    `}
+                        src={image.src}
+                        alt={image.alt}
+                    />
+                    <figcaption className="cursor-default">
+                        {image.caption || image.alt}
                     </figcaption>
                 </figure>
-            </div>
-        ),
+            )
+
+            if (isMobile) {
+                return figure
+            }
+            return (
+                <DialogTrigger
+                    asChild
+                    key={imageKey}
+                    className={cn('self-center min-w-[33%]', optional?.className)}
+                    onClick={() => togglePhoto(imageKey)}
+                    onKeyUp={() => togglePhoto(imageKey)}
+                    tabIndex={0}
+                >
+                    {figure}
+                </DialogTrigger>
+            )
+        },
         [togglePhoto, photos],
     )
 
-    // TODO: Update this styling to handle mobile.
-    const modalBody = (
-        <>
-            <button
-                type="button"
-                onClick={() => setImageIndex((prev) => prev - 1)}
-                disabled={imageIndex === 0}
-            >
-                <span className="material-icons">chevron_left</span>
-            </button>
-            <img
-                src={photos[currentPhotoKey].src}
-                alt={photos[currentPhotoKey].alt}
-                className={photos[currentPhotoKey].className}
-            />
-            {/* Add option for dots along bottom instead of side buttons? */}
-            <button
-                type="button"
-                onClick={() => setImageIndex((prev) => prev + 1)}
-                disabled={imageIndex === imagesCount - 1}
-            >
-                <span className="material-icons">chevron_right</span>
-            </button>
-        </>
-    )
+    const modalHeader = useMemo(() => {
+        return (
+            <>
+                <DialogTitle className='text-2xl'>{currentPhoto.caption || currentPhoto.alt}</DialogTitle>
+                <DialogDescription className="hidden">
+                    {currentPhoto.alt}
+                </DialogDescription>
+            </>
+        )
+    }, [currentPhoto])
 
-    const photoHook = useOverlay({
-        id,
-        className: 'photo-modal',
-        content: {
-            header: photos[currentPhotoKey].caption || photos[currentPhotoKey].alt,
-            body: modalBody,
-        },
-        visibility: { isVisible, setIsVisible },
-    })
+    const generatePhotoModal = useCallback(() => {
+        if (isMobile) {
+            return
+        }
+        return (
+            <Modal
+                id={id}
+                className={`
+                    w-[90vw] h-[90vh]
+                    [&>button]:top-5 
+                `}
+                header={modalHeader}
+                onCloseAutoFocus={(e) => e.preventDefault()}
+            >
+                <div className={`flex justify-center items-center h-full w-full`}>
+                    <Button
+                        className='grow h-full hover:bg-neutral-100'
+                        type="button"
+                        variant="text"
+                        size='icon'
+                        onClick={() => setImageIndex((prev) => prev - 1)}
+                        disabled={imageIndex === 0}
+                    >
+                        <ChevronLeftIcon className="w-12 h-12" />
+                    </Button>
+                    <img
+                        src={currentPhoto.src}
+                        alt={currentPhoto.alt}
+                        className={cn(`max-h-full max-w-[80%] w-full md:w-max object-contain`, currentPhoto.className)}
+                    />
+                    <Button
+                        className='grow h-full hover:bg-neutral-100'
+                        type="button"
+                        variant="text"
+                        size='icon'
+                        onClick={() => setImageIndex((prev) => prev + 1)}
+                        disabled={imageIndex === imagesCount - 1}
+                    >
+                        <ChevronRightIcon className="w-12 h-12" />
+                    </Button>
+                </div>
+            </Modal>
+        )
+    }, [currentPhoto, imageIndex, imagesCount, setImageIndex])
 
     return {
-        photoHook,
+        generatePhotoModal,
         generateTriggerFigure,
-        togglePhoto,
     }
 }

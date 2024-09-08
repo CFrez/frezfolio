@@ -1,19 +1,25 @@
 import React from 'react'
 
-import { PageTitle, PageSection, Overlay, usePhotoModal } from '../../components'
+import { Dialog } from '@/components/ui'
 
+import { PageTitle, PageSection, usePhotoModal } from '../../components'
 import { animalsPhotos } from '../../data'
+
 import { AnimalProcess } from './AnimalProcess'
 import { AnimalRoles, AnimalFeatures } from './AnimalTables'
 
+const setClass = 'w-full flex gap-6 sm:gap-4 items-center justify-center mx-auto my-0 flex-wrap'
+
 export const Animals: React.FC = () => {
-    const { photoHook, generateTriggerFigure } = usePhotoModal<typeof animalsPhotos>({
+    const { generatePhotoModal, generateTriggerFigure } = usePhotoModal<
+        typeof animalsPhotos
+    >({
         id: 'animals',
         photos: animalsPhotos,
     })
 
     return (
-        <>
+        <Dialog>
             <PageTitle
                 title="Pet Rescue Animal Tracker"
                 subtitle="Foreclosed Upon Pets, Inc"
@@ -76,40 +82,36 @@ export const Animals: React.FC = () => {
                     management.
                 </p>
                 {generateTriggerFigure('dashboard')}
-                <div className="set">
-                    {generateTriggerFigure(
-                        'newAnimal',
-                        {className: 'modal'},
-                    )}
-                    {generateTriggerFigure('editAnimal',
-                    {
+                <div className={setClass}>
+                    {generateTriggerFigure('newAnimal', { className: 'modal' })}
+                    {generateTriggerFigure('editAnimal', {
                         className: 'modal',
                     })}
                 </div>
             </PageSection>
             <PageSection title="Animal Page">
-                {generateTriggerFigure('animalHome',{
+                {generateTriggerFigure('animalHome', {
                     className: 'animal',
                 })}
                 {/* TODO: Is this worth creating a component vs relying on className? */}
-                <div className="set">
-                    {generateTriggerFigure('animalHomeExpanded',{
+                <div className={setClass}>
+                    {generateTriggerFigure('animalHomeExpanded', {
                         className: 'animal',
                     })}
-                    {generateTriggerFigure('animalVetExpanded',{
+                    {generateTriggerFigure('animalVetExpanded', {
                         className: 'animal',
                     })}
                 </div>
-                <div className="set">
-                    {generateTriggerFigure('newRecord',{
+                <div className={setClass}>
+                    {generateTriggerFigure('newRecord', {
                         className: 'modal',
                     })}
-                    {generateTriggerFigure('editRecord',{
+                    {generateTriggerFigure('editRecord', {
                         className: 'modal',
                     })}
                 </div>
             </PageSection>
-            <Overlay {...photoHook} />
-        </>
+            {generatePhotoModal()}
+        </Dialog>
     )
 }

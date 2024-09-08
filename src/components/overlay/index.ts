@@ -1,4 +1,2 @@
-export { Overlay } from './Overlay'
-export { OverlayTrigger } from './OverlayTrigger'
-export { useOverlay } from './useOverlay'
+export { Modal } from './Modal'
 export { usePhotoModal } from './usePhotoModal'

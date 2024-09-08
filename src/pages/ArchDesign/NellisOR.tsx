@@ -1,16 +1,20 @@
 import React from 'react'
 
-import { PageTitle, PageSection, usePhotoModal, Overlay } from '../../components'
+import { Dialog } from '@/components/ui'
+
+import { PageTitle, PageSection, usePhotoModal } from '../../components'
 import { nellisPhotos } from '../../data'
 
 export const NellisOR: React.FC = () => {
-    const { photoHook, generateTriggerFigure } = usePhotoModal<typeof nellisPhotos>({
+    const { generatePhotoModal, generateTriggerFigure } = usePhotoModal<
+        typeof nellisPhotos
+    >({
         id: 'nellis-or',
         photos: nellisPhotos,
     })
 
     return (
-        <>
+        <Dialog>
             <PageTitle
                 title="Medical Center Operating Room Renovation"
                 subtitle="Nellis Air Force Base, NV"
@@ -102,7 +106,7 @@ export const NellisOR: React.FC = () => {
                 {generateTriggerFigure('hybridFinal')}
                 {generateTriggerFigure('final')}
             </PageSection>
-            <Overlay {...photoHook} />
-        </>
+            {generatePhotoModal()}
+        </Dialog>
     )
 }
