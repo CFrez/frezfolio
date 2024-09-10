@@ -21,7 +21,7 @@ export const UnbTrees: React.FC = () => {
                     desired a professional yet approachable graphics.
                 </p>
             </PageTitle>
-            <PageSection title="Logo" className="trees-graphics">
+            <PageSection title="Logo">
                 <p>
                     Throughout the evolution of the logo, a noticeable progression
                     occurred in the size and visibility of the leaves on the tree. Over
@@ -34,7 +34,7 @@ export const UnbTrees: React.FC = () => {
                 </p>
                 {generateTriggerFigure('logo')}
             </PageSection>
-            <PageSection title="Business Card" className="trees-graphics">
+            <PageSection title="Business Card">
                 <p>
                     The business card was meticulously designed to exude simplicity,
                     cleanliness, and professionalism, serving as an effective
@@ -45,16 +45,16 @@ export const UnbTrees: React.FC = () => {
                     business cards while still fitting seamlessly into a wallet or
                     cardholder.
                 </p>
-                <div className="set">
+                <div className="w-full flex gap-6 sm:gap-8 items-center justify-center mx-auto my-0 flex-wrap">
                     {generateTriggerFigure('bCFront', {
-                        className: 'business-card',
+                        className: 'w-80 mx-0 min-w-[unset]',
                     })}
                     {generateTriggerFigure('bCBack', {
-                        className: 'business-card',
+                        className: 'w-80 mx-0 min-w-[unset]',
                     })}
                 </div>
             </PageSection>
-            <PageSection title="Flyer" className="trees-graphics">
+            <PageSection title="Flyer">
                 <p>
                     The flyer was thoughtfully crafted to ensure easy distribution and
                     legibility. The front side of the flyer presented a concise overview
@@ -64,16 +64,16 @@ export const UnbTrees: React.FC = () => {
                     measuring 8.5 x 5.5 inches, ensuring durability and a professional
                     appearance.
                 </p>
-                <div className="set">
+                <div className="w-full flex gap-6 sm:gap-8 items-center justify-center mx-auto my-0 flex-wrap">
                     {generateTriggerFigure('flyerFront', {
-                        className: 'flyer',
+                        className: 'w-96 max-h-[unset] mx-0',
                     })}
                     {generateTriggerFigure('flyerBack', {
-                        className: 'flyer',
+                        className: 'w-96 max-h-[unset] mx-0',
                     })}
                 </div>
             </PageSection>
-            <PageSection title="Contract" className="trees-graphics">
+            <PageSection title="Contract">
                 <p>
                     The contract was thoughtfully crafted to prioritize simplicity and
                     clarity, ensuring a user-friendly experience for both the customer
@@ -86,7 +86,7 @@ export const UnbTrees: React.FC = () => {
                 </p>
                 {generateTriggerFigure('contract')}
             </PageSection>
-            <PageSection title="Yard Signs" className="trees-graphics">
+            <PageSection title="Yard Signs">
                 <p>
                     The yard signs were designed to be easily visible and legible from a
                     distance and aimed to create a lasting impression and effectively

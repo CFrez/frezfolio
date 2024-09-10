@@ -6,8 +6,6 @@ import { ArchEngUrl } from '../urls'
 import { ArchEngHome } from './home'
 import { Labview } from './Labview'
 
-import './index.sass'
-
 export const ArchEng: React.FC = () => {
     return (
         <main id="arch-eng">

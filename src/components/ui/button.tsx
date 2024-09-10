@@ -6,7 +6,8 @@ import { cn } from '@/lib/tailwind.utils'
 
 // TODO: Update styling from default shadcn one button is used (except text variant)
 
-const buttonVariants = cva(`
+const buttonVariants = cva(
+    `
         inline-flex items-center justify-center
         whitespace-nowrap
         rounded-md

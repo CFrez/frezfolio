@@ -52,7 +52,6 @@ export function usePhotoModal<T, K extends string = Extract<keyof T, string>>({
         },
         [images],
     )
-    
 
     const generateTriggerFigure = useCallback(
         (imageKey: K, optional?: { className?: string }) => {
@@ -103,7 +102,9 @@ export function usePhotoModal<T, K extends string = Extract<keyof T, string>>({
     const modalHeader = useMemo(() => {
         return (
             <>
-                <DialogTitle className='text-2xl'>{currentPhoto.caption || currentPhoto.alt}</DialogTitle>
+                <DialogTitle className="text-2xl">
+                    {currentPhoto.caption || currentPhoto.alt}
+                </DialogTitle>
                 <DialogDescription className="hidden">
                     {currentPhoto.alt}
                 </DialogDescription>
@@ -127,10 +128,10 @@ export function usePhotoModal<T, K extends string = Extract<keyof T, string>>({
             >
                 <div className={`flex justify-center items-center h-full w-full`}>
                     <Button
-                        className='grow h-full hover:bg-neutral-100'
+                        className="grow h-full hover:bg-neutral-100"
                         type="button"
                         variant="text"
-                        size='icon'
+                        size="icon"
                         onClick={() => setImageIndex((prev) => prev - 1)}
                         disabled={imageIndex === 0}
                     >
@@ -139,13 +140,16 @@ export function usePhotoModal<T, K extends string = Extract<keyof T, string>>({
                     <img
                         src={currentPhoto.src}
                         alt={currentPhoto.alt}
-                        className={cn(`max-h-full max-w-[80%] w-full md:w-max object-contain`, currentPhoto.className)}
+                        className={cn(
+                            `max-h-full max-w-[80%] w-full md:w-max object-contain`,
+                            currentPhoto.className,
+                        )}
                     />
                     <Button
-                        className='grow h-full hover:bg-neutral-100'
+                        className="grow h-full hover:bg-neutral-100"
                         type="button"
                         variant="text"
-                        size='icon'
+                        size="icon"
                         onClick={() => setImageIndex((prev) => prev + 1)}
                         disabled={imageIndex === imagesCount - 1}
                     >
