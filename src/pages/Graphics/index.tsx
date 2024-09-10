@@ -7,8 +7,6 @@ import { GraphicsHome } from './home'
 import { UnbTrees } from './UnbTrees'
 import { Emotions } from './Emotions'
 
-import './index.sass'
-
 export const Graphics: React.FC = () => {
     return (
         <main id="graphics">

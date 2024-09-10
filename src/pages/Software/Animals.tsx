@@ -8,7 +8,8 @@ import { animalsPhotos } from '../../data'
 import { AnimalProcess } from './AnimalProcess'
 import { AnimalRoles, AnimalFeatures } from './AnimalTables'
 
-const setClass = 'w-full flex gap-6 sm:gap-4 items-center justify-center mx-auto my-0 flex-wrap'
+const setClass =
+    'w-full flex gap-6 sm:gap-4 items-center justify-center mx-auto my-0 flex-wrap'
 
 export const Animals: React.FC = () => {
     const { generatePhotoModal, generateTriggerFigure } = usePhotoModal<
@@ -83,9 +84,9 @@ export const Animals: React.FC = () => {
                 </p>
                 {generateTriggerFigure('dashboard')}
                 <div className={setClass}>
-                    {generateTriggerFigure('newAnimal', { className: 'modal' })}
+                    {generateTriggerFigure('newAnimal', { className: 'w-80 mx-0' })}
                     {generateTriggerFigure('editAnimal', {
-                        className: 'modal',
+                        className: 'w-80 mx-0',
                     })}
                 </div>
             </PageSection>

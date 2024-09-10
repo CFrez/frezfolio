@@ -24,16 +24,18 @@ export const Modal = ({
 }: ModalProps) => {
     return (
         <DialogContent
-            className={cn(`
+            className={cn(
+                `
                 flex flex-col
-            `, className,
+            `,
+                className,
             )}
             {...props}
         >
             {header && (
                 <DialogHeader className={`px-6 py-4 border-b-1`}>{header}</DialogHeader>
             )}
-            <div className='grow overflow-hidden'>{children}</div>
+            <div className="grow overflow-hidden">{children}</div>
             {footer && (
                 <DialogFooter className={`px-6 py-4 border-t-2`}>{footer}</DialogFooter>
             )}

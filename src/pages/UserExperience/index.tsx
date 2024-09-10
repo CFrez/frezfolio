@@ -6,8 +6,6 @@ import { UserExperienceUrl } from '../urls'
 import { UserExperienceHome } from './home'
 import { Zirtual } from './Zirtual'
 
-import './index.sass'
-
 export const UserExperience: React.FC = () => {
     return (
         <main id="user-experience">

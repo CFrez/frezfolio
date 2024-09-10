@@ -83,6 +83,7 @@ html {
     height: 100vh;
     overflow-wrap: break-word;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -95,4 +96,14 @@ div#root {
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
+}
+
+p, ul, li, details{
+    font-size: 1.25rem;
+    line-height: 1.5rem
+}
+
+a {
+    text-decoration: none;
+    color: unset;
 }

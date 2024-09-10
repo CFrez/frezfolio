@@ -65,7 +65,7 @@ export const Labview: React.FC = () => {
                 {generateTriggerFigure('gui')}
             </PageSection>
 
-            <PageSection title="Documentation" className="documentation">
+            <PageSection title="Documentation">
                 <p>
                     As an integral part of the project, I prepared comprehensive
                     instructions for students regarding the installation and utilization
@@ -73,31 +73,39 @@ export const Labview: React.FC = () => {
                     provides step-by-step explanations on how the program functions,
                     including instructions on how to incorporate new tests or add a new
                     cDAQ if needed in the future. The final report utilized{' '}
-                    <a href="https://streamlit.io/" target="_blank" rel="noreferrer">
+                    <a
+                        href="https://streamlit.io/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="underline hover:text-secondary-dark"
+                    >
                         Streamlit
                     </a>{' '}
                     to calculate and then graph theoretical calculations to compare with
                     the test results.
                 </p>
-                <div className="documents">
-                    <figure>
+                <div className="flex flex-wrap gap-6 justify-center align-center text-center">
+                    <figure className="h-96 max-w-80">
                         <iframe
+                            className="grow h-full"
                             title="Student Instructions"
                             src="https://indd.adobe.com/embed/89ab3bbf-a322-4a5b-a108-bd9217de7f44?startpage=1&allowFullscreen=true"
                             allowFullScreen
                         />
                         <figcaption>Student Instructions</figcaption>
                     </figure>
-                    <figure>
+                    <figure className="h-96 max-w-80">
                         <iframe
+                            className="grow h-full"
                             title="LabVIEW Guide"
                             src="https://indd.adobe.com/embed/68e996d3-5954-4ffc-97f5-6f740da7b179?startpage=1&allowFullscreen=true"
                             allowFullScreen
                         />
                         <figcaption>LabVIEW Guide</figcaption>
                     </figure>
-                    <figure>
+                    <figure className="h-96 max-w-80">
                         <iframe
+                            className="grow h-full"
                             title="Final Report"
                             src="https://indd.adobe.com/embed/9fb33c5d-c375-486e-bbd0-34a061c808db?startpage=1&allowFullscreen=true"
                             allowFullScreen
@@ -107,19 +115,24 @@ export const Labview: React.FC = () => {
                 </div>
             </PageSection>
 
-            <PageSection title="Graphics" className="graphics">
+            <PageSection title="Graphics">
                 <p>
                     This was possibly my favorite part of the program, which is not
                     actually part of the program. I created this icon character based on
                     the test equipment used for the lab. I don&apos;t know how I never
                     gave him a name, but he still makes me smile.
                 </p>
-                <div className="icon">
+                <div className="flex flex-wrap gap-6 justify-center items-center">
                     <img
+                        className="h-80"
                         src="/projects/labview/testing.jpg"
                         alt="testing equipment that inspired icon"
                     />
-                    <img src="/projects/labview/icon.svg" alt="icon" />
+                    <img
+                        className="h-80"
+                        src="/projects/labview/icon.svg"
+                        alt="icon inspired by testing equipment"
+                    />
                 </div>
             </PageSection>
             {generatePhotoModal()}

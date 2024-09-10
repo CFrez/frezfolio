@@ -4,10 +4,20 @@ import { PageTitle } from '../../components'
 import { emotionsPhotos } from '../../data'
 import { ImageData } from '../../types'
 
+import './Emotions.css'
+
 export const Emotions: React.FC = () => {
     const generateEmotion = useCallback(
         (emotion: ImageData) => (
-            <figure key={emotion.src} className="emotion">
+            <figure
+                key={emotion.src}
+                className={`
+                shadow hover:shadow-md
+                h-80 w-80 p-8
+                rounded-md
+                bg-white
+            `}
+            >
                 <img src={emotion.src} alt={emotion.alt} />
                 <figcaption>{emotion.alt}</figcaption>
             </figure>
@@ -26,7 +36,7 @@ export const Emotions: React.FC = () => {
                     these feelings and their link to emotions.
                 </p>
             </PageTitle>
-            <section className="emotions">
+            <section className="flex flex-wrap gap-12 justify-center items-center emotions">
                 {Object.values(emotionsPhotos).map(generateEmotion)}
             </section>
         </>

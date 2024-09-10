@@ -1,0 +1,14 @@
+/* TODO: Figure out how to do this in tailwind */
+section.emotions {
+    figure {
+        figcaption {
+            display: none;
+        }
+
+        &:hover {
+            figcaption {
+                display: unset;
+            }
+        }
+    }
+}
