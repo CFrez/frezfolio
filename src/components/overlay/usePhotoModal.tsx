@@ -67,7 +67,9 @@ export function usePhotoModal<T, K extends string = Extract<keyof T, string>>({
                 >
                     <img
                         className={`
-                        min-h-0 h-full object-cover 
+                        min-h-0 object-contain
+                        sm:h-full 
+                        sm:object-cover 
                         sm:hover:cursor-pointer
                         sm:hover:shadow-md
                     `}
