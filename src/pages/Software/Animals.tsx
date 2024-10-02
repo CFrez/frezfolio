@@ -7,17 +7,24 @@ import { animalsPhotos } from '../../data'
 
 import { AnimalProcess } from './AnimalProcess'
 import { AnimalRoles, AnimalFeatures } from './AnimalTables'
+import { useMediaQuery } from 'react-responsive'
 
 const setClass =
     'w-full flex gap-6 sm:gap-4 items-center justify-center mx-auto my-0 flex-wrap'
 
 export const Animals: React.FC = () => {
+    const isMobile = useMediaQuery({ query: '(max-width: 640px)' })
+
     const { generatePhotoModal, generateTriggerFigure } = usePhotoModal<
         typeof animalsPhotos
     >({
         id: 'animals',
         photos: animalsPhotos,
     })
+
+    const tableOnMobileWarning = isMobile && (
+        <p className="text-center italic text-[1rem]">***Table is viewed best on desktop***</p>
+    )
 
     return (
         <Dialog>
@@ -66,10 +73,12 @@ export const Animals: React.FC = () => {
                 </details>
                 <details>
                     <summary>Table of roles and potential data models</summary>
+                    {tableOnMobileWarning}
                     <AnimalRoles />
                 </details>
                 <details>
                     <summary>Table of feature analysis</summary>
+                    {tableOnMobileWarning}
                     <AnimalFeatures />
                 </details>
             </PageSection>
