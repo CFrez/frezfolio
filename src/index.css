@@ -98,9 +98,12 @@ div#root {
     overflow-x: hidden;
 }
 
-p, ul, li, details{
+p,
+ul,
+li,
+details {
     font-size: 1.25rem;
-    line-height: 1.5rem
+    line-height: 1.5rem;
 }
 
 a {

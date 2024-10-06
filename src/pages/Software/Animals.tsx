@@ -23,7 +23,9 @@ export const Animals: React.FC = () => {
     })
 
     const tableOnMobileWarning = isMobile && (
-        <p className="text-center italic text-[1rem]">***Table is viewed best on desktop***</p>
+        <p className="text-center italic text-[1rem]">
+            ***Table is viewed best on desktop***
+        </p>
     )
 
     return (
