@@ -10,7 +10,6 @@ import {
     Graphics,
     Software,
     UserExperience,
-    Redirect404,
 } from './pages'
 
 export const App: React.FC = () => {
@@ -30,8 +29,6 @@ export const App: React.FC = () => {
                     element={<Software />}
                 />
             </Route>
-
-            <Route path="*" element={<Redirect404 />} />
         </Routes>
     )
 }
