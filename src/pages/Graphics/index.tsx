@@ -9,7 +9,7 @@ import { Emotions } from './Emotions'
 
 export const Graphics: React.FC = () => {
     return (
-        <main id="graphics">
+        <main id="graphics" className="bg-graphics">
             <Routes>
                 <Route index element={<GraphicsHome />} />
                 <Route path={GraphicsUrl.UnbTrees} element={<UnbTrees />} />

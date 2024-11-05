@@ -1,7 +1,7 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 
-import { ExpandableTruncatedText, LinkCard } from '../../components'
+import { ExpandableTruncatedText, LinkCard, PageHeader } from '../../components'
 
 import { UserExperienceUrl } from '../urls'
 
@@ -10,13 +10,13 @@ export const UserExperienceHome: React.FC = () => {
 
     return (
         <>
-            <p className="w-full text-center">
+            <PageHeader page="UserExperience">
                 Architecture Design inspired me to pursue a Master&apos;s degree in
                 Human Factors. Initially, my intention was to apply this expertise to
                 the design of healthcare facilities. However, as I delved deeper into
                 the field, my interests took a slight shift towards software design
                 instead.
-            </p>
+            </PageHeader>
 
             <LinkCard
                 title="Zirtual Hiring"

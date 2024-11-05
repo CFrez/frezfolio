@@ -1,18 +1,18 @@
 import React from 'react'
 
-import { LinkCard } from '../../components'
+import { LinkCard, PageHeader } from '../../components'
 
 import { GraphicsUrl } from '../urls'
 
 export const GraphicsHome: React.FC = () => {
     return (
         <>
-            <p className="w-full text-center">
+            <PageHeader page="GraphicDesign">
                 Graphic design is a hobby more than anything, but it seems like no
                 matter what I am working on I can&apos;t help but create graphics for
                 it. I have created logos, business cards, and other graphics for a few
                 different projects.
-            </p>
+            </PageHeader>
 
             <LinkCard
                 title="UNB Trees"

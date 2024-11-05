@@ -2,65 +2,65 @@ import { TopperProperties } from '../types'
 
 export enum PageUrl {
     Home = '/',
-    About = '/about',
     UserExperience = '/ux',
     SoftwareEngineering = '/software',
     GraphicDesign = '/graphics',
     ArchEngineering = '/archeng',
     ArchDesign = '/archdesign',
-    System = '/system',
 }
 
-export enum Topper {
-    BG = 'BG',
-    GD = 'GD',
-    SE = 'SE',
-    UX = 'UX',
-    AE = 'AE',
-    AD = 'AD',
+export type Page = keyof typeof PageUrl
+
+export const pageTitles: Record<Page, string> = {
+    Home: 'Home',
+    UserExperience: 'User Experience',
+    SoftwareEngineering: 'Software Engineering',
+    GraphicDesign: 'Graphic Design',
+    ArchEngineering: 'Architectural Engineering',
+    ArchDesign: 'Architectural Design',
 }
 
-export const topperProperties: Record<Topper, TopperProperties> = {
-    [Topper.BG]: {
+export const topperProperties: Record<Page, TopperProperties> = {
+    Home: {
         src: '/images/topper/bg.svg',
         srcLabeled: '/images/topper/labeled-bg.svg',
         alt: 'dallas skyline background',
         link: PageUrl.Home,
-        percentage: 0,
+        style: 'left-0',
     },
-    [Topper.GD]: {
+    GraphicDesign: {
         src: '/images/topper/gd.svg',
         srcLabeled: '/images/topper/labeled-gd.svg',
         alt: 'graphic design',
         link: PageUrl.GraphicDesign,
-        percentage: 966 / 1470,
+        style: 'left-[65.714286%]',
     },
-    [Topper.SE]: {
+    SoftwareEngineering: {
         src: '/images/topper/se.svg',
         srcLabeled: '/images/topper/labeled-se.svg',
         alt: 'software engineering',
         link: PageUrl.SoftwareEngineering,
-        percentage: 1143 / 1470,
+        style: 'left-[77.755102%]',
     },
-    [Topper.UX]: {
+    UserExperience: {
         src: '/images/topper/ux.svg',
         srcLabeled: '/images/topper/labeled-ux.svg',
         alt: 'user experience',
         link: PageUrl.UserExperience,
-        percentage: 715 / 1470,
+        style: 'left-[48.639456%]',
     },
-    [Topper.AE]: {
+    ArchEngineering: {
         src: '/images/topper/ae.svg',
         srcLabeled: '/images/topper/labeled-ae.svg',
         alt: 'architectural engineering',
         link: PageUrl.ArchEngineering,
-        percentage: 435 / 1470,
+        style: 'left-[29.591837%]',
     },
-    [Topper.AD]: {
+    ArchDesign: {
         src: '/images/topper/ad.svg',
         srcLabeled: '/images/topper/labeled-ad.svg',
         alt: 'architectural design',
         link: PageUrl.ArchDesign,
-        percentage: 58 / 1470,
+        style: 'left-[3.945578%]',
     },
 }

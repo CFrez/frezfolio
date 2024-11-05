@@ -25,7 +25,7 @@ export interface TopperProperties {
     srcLabeled: string
     alt: string
     link: string
-    percentage: number
+    style: string
 }
 
 export interface AnimalFeature {

@@ -1,16 +1,37 @@
 import React from 'react'
 
 import { Hero, Contact, LogoLink } from '../components'
-import './Home.sass'
 
 export const Home: React.FC = () => {
     return (
-        <main id="home">
-            <div className="links">
+        <main
+            id="home"
+            className={`
+            justify-center overflow-hidden 
+            h-screen
+            w-screen
+            flex flex-col
+            bg-gradient-to-b from-accent-half to-secondary-light
+        `}
+        >
+            <div
+                className={`
+                flex flex-row w-full
+                justify-between items-start
+                px-6 pt-4
+            `}
+            >
                 <LogoLink />
                 <Contact />
             </div>
-            <h1>
+            <h1
+                className={`
+                grow
+                flex flex-col w-full gap-6 
+                justify-center items-center text-center
+                text-4xl sm:text-5xl
+            `}
+            >
                 Designer & Engineer
                 <br />
                 in any medium

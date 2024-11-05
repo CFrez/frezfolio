@@ -26,11 +26,22 @@ module.exports = {
                     light: 'hsl(var(--secondary-light))',
                     dark: 'hsl(var(--secondary-dark))',
                     foreground: 'hsl(var(--secondary-foreground))',
+                    half: {
+                        DEFAULT: 'hsl(var(--secondary) / 0.5)',
+                        light: 'hsl(var(--secondary-light) / 0.5)',
+                        dark: 'hsl(var(--secondary-dark) / 0.5)',
+                        foreground: 'hsl(var(--secondary-foreground) / 0.5)',
+                    },
                 },
                 accent: {
                     DEFAULT: 'hsl(var(--accent))',
                     dark: 'hsl(var(--accent-dark))',
                     foreground: 'hsl(var(--accent-foreground))',
+                    half: {
+                        DEFAULT: 'hsl(var(--accent) / 0.5)',
+                        dark: 'hsl(var(--accent-dark) / 0.5)',
+                        foreground: 'hsl(var(--accent-foreground) / 0.5)',
+                    },
                 },
                 muted: {
                     DEFAULT: 'hsl(var(--muted))',
@@ -40,13 +51,16 @@ module.exports = {
                     DEFAULT: 'hsl(var(--destructive))',
                     foreground: 'hsl(var(--destructive-foreground))',
                 },
-
-                blend: {
-                    DEFAULT:
-                        'linear-gradient(to right, transparentize(var(--accent), 0.5), transparentize(var(--secondary), 0.5))',
-                    background:
-                        'linear-gradient(to bottom, transparentize(var(--accent), .5), var(--secondary-light))',
+                gray: {
+                    dark: 'hsl(var(--grey-dark))',
                 },
+
+                /** Pages */
+                design: 'hsl(var(--design))',
+                eng: 'hsl(var(--eng))',
+                graphics: 'hsl(var(--graphics))',
+                software: 'hsl(var(--software))',
+                ux: 'hsl(var(--ux))',
 
                 /** Default */
                 border: 'hsl(var(--border))',

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 
-import { ExpandableTruncatedText, LinkCard } from '../../components'
+import { ExpandableTruncatedText, LinkCard, PageHeader } from '../../components'
 
 import { SoftwareUrl } from '../urls'
 
@@ -10,25 +10,14 @@ export const SoftwareHome: React.FC = () => {
 
     return (
         <>
-            <p className="w-full text-center">
-                The field of software development has become a passion of mine, to the
-                point where it no longer feels like work, but rather an engaging and
-                fulfilling pursuit. The intricate nature of software development
-                continuously presents me with a diverse range of challenges and problems
-                to solve, igniting my curiosity and driving my motivation. From
-                unraveling complex algorithms to designing user-friendly interfaces,
-                every step in the software development process offers its own set of
-                unique hurdles and opportunities for growth.
-            </p>
-
-            <p className="w-full text-center">
-                The dynamic nature of the software development landscape ensures that I
-                am constantly learning and evolving. As technology evolves and new
-                paradigms emerge, I am driven to stay at the forefront of these
-                advancements, embracing new frameworks, languages, and tools. This
-                constant state of learning and growth keeps me engaged and motivated,
-                propelling me forward in my journey as a software developer.
-            </p>
+            <PageHeader page="SoftwareEngineering">
+                Software development has turned into a real passion of mine—it
+                doesn&apos;t feel like work anymore but something I genuinely enjoy
+                doing. The complexity keeps me engaged, constantly throwing new
+                challenges my way, whether it is unraveling complex algorithms or
+                creating intuitive designs. Every part of the process is a chance to
+                grow and keep learning.
+            </PageHeader>
 
             <LinkCard
                 title="Pet Rescue"

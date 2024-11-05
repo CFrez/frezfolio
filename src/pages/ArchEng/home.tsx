@@ -1,7 +1,7 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 
-import { ExpandableTruncatedText, LinkCard } from '../../components'
+import { ExpandableTruncatedText, LinkCard, PageHeader } from '../../components'
 
 import { ArchEngUrl } from '../urls'
 
@@ -10,7 +10,7 @@ export const ArchEngHome: React.FC = () => {
 
     return (
         <>
-            <p className="w-full text-center">
+            <PageHeader page="ArchEngineering">
                 Architectural Engineering has captivated my interest due to its inherent
                 value and practical applications, especially given my residence in a
                 century-old house. During the pursuit of this Master&apos;s degree, I
@@ -18,7 +18,7 @@ export const ArchEngHome: React.FC = () => {
                 range of scientific programming languages and tools. These included
                 Ansys, Matlab, LabVIEW, Jupyter, and Python, enabling me to conduct
                 experiments and analysis with versatility and precision.
-            </p>
+            </PageHeader>
 
             <LinkCard
                 title="LabVIEW"

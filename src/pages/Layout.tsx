@@ -10,7 +10,7 @@ export const Layout: React.FC = () => {
             bg-background
             mx-auto my-0
             min-h-screen h-full
-            min-w-96 max-w-screen-xl
+            min-w-96
             flex flex-col gap-0
             [&>main]:flex-1
             [&>main]:flex [&>main]:flex-col [&>main]:gap-6 [&>main]:md:gap-8
@@ -18,7 +18,7 @@ export const Layout: React.FC = () => {
         `}
         >
             <Header />
-            <Nav />
+            {/* <Nav /> */}
             <Outlet />
             <Footer />
         </div>

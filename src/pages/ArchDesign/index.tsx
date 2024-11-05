@@ -9,7 +9,7 @@ import { NellisOR } from './NellisOR'
 
 export const ArchDesign: React.FC = () => {
     return (
-        <main id="arch-design">
+        <main id="arch-design" className="bg-design">
             <Routes>
                 <Route index element={<ArchDesignHome />} />
                 <Route path={ArchDesignUrl.TexasAM} element={<TexasAM />} />

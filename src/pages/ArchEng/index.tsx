@@ -8,7 +8,7 @@ import { Labview } from './Labview'
 
 export const ArchEng: React.FC = () => {
     return (
-        <main id="arch-eng">
+        <main id="arch-eng" className="bg-eng">
             <Routes>
                 <Route index element={<ArchEngHome />} />
                 <Route path={ArchEngUrl.Labview} element={<Labview />} />

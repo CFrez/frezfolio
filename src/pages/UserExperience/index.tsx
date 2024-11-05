@@ -8,7 +8,7 @@ import { Zirtual } from './Zirtual'
 
 export const UserExperience: React.FC = () => {
     return (
-        <main id="user-experience">
+        <main id="user-experience" className="bg-ux">
             <Routes>
                 <Route index element={<UserExperienceHome />} />
                 <Route path={UserExperienceUrl.Zirtual} element={<Zirtual />} />

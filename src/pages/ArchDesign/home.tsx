@@ -1,8 +1,7 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 
-import { ExpandableTruncatedText, LinkCard } from '../../components'
-
+import { ExpandableTruncatedText, LinkCard, PageHeader } from '../../components'
 import { ArchDesignUrl } from '../urls'
 
 export const ArchDesignHome: React.FC = () => {
@@ -10,14 +9,13 @@ export const ArchDesignHome: React.FC = () => {
 
     return (
         <>
-            <p className="w-full text-center">
+            <PageHeader page="ArchDesign">
                 My fascination with architecture first ignited during my high school
                 years when I enrolled in a drafting class. However, it was during my
                 time at Texas A&M University that my passion became focused on the
                 captivating realm of Healthcare Design. This newfound interest paved the
                 way for my career path as an officer in the Air Force.
-            </p>
-
+            </PageHeader>
             <LinkCard
                 title="Health Facilities Planning, Design, and Construction"
                 url={ArchDesignUrl.AirForce}

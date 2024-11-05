@@ -11,7 +11,7 @@ import './index.sass'
 
 export const Software: React.FC = () => {
     return (
-        <main id="software">
+        <main id="software" className="bg-software">
             <Routes>
                 <Route index element={<SoftwareHome />} />
                 <Route path={SoftwareUrl.Animals} element={<Animals />} />

@@ -1,0 +1,5 @@
+export { Footer } from './footer'
+export { Header } from './header'
+export { Hero } from './hero'
+export { Contact } from './contact'
+export { LogoLink } from './logo'

@@ -16,6 +16,58 @@ const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElemen
 )
 Card.displayName = 'Card'
 
+const FlipCard = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+    ({ className, ...props }, ref) => (
+        <article
+            ref={ref}
+            className={cn('group perspective-1000', className)}
+            {...props}
+        />
+    ),
+)
+FlipCard.displayName = 'FlipCard'
+
+const CardFront = React.forwardRef<
+    HTMLDivElement,
+    React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+    <Card
+        ref={ref}
+        className={cn(
+            `
+                    w-full h-full
+                    backface-hidden
+                    transform transition duration-1000
+                    group-hover:rotate-y-180
+                    absolute t-0 l-0
+                `,
+            className,
+        )}
+        {...props}
+    />
+))
+CardFront.displayName = 'CardFront'
+
+const CardBack = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+    ({ className, ...props }, ref) => (
+        <Card
+            ref={ref}
+            className={cn(
+                `
+                    w-full h-full
+                    backface-hidden
+                    transform transition duration-1000
+                    rotate-y-180 group-hover:rotate-y-0
+                    absolute t-0 l-0
+                `,
+                className,
+            )}
+            {...props}
+        />
+    ),
+)
+CardBack.displayName = 'CardBack'
+
 const CardHeader = React.forwardRef<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
@@ -64,4 +116,14 @@ const CardFooter = React.forwardRef<
 ))
 CardFooter.displayName = 'CardFooter'
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+export {
+    Card,
+    CardBack,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardFront,
+    CardHeader,
+    CardTitle,
+    FlipCard,
+}
