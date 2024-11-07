@@ -1,52 +1,40 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
 
-import { topperProperties } from '@/data'
-import { cn } from '@/lib/tailwind.utils'
+import { CategoryFilter } from '../category/CategoryFilter'
 
 import { LogoLink } from './logo'
 import { Contact } from './contact'
+import { Nav } from './nav'
+import { useAppContext } from '@/App.context'
+import { Toggle } from '@radix-ui/react-toggle'
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
 
 export const Header: React.FC = () => {
-    const { pathname } = useLocation()
-
+    const { theme, toggleTheme } = useAppContext()
     return (
         <header
             className={`
-            bg-gradient-to-b from-accent-half to-secondary-light 
+            bg-gradient-to-b 
+            from-secondary-300 to-primary-400 
+            dark:from-primary-950 dark:to-secondary-200
             border-b-2 sm:border-b-[6px] 
             border-neutral-800
         `}
         >
             <div className="flex flex-col w-full gap-0 items-center justify-center">
                 <div className="flex flex-row w-full max-w-7xl justify-between items-start px-6 pt-4">
-                    <LogoLink />
-                    <Contact />
+                    <div className="flex flex-row gap-6">
+                        <LogoLink />
+                        <Nav />
+                    </div>
+                    <div className="flex flex-col items-end gap-6">
+                        <Contact />
+                        <Toggle pressed={theme === 'light'} onPressedChange={toggleTheme}>
+                            {theme === 'light' ? <SunIcon /> : <MoonIcon />}
+                        </Toggle>
+                    </div>
                 </div>
-                <div
-                    className={`
-                    sticky bottom-0 
-                    min-h-[82.72154px] h-[25.85048vw] max-h-[192px]
-                    min-w-[320px] w-[100vw] max-w-[742.7328px]
-                    mt-[0] md:mt-[-48px]
-                `}
-                >
-                    {Object.entries(topperProperties).map(
-                        ([key, { src, alt, link, style }]) => (
-                            <Link key={key} className={key} to={link}>
-                                <img
-                                    className={cn(
-                                        'absolute bottom-0 h-full saturate-0 hover:saturate-[.75]',
-                                        style,
-                                        pathname.includes(link) && 'saturate-100',
-                                    )}
-                                    src={src}
-                                    alt={alt}
-                                />
-                            </Link>
-                        ),
-                    )}
-                </div>
+                <CategoryFilter />
             </div>
         </header>
     )

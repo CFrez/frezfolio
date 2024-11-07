@@ -1,3 +1,9 @@
+export enum PageUrl {
+    Home = '/',
+    About = '/about',
+    Projects = '/projects',
+}
+
 export enum ArchDesignUrl {
     TexasAM = 'texas-am',
     AirForce = 'air-force',
@@ -7,7 +13,7 @@ export enum ArchEngUrl {
     Labview = 'labview',
 }
 
-export enum GraphicsUrl {
+export enum MiscDesignUrl {
     UnbTrees = 'unb-trees',
     Emotions = 'emotions',
 }

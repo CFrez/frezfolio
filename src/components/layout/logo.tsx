@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { Logo } from '@/assets/logo'
-import { PageUrl } from '@/data/pages'
+import { PageUrl } from '@/pages'
 
 export const LogoLink: React.FC = () => {
     return (

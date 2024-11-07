@@ -1,3 +1,8 @@
+import type { ReactNode } from 'react'
+import type { Category } from './data/categories'
+
+export type Theme = 'light' | 'dark'
+
 export interface ImageData {
     src: string
     alt: string
@@ -11,21 +16,26 @@ export interface CategoryData {
 }
 
 export interface ProjectData {
+    category: Category
     title: string
-    description: string
-    details: JSX.Element
-    imageSet: ImageData[]
-    name: string
-    tags?: string[]
-    type?: string
+    url: string
+    element: ReactNode
+    subtitle?: string
+    graphic: {
+        src: string
+        alt: string
+    }
+    notes?: string
+    details?: ReactNode
 }
 
 export interface TopperProperties {
     src: string
     srcLabeled: string
     alt: string
-    link: string
     style: string
+    /** used to document the numbers used for calculating the style left percentage */
+    percentage: number
 }
 
 export interface AnimalFeature {

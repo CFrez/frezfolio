@@ -1,26 +1,31 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
-import { Footer, Header, Nav } from '../components'
+import { Footer, Header } from '../components'
 
 export const Layout: React.FC = () => {
     return (
         <div
             className={`
-            bg-background
+            overflow-hidden
             mx-auto my-0
             min-h-screen h-full
             min-w-96
             flex flex-col gap-0
-            [&>main]:flex-1
-            [&>main]:flex [&>main]:flex-col [&>main]:gap-6 [&>main]:md:gap-8
-            [&>main]:px-8 [&>main]:py-8 [&>main]:md:py-10
         `}
         >
             <Header />
-            {/* <Nav /> */}
-            <Outlet />
-            <Footer />
+            <div
+                className={`
+                flex flex-col gap-8
+                p-8 sm:py-0
+                overflow-x-auto 
+                [&>main]:flex-1
+            `}
+            >
+                <Outlet />
+                <Footer />
+            </div>
         </div>
     )
 }

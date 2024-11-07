@@ -1,11 +1,14 @@
 import React, { useRef, type WheelEvent } from 'react'
 import { Link } from 'react-router-dom'
 
+import { useAppContext } from '@/App.context'
 import { topperProperties } from '@/data'
+import type { Category } from '@/data/categories'
 import { cn } from '@/lib/tailwind.utils'
 
 export const Hero: React.FC = () => {
     const ref = useRef<HTMLDivElement>(null)
+    const { setCategory } = useAppContext()
 
     const onWheel = (e: WheelEvent<HTMLDivElement>) => {
         const element = ref.current
@@ -28,21 +31,28 @@ export const Hero: React.FC = () => {
             `}
             >
                 {Object.entries(topperProperties).map(
-                    ([key, { srcLabeled, alt, link, style }]) => (
-                        <Link key={key} to={link}>
-                            <img
-                                className={cn(
-                                    `
+                    ([key, { srcLabeled, alt, style }]) => {
+                        const category = key as Category
+                        return (
+                            <Link
+                                key={category}
+                                to={`/about`}
+                                onClick={() => setCategory(category)}
+                            >
+                                <img
+                                    className={cn(
+                                        `
                                     absolute bottom-0 h-full 
                                     saturate-0 hover:saturate-100
                                     `,
-                                    style,
-                                )}
-                                src={srcLabeled}
-                                alt={alt}
-                            />
-                        </Link>
-                    ),
+                                        style,
+                                    )}
+                                    src={srcLabeled}
+                                    alt={alt}
+                                />
+                            </Link>
+                        )
+                    },
                 )}
             </div>
         </div>
