@@ -48,12 +48,6 @@ module.exports = {
                     800: 'var(--primary-800)',
                     900: 'var(--primary-900)',
                     950: 'var(--primary-950)',
-                    half: {
-                        DEFAULT: 'var(--primary) 50%',
-                        light: 'var(--primary-100) 50%',
-                        dark: 'var(--primary-900) 50%',
-                        foreground: 'var(--primary-foreground) 50%',
-                    },
                 },
                 secondary: {
                     DEFAULT: 'var(--secondary)',
@@ -71,12 +65,6 @@ module.exports = {
                     800: 'var(--secondary-800)',
                     900: 'var(--secondary-900)',
                     950: 'var(--secondary-950)',
-                    half: {
-                        DEFAULT: 'var(--secondary) 50%',
-                        foreground: 'var(--secondary-foreground) 50%',
-                        light: 'var(--secondary-100) 50%',
-                        dark: 'var(--secondary-900) 50%',
-                    },
                 },
                 muted: {
                     DEFAULT: 'var(--muted)',

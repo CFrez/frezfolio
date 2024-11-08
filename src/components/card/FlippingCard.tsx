@@ -27,9 +27,9 @@ export const FlippingCard: React.FC<ProjectData> = ({
     const borderStyle = `border-[1px] ${categoryColors[category].border}`
 
     return (
-        <FlipCard className={`w-[25vw] h-[30vw] max-w-[300px] max-h-[400px] `}>
+        <FlipCard className={`w-[25vw] h-[25vw] max-w-[300px] max-h-[300px] `}>
             <CardFront className={cn(`flex flex-col p-4`, borderStyle)}>
-                <CardHeader
+                {/* <CardHeader
                     className={``}
                 >
                     <CardTitle
@@ -38,7 +38,7 @@ export const FlippingCard: React.FC<ProjectData> = ({
                         {title}
                     </CardTitle>
                     {subtitle && <h3 className={`text-sm md:text-lg`}>{subtitle}</h3>}
-                </CardHeader>
+                </CardHeader> */}
                 <CardContent className="grow">
                     <img
                         className={`w-full object-contain`}
@@ -46,10 +46,20 @@ export const FlippingCard: React.FC<ProjectData> = ({
                         alt={graphic.alt}
                     />
                 </CardContent>
-                {notes && <CardFooter className={`text-base`}>{notes}</CardFooter>}
             </CardFront>
-            <CardBack className={cn(`p-6 overflow-hidden`, borderStyle)}>
-                <CardContent className='overflow-x-auto'>{details}</CardContent>
+            <CardBack className={cn(`p-6 overflow-hidden flex flex-col gap-2`, borderStyle)}>                
+                <CardHeader
+                    className={``}
+                >
+                    <CardTitle
+                        className={cn(`text-base md:text-xl border-b-4`, categoryColors[category].border)}
+                    >
+                        {title}
+                    </CardTitle>
+                    {/* {subtitle && <h3 className={`text-sm md:text-lg`}>{subtitle}</h3>} */}
+                </CardHeader>
+                <CardContent className='overflow-x-auto [&>p]:text-base'>{details}</CardContent>
+                {notes && <CardFooter className={`text-base`}>{notes}</CardFooter>}
             </CardBack>
         </FlipCard>
     )

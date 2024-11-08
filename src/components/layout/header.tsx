@@ -14,9 +14,8 @@ export const Header: React.FC = () => {
     return (
         <header
             className={`
-            bg-gradient-to-b 
-            from-secondary-300 to-primary-400 
-            dark:from-primary-950 dark:to-secondary-200
+            bg-[url(images/topper/light-sky.svg)] 
+            dark:bg-[url(images/topper/dark-sky.svg)]
             border-b-2 sm:border-b-[6px] 
             border-neutral-800
         `}
