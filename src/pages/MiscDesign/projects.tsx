@@ -2,47 +2,44 @@ import { ProjectData } from '@/types'
 
 import { UnbTrees } from './UnbTrees'
 import { Emotions } from './Emotions'
-
-import { MiscDesignUrl } from '../urls'
+import { EmotionsSample } from './EmotionsSample'
 
 export const miscDesignProjects: ProjectData[] = [
     {
         category: 'MiscDesign',
-        title:"UNB Trees",
-        url: MiscDesignUrl.UnbTrees,
+        date: new Date(2019, 5, 1),
+        title: 'Milwaukee Tree Service',
+        url: 'unb-trees',
         element: <UnbTrees />,
-        subtitle:"Milwaukee Based Tree Service",
-        graphic:{
-            src: 'projects/unbtrees/citylogo.png',
+        subtitle: 'Milwaukee Based Tree Service',
+        graphic: {
+            src: 'projects/unbtrees/citylogo.svg',
+            srcDark: 'projects/unbtrees/gray-logo.svg',
             alt: 'Logo with milwaukee skyline roots.',
         },
-        notes:"Illustrator, InDesign, Photoshop",
-        details: (
-            <p>
-                UNB Trees is a Milwaukee, Wisconsin based tree service. I handled
-                all of the graphic design for the company, including the logo,
-                business cards, contracts, signage, and website.
-            </p>
-        ),
+        notes: 'Illustrator, InDesign, Photoshop',
+        details: `
+            I managed all graphic design needs for the company, including the logo, 
+            business cards, contracts, signage, and website.
+        `,
     },
     {
         category: 'MiscDesign',
-        title: "Mental Health Emotions",
-        url: MiscDesignUrl.Emotions,
+        date: new Date(2020, 7, 1),
+        title: 'Emotions',
+        url: 'emotions',
         element: <Emotions />,
-        subtitle: "Emotions and Mental Health",
+        subtitle: 'Emotions and Mental Health',
         graphic: {
-            src: 'projects/emotions/all.png',
+            element: <EmotionsSample />,
+            src: 'projects/emotions/sample.svg',
             alt: 'All Emotions',
         },
-        notes:"Illustrator",
-        details: (
-            <p>
-                Motivated by a fascination with Alexithymia, a condition
-                characterized by difficulty in identifying and expressing emotions,
-                I embarked on a creative endeavor to develop a series of graphics
-                that visually represent emotions.
-            </p>
-        ),
+        notes: 'Illustrator',
+        details: `
+            Motivated by a fascination with Alexithymia, I embarked on a creative
+            endeavor to develop a series of graphics that visually represent
+            emotions.
+           `,
     },
 ]

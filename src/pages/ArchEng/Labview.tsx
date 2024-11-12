@@ -17,6 +17,7 @@ export const Labview: React.FC = () => {
             <PageTitle
                 title="Materials and Methods Lab"
                 subtitle="Milwaukee School of Engineering"
+                category="ArchEng"
             >
                 <p>
                     The Materials and Methods Lab teaches students how structures should

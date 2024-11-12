@@ -5,10 +5,11 @@ import { CategoryInfo } from '../../components'
 export const UserExperienceInfo: React.FC = () => (
     <CategoryInfo category="UserExperience">
         <p>
-            Architecture Design inspired me to pursue a Master&apos;s degree in Human
-            Factors. Initially, my intention was to apply this expertise to the design
-            of healthcare facilities. However, as I delved deeper into the field, my
-            interests took a slight shift towards software design instead.
+            My interest in architectural design led me to pursue a Master&apos;s
+            degree in Human Factors, initially with the intent of applying my 
+            knowledge to healthcare facility design. However, as I explored the 
+            field further, my focus shifted toward user experience and software
+            design.
         </p>
     </CategoryInfo>
 )

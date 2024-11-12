@@ -17,16 +17,20 @@ export interface CategoryData {
 
 export interface ProjectData {
     category: Category
+    date: Date
     title: string
     url: string
     element: ReactNode
     subtitle?: string
     graphic: {
+        // Update type to have either element or src
+        element?: ReactNode
         src: string
+        srcDark?: string
         alt: string
     }
     notes?: string
-    details?: ReactNode
+    details?: string
 }
 
 export interface TopperProperties {

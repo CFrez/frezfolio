@@ -1,4 +1,4 @@
-export { Nav } from './layout/nav'
+export { Nav } from './layout/Nav'
 export { PageTitle } from './page/title'
 export { LinkCard } from './card/LinkCard'
 export { PageSection } from './page/section'

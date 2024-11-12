@@ -27,7 +27,7 @@ export const Emotions: React.FC = () => {
 
     return (
         <>
-            <PageTitle title="Emotions">
+            <PageTitle title="Emotions" category="MiscDesign">
                 <p>
                     Recognizing how individuals with Alexithymia often connect with
                     emotions through physical sensations, I embarked on a fascinating

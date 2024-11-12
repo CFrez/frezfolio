@@ -1,11 +1,16 @@
 import { TopperProperties } from '../types'
 
+/**
+ * The titles for each category.
+ *
+ * The order below is how they are displayed on the website.
+ */
 export const categoryTitles = {
-    UserExperience: 'User Experience',
-    Software: 'Software Engineering',
-    MiscDesign: 'Miscellaneous Design',
-    ArchEng: 'Architectural Engineering',
     ArchDesign: 'Architectural Design',
+    ArchEng: 'Architectural Engineering',
+    UserExperience: 'User Experience',
+    MiscDesign: 'Miscellaneous Design',
+    Software: 'Software Engineering',
 }
 
 export type Category = keyof typeof categoryTitles
@@ -13,10 +18,11 @@ export type Category = keyof typeof categoryTitles
 export const allCategories = Object.keys(categoryTitles) as Category[]
 
 interface CategoryColor {
-    color: string
-    hoverColor: string
-    border: string
     background: string
+    border: string
+    color: string
+    decoration: string
+    hoverColor: string
 }
 
 /**
@@ -26,34 +32,39 @@ interface CategoryColor {
  */
 export const categoryColors: Record<Category, CategoryColor> = {
     ArchDesign: {
-        color: 'text-ad',
-        hoverColor: 'hover:text-ad',
-        border: 'border-ad',
         background: 'bg-ad',
+        border: 'border-ad',
+        color: 'text-ad',
+        decoration: 'decoration-ad',
+        hoverColor: 'hover:text-ad',
     },
     ArchEng: {
-        color: 'text-ae',
-        hoverColor: 'hover:text-ae',
-        border: 'border-ae',
         background: 'bg-ae',
+        border: 'border-ae',
+        color: 'text-ae',
+        decoration: 'decoration-ae',
+        hoverColor: 'hover:text-ae',
     },
     MiscDesign: {
-        color: 'text-md',
-        hoverColor: 'hover:text-md',
-        border: 'border-md',
         background: 'bg-md',
+        border: 'border-md',
+        color: 'text-md',
+        decoration: 'decoration-md',
+        hoverColor: 'hover:text-md',
     },
     Software: {
-        color: 'text-se',
-        hoverColor: 'hover:text-se',
-        border: 'border-se',
         background: 'bg-se',
+        border: 'border-se',
+        color: 'text-se',
+        decoration: 'decoration-se',
+        hoverColor: 'hover:text-se',
     },
     UserExperience: {
-        color: 'text-ux',
-        hoverColor: 'hover:text-ux',
-        border: 'border-ux',
         background: 'bg-ux',
+        border: 'border-ux',
+        color: 'text-ux',
+        decoration: 'decoration-ux',
+        hoverColor: 'hover:text-ux',
     },
 }
 

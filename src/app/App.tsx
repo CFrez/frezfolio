@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 import { AppContext, useAppContextHook } from './App.context'
-import { Home, About, Projects, PageUrl, Layout } from './pages'
+import { Home, About, Projects, PageUrl, Layout } from '../pages'
 
 export const App: React.FC = () => {
     const appContext = useAppContextHook()

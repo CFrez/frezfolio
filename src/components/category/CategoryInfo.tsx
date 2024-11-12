@@ -3,7 +3,7 @@ import React, { type ReactNode } from 'react'
 import { type Category, categoryColors, categoryTitles } from '@/data/categories'
 import { cn } from '@/lib/tailwind.utils'
 import { Link } from 'react-router-dom'
-import { useAppContext } from '@/App.context'
+import { useAppContext } from '@/app/App.context'
 
 interface CategoryInfoProps {
     category: Category
@@ -36,7 +36,7 @@ export const CategoryInfo: React.FC<CategoryInfoProps> = ({
                 <h1
                     className={cn(
                         `
-                        scroll-m-20 text-3xl font-extrabold lg:text-5xl
+                        scroll-m-20 text-3xl font-extrabold lg:text-4xl
                         text-center
                         sm:p-12
                     `,
@@ -46,7 +46,7 @@ export const CategoryInfo: React.FC<CategoryInfoProps> = ({
                     {categoryTitles[category]}
                 </h1>
             </Link>
-            <div className="w-full">{children}</div>
+            <div className="w-full [&>p]:text-base">{children}</div>
         </section>
     )
 }

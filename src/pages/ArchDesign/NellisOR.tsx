@@ -18,6 +18,7 @@ export const NellisOR: React.FC = () => {
             <PageTitle
                 title="Medical Center Operating Room Renovation"
                 subtitle="Nellis Air Force Base, NV"
+                category="ArchDesign"
             >
                 <p>
                     The Nellis Air Force Base Medical Center realignment project was a

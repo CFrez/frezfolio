@@ -1,27 +1,17 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { ProjectsHome } from './home'
 
-import { archDesignProjects } from '../ArchDesign/projects'
-import { archEngProjects } from '../ArchEng/projects'
-import { miscDesignProjects } from '../MiscDesign/projects'
-import { softwareProjects } from '../Software/projects'
-import { userExperienceProjects } from '../UserExperience/projects'
-import { ProjectData } from '@/types'
+import { ProjectsHome } from './home'
+import { allProjects, useProjectFilter } from './useProjectFilter'
+import { ProjectsLayout } from './layout'
 
 export const Projects: React.FC = () => {
-    const allProjects: ProjectData[] = [
-        ...archDesignProjects,
-        ...archEngProjects,
-        ...miscDesignProjects,
-        ...softwareProjects,
-        ...userExperienceProjects,
-    ]
+    const { filteredProjects } = useProjectFilter()
 
     return (
-        <main id="projects" className={``}>
-            <Routes>
-                <Route index element={<ProjectsHome projects={allProjects} />} />
+        <Routes>
+            <Route index element={<ProjectsHome projects={filteredProjects} />} />
+            <Route element={<ProjectsLayout />}>
                 {allProjects.map((project) => (
                     <Route
                         key={project.title}
@@ -29,7 +19,7 @@ export const Projects: React.FC = () => {
                         element={project.element}
                     />
                 ))}
-            </Routes>
-        </main>
+            </Route>
+        </Routes>
     )
 }

@@ -1,19 +1,17 @@
 import React from 'react'
 
-import { CategoryFilter } from '../category/CategoryFilter'
+import { CategoryFilterImage } from '../category'
 
-import { LogoLink } from './logo'
-import { Contact } from './contact'
-import { Nav } from './nav'
-import { useAppContext } from '@/App.context'
-import { Toggle } from '@radix-ui/react-toggle'
-import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
+import { LogoLink } from './LogoLink'
+import { Contact } from './Contact'
+import { Nav } from './Nav'
+import { ThemeToggle } from './ThemeToggle'
 
 export const Header: React.FC = () => {
-    const { theme, toggleTheme } = useAppContext()
     return (
         <header
             className={`
+            bg-contain bg-repeat-x bg-center
             bg-[url(images/topper/light-sky.svg)] 
             dark:bg-[url(images/topper/dark-sky.svg)]
             border-b-2 sm:border-b-[6px] 
@@ -26,14 +24,16 @@ export const Header: React.FC = () => {
                         <LogoLink />
                         <Nav />
                     </div>
-                    <div className="flex flex-col items-end gap-6">
+                    <div
+                        className={`
+                            flex flex-row gap-2
+                        `}
+                    >
                         <Contact />
-                        <Toggle pressed={theme === 'light'} onPressedChange={toggleTheme}>
-                            {theme === 'light' ? <SunIcon /> : <MoonIcon />}
-                        </Toggle>
+                        <ThemeToggle />
                     </div>
                 </div>
-                <CategoryFilter />
+                <CategoryFilterImage />
             </div>
         </header>
     )

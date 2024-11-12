@@ -15,7 +15,7 @@ module.exports = {
                     DEFAULT: 'var(--popover)',
                     foreground: 'var(--popover-foreground)',
                 },
-                gray:{
+                gray: {
                     DEFAULT: 'var(--gray)',
                     foreground: 'var(--gray-foreground)',
                     light: 'var(--gray-100)',

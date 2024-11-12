@@ -14,7 +14,11 @@ export const Zirtual: React.FC = () => {
     })
     return (
         <Dialog>
-            <PageTitle title="Zirtual" subtitle="Hiring Process Automation">
+            <PageTitle
+                title="Zirtual"
+                subtitle="Hiring Process Automation"
+                category="UserExperience"
+            >
                 <p>
                     By conducting user interviews and analyzing the hiring process at
                     Zirtual, we uncovered pain points that the hiring team was facing.

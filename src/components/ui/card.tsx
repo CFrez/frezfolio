@@ -2,16 +2,13 @@ import * as React from 'react'
 
 import { cn } from '@/lib/tailwind.utils'
 
+const baseCardStyle =
+    'rounded-lg bg-card text-card-foreground shadow hover:shadow-lg transition-shadow'
+const flipCardStyle = `w-full h-full backface-hidden transform transition duration-1000 absolute t-0 l-0`
+
 const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
     ({ className, ...props }, ref) => (
-        <article
-            ref={ref}
-            className={cn(
-                'rounded-lg bg-card text-card-foreground shadow hover:shadow-lg transition-shadow',
-                className,
-            )}
-            {...props}
-        />
+        <article ref={ref} className={cn(baseCardStyle, className)} {...props} />
     ),
 )
 Card.displayName = 'Card'
@@ -31,16 +28,12 @@ const CardFront = React.forwardRef<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-    <Card
+    <div
         ref={ref}
         className={cn(
-            `
-                    w-full h-full
-                    backface-hidden
-                    transform transition duration-1000
-                    group-hover:rotate-y-180
-                    absolute t-0 l-0
-                `,
+            baseCardStyle,
+            flipCardStyle,
+            `group-hover:rotate-y-180 group-focus:rotate-y-180 group-active:rotate-y-180`,
             className,
         )}
         {...props}
@@ -50,16 +43,12 @@ CardFront.displayName = 'CardFront'
 
 const CardBack = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
     ({ className, ...props }, ref) => (
-        <Card
+        <div
             ref={ref}
             className={cn(
-                `
-                    w-full h-full
-                    backface-hidden
-                    transform transition duration-1000
-                    rotate-y-180 group-hover:rotate-y-0
-                    absolute t-0 l-0
-                `,
+                baseCardStyle,
+                flipCardStyle,
+                `rotate-y-180 group-hover:rotate-y-0 group-focus:rotate-y-0 group-active:rotate-y-0`,
                 className,
             )}
             {...props}

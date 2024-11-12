@@ -15,7 +15,7 @@ export const UnbTrees: React.FC = () => {
 
     return (
         <Dialog>
-            <PageTitle title="UNB Trees">
+            <PageTitle title="UNB Trees" category="MiscDesign">
                 <p>
                     The tree service was a family-owned and operated business that
                     desired a professional yet approachable graphics.

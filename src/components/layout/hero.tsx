@@ -1,7 +1,7 @@
 import React, { useRef, type WheelEvent } from 'react'
 import { Link } from 'react-router-dom'
 
-import { useAppContext } from '@/App.context'
+import { useAppContext } from '@/app/App.context'
 import { topperProperties } from '@/data'
 import type { Category } from '@/data/categories'
 import { cn } from '@/lib/tailwind.utils'

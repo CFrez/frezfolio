@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { PageUrl } from '@/pages'
-import { useAppContext } from '@/App.context'
+import { useAppContext } from '@/app/App.context'
 
 const navLinkStyle = 'text-grey-800 hover:underline [&.active]:underline'
 

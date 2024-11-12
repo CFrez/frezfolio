@@ -1,11 +1,11 @@
 import React, { useMemo, useCallback } from 'react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@radix-ui/react-icons'
-import { useMediaQuery } from 'react-responsive'
 
-import type { ImageData } from '../../types'
+import { cn, useIsMobile } from '@/lib'
+import type { ImageData } from '@/types'
 
 import { Button, DialogDescription, DialogTitle, DialogTrigger } from '../ui'
-import { cn } from '@/lib/tailwind.utils'
+
 import { Modal } from './Modal'
 
 export interface PhotoModalProps {
@@ -36,7 +36,7 @@ export function usePhotoModal<T, K extends string = Extract<keyof T, string>>({
     // TODO: instead of sending the type of photos, could we infer it from the photos object?
     photos,
 }: PhotoModalProps): PhotoModalInterface<K> {
-    const isMobile = useMediaQuery({ query: '(max-width: 640px)' })
+    const isMobile = useIsMobile()
     const [imageIndex, setImageIndex] = React.useState(0)
 
     const images = useMemo(() => Object.keys(photos), [photos])

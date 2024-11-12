@@ -1,16 +1,25 @@
 import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-import { useAppContext } from '@/App.context'
+import { useAppContext } from '@/app/App.context'
 import { topperProperties } from '@/data'
 import type { Category } from '@/data/categories'
 import { cn } from '@/lib/tailwind.utils'
 import { useLocation } from 'react-router-dom'
 
-export const CategoryFilter: React.FC = () => {
-    const { activeCategories, toggleCategory, scrollToCategory, resetCategories } =
-        useAppContext()
+export const CategoryFilterImage: React.FC = () => {
+    const navigate = useNavigate()
+
+    const {
+        activeCategories,
+        toggleCategory,
+        scrollToCategory,
+        resetCategories,
+        setCategory,
+    } = useAppContext()
     const { pathname } = useLocation()
 
+    const isProjects = pathname === '/projects'
     const isAbout = pathname === '/about'
 
     useEffect(() => {
@@ -19,6 +28,17 @@ export const CategoryFilter: React.FC = () => {
             resetCategories()
         }
     })
+
+    const handleCategoryClick = (category: Category) => {
+        if (isAbout) {
+            scrollToCategory(category)
+        } else if (isProjects) {
+            toggleCategory(category)
+        } else {
+            navigate('/projects')
+            setCategory(category)
+        }
+    }
 
     return (
         <div
@@ -34,11 +54,7 @@ export const CategoryFilter: React.FC = () => {
                 return (
                     <button
                         key={category}
-                        onClick={() =>
-                            isAbout
-                                ? scrollToCategory(category)
-                                : toggleCategory(category)
-                        }
+                        onClick={() => handleCategoryClick(category)}
                     >
                         <img
                             className={cn(

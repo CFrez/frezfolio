@@ -13,53 +13,66 @@ import {
     CardTitle,
     FlipCard,
 } from '../ui'
-
+import { useAppContext } from '@/app/App.context'
 
 export const FlippingCard: React.FC<ProjectData> = ({
     details,
     graphic,
     notes,
-    subtitle,
     title,
-    category
+    category,
 }) => {
-
-    const borderStyle = `border-[1px] ${categoryColors[category].border}`
+    const { isDark } = useAppContext()
+    const borderStyle = `border-[1px] dark:border-[2px] ${categoryColors[category].border}`
 
     return (
-        <FlipCard className={`w-[25vw] h-[25vw] max-w-[300px] max-h-[300px] `}>
-            <CardFront className={cn(`flex flex-col p-4`, borderStyle)}>
-                {/* <CardHeader
-                    className={``}
-                >
-                    <CardTitle
-                        className={cn(`text-base md:text-xl border-b-4`, categoryColors[category].border)}
-                    >
-                        {title}
-                    </CardTitle>
-                    {subtitle && <h3 className={`text-sm md:text-lg`}>{subtitle}</h3>}
-                </CardHeader> */}
+        <FlipCard
+            className={`
+                w-[250px] h-[187.5px] 
+                lg:w-[400px] lg:h-[300px] 
+            `}
+        >
+            <CardFront className={cn(`flex flex-col overflow-hidden`, borderStyle)}>
                 <CardContent className="grow">
-                    <img
-                        className={`w-full object-contain`}
-                        src={graphic.src}
-                        alt={graphic.alt}
-                    />
+                    {graphic?.element ? (
+                        graphic.element
+                    ) : (
+                        <img
+                            className={`w-full h-full object-cover [&>svg]:text-foreground`}
+                            src={
+                                isDark && graphic.srcDark
+                                    ? graphic.srcDark
+                                    : graphic.src
+                            }
+                            alt={graphic.alt}
+                        />
+                    )}
                 </CardContent>
             </CardFront>
-            <CardBack className={cn(`p-6 overflow-hidden flex flex-col gap-2`, borderStyle)}>                
-                <CardHeader
-                    className={``}
-                >
+            <CardBack
+                className={cn(
+                    `p-6 overflow-hidden flex flex-col gap-2 border-[1px] border-border`,
+                )}
+            >
+                <CardHeader>
                     <CardTitle
-                        className={cn(`text-base md:text-xl border-b-4`, categoryColors[category].border)}
+                        className={cn(
+                            `text-base md:text-xl border-b-4`,
+                            categoryColors[category].border,
+                        )}
                     >
                         {title}
                     </CardTitle>
                     {/* {subtitle && <h3 className={`text-sm md:text-lg`}>{subtitle}</h3>} */}
                 </CardHeader>
-                <CardContent className='overflow-x-auto [&>p]:text-base'>{details}</CardContent>
-                {notes && <CardFooter className={`text-base`}>{notes}</CardFooter>}
+                <CardContent className="overflow-x-auto grow">
+                    <p className="text-base">{details}</p>
+                </CardContent>
+                {notes && (
+                    <CardFooter className={`text-base justify-self-end`}>
+                        {notes}
+                    </CardFooter>
+                )}
             </CardBack>
         </FlipCard>
     )

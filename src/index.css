@@ -32,10 +32,7 @@
         --primary-900: #182c53;
         --primary-950: #0d172b;
         --primary: var(--primary-500);
-        --primary-foreground: var(--gray-950)
-
-        /* Tree Poppy */
-        --secondary-50: #fff8eb;
+        --primary-foreground: var(--gray-950) /* Tree Poppy */ --secondary-50: #fff8eb;
         --secondary-100: #fdebc8;
         --secondary-200: #fcd38b;
         --secondary-300: #fab74f;
@@ -48,7 +45,7 @@
         --secondary-950: #441004;
         --secondary: var(--secondary-500);
         --secondary-foreground: var(--gray-950);
-        
+
         --background: var(--secondary-50);
         --foreground: var(--gray-950);
         --card: var(--gray-0);
@@ -77,16 +74,16 @@
     .dark {
         --background: var(--primary-950);
         --foreground: var(--gray-50);
-        /* --card: var(--gray-950);
-        --card-foreground: var(--gray-50); */
+        --card: var(--gray-950);
+        --card-foreground: var(--gray-50);
         --popover: var(--gray-900);
         --popover-foreground: var(--gray-50);
         --primary: 60 9.1% 97.8%;
         --primary-foreground: 24 9.8% 10%;
         --secondary: 12 6.5% 15.1%;
         --secondary-foreground: 60 9.1% 97.8%;
-        --muted: 12 6.5% 15.1%;
-        --muted-foreground: 24 5.4% 63.9%;
+        --muted: var(--gray-100);
+        --muted-foreground: var(--gray-900);
         --border: var(--gray-700);
         --input: var(--gray-800);
         --ring: 24 5.7% 82.9%;
