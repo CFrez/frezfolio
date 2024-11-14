@@ -72,9 +72,9 @@
         /* --bg-img: url('/images/stressed-linen.png') */
     }
     .dark {
-        --background: var(--primary-950);
+        --background: #0d1117;
         --foreground: var(--gray-50);
-        --card: var(--gray-950);
+        --card: #151b23;
         --card-foreground: var(--gray-50);
         --popover: var(--gray-900);
         --popover-foreground: var(--gray-50);

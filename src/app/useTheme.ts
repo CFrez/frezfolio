@@ -3,21 +3,25 @@ import { useEffect, useMemo, useState } from 'react'
 import type { Theme } from '../types'
 
 export function useTheme() {
-    const [theme, setTheme] = useState<Theme>('light')
+    const matchDark = '(prefers-color-scheme: dark)'
+    const [theme, setTheme] = useState<Theme>(() =>
+        window.matchMedia(matchDark).matches ? 'dark' : 'light',
+    )
 
     useEffect(() => {
-        const savedTheme = localStorage.getItem('theme')
-        if (savedTheme) {
-            setTheme(savedTheme as Theme)
-        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            setTheme('dark')
+        const onThemeChange = (e: MediaQueryListEvent) => {
+            setTheme(e.matches ? 'dark' : 'light')
         }
+
+        // Listen for changes to the prefers-color-scheme media query
+        const darkMatcher = window.matchMedia(matchDark)
+        darkMatcher.addEventListener('change', onThemeChange)
+        return () => darkMatcher.removeEventListener('change', onThemeChange)
     }, [])
 
     useEffect(() => {
         document.documentElement.classList.remove('light', 'dark')
         document.documentElement.classList.add(theme)
-        localStorage.setItem('theme', theme)
     }, [theme])
 
     const toggleTheme = () => setTheme((prev) => (prev === 'light' ? 'dark' : 'light'))

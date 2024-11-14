@@ -23,8 +23,7 @@ export const FlippingCard: React.FC<ProjectData> = ({
     category,
 }) => {
     const { isDark } = useAppContext()
-    const borderStyle = `border-[1px] dark:border-[2px] ${categoryColors[category].border}`
-
+    
     return (
         <FlipCard
             className={`
@@ -32,7 +31,7 @@ export const FlippingCard: React.FC<ProjectData> = ({
                 lg:w-[400px] lg:h-[300px] 
             `}
         >
-            <CardFront className={cn(`flex flex-col overflow-hidden`, borderStyle)}>
+            <CardFront className={cn(`flex flex-col overflow-hidden border-[1px]`, categoryColors[category].border)}>
                 <CardContent className="grow">
                     {graphic?.element ? (
                         graphic.element
