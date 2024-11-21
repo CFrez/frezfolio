@@ -46,7 +46,7 @@ export const CategoryInfo: React.FC<CategoryInfoProps> = ({
                     {categoryTitles[category]}
                 </h1>
             </Link>
-            <div className="w-full [&>p]:text-base">{children}</div>
+            <div className="w-full [&>p]:text-base flex flex-col gap-4">{children}</div>
         </section>
     )
 }

@@ -10,5 +10,9 @@ export const UserExperienceInfo: React.FC = () => (
             healthcare facility design. However, as I explored the field further, my
             focus shifted toward user experience and software design.
         </p>
+        <p>
+            This degree sparked my passion for ensuring that accessibility and usability
+            are a priority in all products and services I contribute to.
+        </p>
     </CategoryInfo>
 )
