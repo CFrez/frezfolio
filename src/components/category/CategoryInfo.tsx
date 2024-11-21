@@ -24,8 +24,8 @@ export const CategoryInfo: React.FC<CategoryInfoProps> = ({
             className={cn(
                 `
                 max-w-7xl mx-auto
-                flex flex-row gap-4 sm:gap-8 
-                flex-wrap sm:flex-nowrap
+                flex flex-row gap-4 md:gap-8 
+                flex-wrap md:flex-nowrap
                 justify-center items-center
                 [&>p]:w-full [&>p]:text-center [&>p]:sm:text-start
             `,
@@ -38,7 +38,8 @@ export const CategoryInfo: React.FC<CategoryInfoProps> = ({
                         `
                         scroll-m-20 text-3xl font-extrabold lg:text-4xl
                         text-center
-                        sm:p-12
+                        sm:p-4
+                        md:p-12
                     `,
                         categoryColors[category].hoverColor,
                     )}

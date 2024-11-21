@@ -7,7 +7,7 @@ import { SoftwareInfo } from './Software/Info'
 
 export const About: React.FC = () => {
     return (
-        <main id="about" className={`flex flex-col gap-8 sm:gap-[48px]`}>
+        <main id="about" className={`flex flex-col gap-8 sm:gap-[48px] md:pt-10`}>
             <ArchDesignInfo />
             <hr />
             <ArchEngInfo />
