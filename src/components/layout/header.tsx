@@ -2,9 +2,9 @@ import React from 'react'
 
 import { CategoryFilterImage } from '../category'
 
+import { Contact } from './contact'
 import { LogoLink } from './LogoLink'
-import { Contact } from './Contact'
-import { Nav } from './Nav'
+import { Nav } from './nav'
 import { ThemeToggle } from './ThemeToggle'
 
 export const Header: React.FC = () => {
