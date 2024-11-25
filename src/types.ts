@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import type { ReactElement, ReactNode, SVGProps } from 'react'
 import type { Category } from './data/categories'
 
 export type Theme = 'light' | 'dark'
@@ -22,9 +22,9 @@ export interface ProjectData {
     url: string
     element: ReactNode
     subtitle?: string
+    // Update type to have either element or src
     graphic: {
-        // Update type to have either element or src
-        element?: ReactNode
+        element?: (props: SVGProps<SVGSVGElement>) => JSX.Element
         src: string
         srcDark?: string
         alt: string

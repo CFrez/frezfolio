@@ -3,7 +3,7 @@ import React from 'react'
 import { PageTitle, PageSection, usePhotoModal } from '@/components'
 import { Dialog } from '@/components/ui'
 import { animalsPhotos } from '@/data'
-import { useIsMobile } from '@/lib'
+import { useIsTablet } from '@/lib'
 
 import { AnimalProcess } from './AnimalProcess'
 import { AnimalRoles, AnimalFeatures } from './AnimalTables'
@@ -12,7 +12,7 @@ const setClass =
     'w-full flex gap-6 sm:gap-4 items-center justify-center mx-auto my-0 flex-wrap'
 
 export const Animals: React.FC = () => {
-    const isMobile = useIsMobile()
+    const isTablet = useIsTablet()
 
     const { generatePhotoModal, generateTriggerFigure } = usePhotoModal<
         typeof animalsPhotos
@@ -21,7 +21,7 @@ export const Animals: React.FC = () => {
         photos: animalsPhotos,
     })
 
-    const tableOnMobileWarning = isMobile && (
+    const tableOnMobileWarning = isTablet && (
         <p className="text-center italic text-[1rem]">
             ***Table is viewed best on desktop***
         </p>

@@ -31,7 +31,7 @@ export const miscDesignProjects: ProjectData[] = [
         element: <Emotions />,
         subtitle: 'Emotions and Mental Health',
         graphic: {
-            element: <EmotionsSample />,
+            element: EmotionsSample,
             src: 'projects/emotions/sample.svg',
             alt: 'All Emotions',
         },

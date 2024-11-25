@@ -17,13 +17,13 @@ import { useAppContext } from '@/app/App.context'
 
 export const FlippingCard: React.FC<ProjectData> = ({
     details,
-    graphic,
+    graphic: { src, srcDark, alt, element: Element },
     notes,
     title,
     category,
 }) => {
     const { isDark } = useAppContext()
-    
+
     return (
         <FlipCard
             className={`
@@ -31,19 +31,20 @@ export const FlippingCard: React.FC<ProjectData> = ({
                 lg:w-[400px] lg:h-[300px] 
             `}
         >
-            <CardFront className={cn(`flex flex-col overflow-hidden border-[1px]`, categoryColors[category].border)}>
+            <CardFront
+                className={cn(
+                    `flex flex-col overflow-hidden border-[1px]`,
+                    categoryColors[category].border,
+                )}
+            >
                 <CardContent className="grow">
-                    {graphic?.element ? (
-                        graphic.element
+                    {Element ? (
+                        <Element className={`w-full h-full object-cover`} />
                     ) : (
                         <img
-                            className={`w-full h-full object-cover [&>svg]:text-foreground`}
-                            src={
-                                isDark && graphic.srcDark
-                                    ? graphic.srcDark
-                                    : graphic.src
-                            }
-                            alt={graphic.alt}
+                            className={`w-full h-full object-cover`}
+                            src={isDark && srcDark ? srcDark : src}
+                            alt={alt}
                         />
                     )}
                 </CardContent>

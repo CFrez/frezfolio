@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 import { useAppContext } from '@/app/App.context'
 import { topperProperties } from '@/data'
 import type { Category } from '@/data/categories'
-import { cn } from '@/lib/tailwind.utils'
-import { useLocation } from 'react-router-dom'
+import { cn } from '@/lib'
 
 export const CategoryFilterImage: React.FC = () => {
     const navigate = useNavigate()
@@ -24,16 +23,17 @@ export const CategoryFilterImage: React.FC = () => {
 
     useEffect(() => {
         if (isAbout && activeCategories.length === 1) {
-            scrollToCategory(activeCategories[0])
+            scrollToCategory({ category: activeCategories[0] })
             resetCategories()
         }
     })
 
-    const handleCategoryClick = (category: Category) => {
+    // TODO: make it so when you double click it doesn't first flash/toggle the single click
+    const handleCategoryClick = (category: Category, isDouble: boolean = false) => {
         if (isAbout) {
-            scrollToCategory(category)
+            scrollToCategory({ category })
         } else if (isProjects) {
-            toggleCategory(category)
+            isDouble ? setCategory(category) : toggleCategory(category)
         } else {
             navigate('/projects')
             setCategory(category)
@@ -43,10 +43,10 @@ export const CategoryFilterImage: React.FC = () => {
     return (
         <div
             className={`
-            sticky bottom-0 
-            min-h-[82.72154px] h-[25.85048vw] max-h-[192px]
-            min-w-[320px] w-[100vw] max-w-[742.7328px]
-            mt-[0] lg:mt-[-48px]
+            relative bottom-0 
+            min-h-[82.72154px] h-[25.85048vw] max-h-[124.082304px] md:max-h-[192px]
+            min-w-[320px] w-[100vw] max-w-[480px] md:max-w-[742.7328px]
+            mt-[0] sm:mt-[-24px] lg:mt-[-48px]
         `}
         >
             {Object.entries(topperProperties).map(([key, { src, alt, style }]) => {
@@ -55,6 +55,7 @@ export const CategoryFilterImage: React.FC = () => {
                     <button
                         key={category}
                         onClick={() => handleCategoryClick(category)}
+                        onDoubleClick={() => handleCategoryClick(category, true)}
                     >
                         <img
                             className={cn(

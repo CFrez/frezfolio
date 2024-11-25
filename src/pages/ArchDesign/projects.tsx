@@ -36,12 +36,10 @@ export const archDesignProjects: ProjectData[] = [
         },
         notes: 'August 2005 - May 2009',
         details: `
-            The Bachelor of Environmental Design program at Texas A&M University is
-            an interdisciplinary undergraduate degree focused on architecture. It
-            offers a comprehensive education in design thinking, problem-solving,
-            and architectural principles. Students engage in studio-based courses,
-            explore sustainability and cultural context, and gain practical
-            experience through a study abroad program.
+            I started this Bachelor&apos;s degree with aspirations of becoming a home 
+            designer, inspired by my love for home renovation shows. However, in 
+            my third year, I discovered healthcare architecture, which sparked a 
+            deeper passion and became my focus during my final semester.
         `,
     },
 ]

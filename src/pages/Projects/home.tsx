@@ -18,9 +18,9 @@ export const ProjectsHome: React.FC<{ projects: ProjectData[] }> = ({ projects }
                     more as I collect their parts and pieces.
                 </h2>
             </header>
-            <div className="flex flex-row gap-8">
+            <div className="flex flex-row gap-8 mx-auto">
                 {!isMobile && <CategoryFilterList />}
-                <div className={`grid sm:grid-cols-2 2xl:grid-cols-3 gap-6`}>
+                <div className={`grid md:grid-cols-2 2xl:grid-cols-3 gap-6`}>
                     {projects.map((project) => (
                         <LinkCard key={project.title} {...project} />
                     ))}

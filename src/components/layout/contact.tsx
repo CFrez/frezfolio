@@ -1,9 +1,9 @@
-import { cn, useIsMobile } from '@/lib'
+import { cn, useIsTablet } from '@/lib'
 import React from 'react'
 
 export const Contact: React.FC = () => {
-    const isMobile = useIsMobile()
-    const imgStyle = cn('opacity-85 hover:opacity-100', isMobile ? 'h-6' : 'h-8')
+    const isTablet = useIsTablet()
+    const imgStyle = cn('opacity-85 hover:opacity-100', isTablet ? 'h-6' : 'h-8')
 
     return (
         <div className="flex flex-row w-full gap-3 justify-end items-end">

@@ -19,10 +19,20 @@ export function useCategories() {
 
     const resetCategories = () => setActiveCategory(allCategories)
 
-    const scrollToCategory = (category: Category) => {
+    const scrollToCategory = ({
+        category,
+        horizontal = false,
+    }: {
+        category: Category
+        horizontal?: boolean
+    }) => {
         const element = document.getElementById(category)
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth' })
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: horizontal ? 'nearest' : 'end',
+                inline: horizontal ? 'start' : 'nearest',
+            })
         }
     }
 

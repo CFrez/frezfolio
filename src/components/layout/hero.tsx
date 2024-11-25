@@ -8,7 +8,7 @@ import { cn } from '@/lib/tailwind.utils'
 
 export const Hero: React.FC = () => {
     const ref = useRef<HTMLDivElement>(null)
-    const { setCategory } = useAppContext()
+    const { setCategory, scrollToCategory } = useAppContext()
 
     const onWheel = (e: WheelEvent<HTMLDivElement>) => {
         const element = ref.current
@@ -18,6 +18,11 @@ export const Hero: React.FC = () => {
                 left: element.scrollLeft + e.deltaY,
             })
         }
+    }
+
+    // No idea if this actually works since I am not sure how to tab to focus it...
+    const handleFocus = (category: Category) => {
+        scrollToCategory({ category, horizontal: true })
     }
 
     return (
@@ -35,9 +40,11 @@ export const Hero: React.FC = () => {
                         const category = key as Category
                         return (
                             <Link
+                                id={category}
                                 key={category}
                                 to={`/about`}
                                 onClick={() => setCategory(category)}
+                                onFocus={() => handleFocus(category)}
                             >
                                 <img
                                     className={cn(

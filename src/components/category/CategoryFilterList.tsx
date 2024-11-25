@@ -33,9 +33,9 @@ export const CategoryFilterList: React.FC = () => {
                     >
                         <button onClick={() => toggleCategory(category)}>
                             {selected || noCategoriesActive ? (
-                                <EyeIcon size={28} />
+                                <EyeIcon size={24} strokeWidth={1} />
                             ) : (
-                                <EyeClosedIcon size={28} />
+                                <EyeClosedIcon size={24} strokeWidth={1} />
                             )}
                         </button>
                         <button
@@ -59,7 +59,7 @@ export const CategoryFilterList: React.FC = () => {
                     !allCategoriesActive && 'hover:underline',
                 )}
             >
-                <RotateCcwIcon width="28px" size={22} strokeWidth={3} />
+                <RotateCcwIcon width="28px" size={20} strokeWidth={2} />
                 Reset
             </button>
         </aside>
