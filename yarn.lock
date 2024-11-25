@@ -374,11 +374,6 @@
   resolved "https://registry.yarnpkg.com/@fontsource/josefin-sans/-/josefin-sans-4.5.12.tgz#7532738e5356e65dfef1c41f0ef73e2f33d6bb29"
   integrity sha512-Wu69wdmSDrKPPloaQmM8E+tTZO7o+OTTKu/Pcs1vpRveblVI69/n2mcViXxzeItXwx/Wm9DFxEEvCH71cSPeeg==
 
-"@fontsource/material-icons@^4.5.4":
-  version "4.5.4"
-  resolved "https://registry.yarnpkg.com/@fontsource/material-icons/-/material-icons-4.5.4.tgz#bfedde9352c36dbbacb6b49d190a1ce1e5917756"
-  integrity sha512-YGmXkkEdu6EIgpFKNmB/nIXzZocwSmbI01Ninpmml8x8BT0M6RR++V1KqOfpzZ6Cw/FQ2/KYonQ3x4IY/4VRRA==
-
 "@fontsource/source-sans-pro@^4.5.11":
   version "4.5.11"
   resolved "https://registry.yarnpkg.com/@fontsource/source-sans-pro/-/source-sans-pro-4.5.11.tgz#06b3f08ef1a5250d78c8198e5a0482b5d87a4d52"
@@ -579,6 +574,15 @@
   integrity sha512-FUCf5XMfmW4dtYl69pdS4DbxKy8nj4M7SafBgPllysxmdachynNflAdp/gCsnYWNDnge6tI9onzMp5ARYc1KNw==
   dependencies:
     "@radix-ui/react-compose-refs" "1.1.0"
+
+"@radix-ui/react-toggle@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-toggle/-/react-toggle-1.1.0.tgz#1f7697b82917019330a16c6f96f649f46b4606cf"
+  integrity sha512-gwoxaKZ0oJ4vIgzsfESBuSgJNdc0rv12VhHgcqN0TEJmmZixXG/2XpsLK8kzNWYcnaoRIEEQc0bEi3dIvdUpjw==
+  dependencies:
+    "@radix-ui/primitive" "1.1.0"
+    "@radix-ui/react-primitive" "2.0.0"
+    "@radix-ui/react-use-controllable-state" "1.1.0"
 
 "@radix-ui/react-use-callback-ref@1.1.0":
   version "1.1.0"
@@ -965,6 +969,11 @@
     "@babel/plugin-transform-react-jsx-source" "^7.24.1"
     "@types/babel__core" "^7.20.5"
     react-refresh "^0.14.2"
+
+"@xpd/tailwind-3dtransforms@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@xpd/tailwind-3dtransforms/-/tailwind-3dtransforms-1.0.3.tgz#71871c860943f81333473006b2af88ac49d19233"
+  integrity sha512-LEKfNj57djZAucQ1itu/zinRkYnkhzNjAMhz8DkbguTyBcTDHF1R6CuXO536BFE/YGyHDCYd7tDF5ghSrViUgQ==
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
@@ -2670,10 +2679,10 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-lucide-react@^0.438.0:
-  version "0.438.0"
-  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.438.0.tgz#80cc2602c973416256ad65ded9872531626b4f70"
-  integrity sha512-uq6yCB+IzVfgIPMK8ibkecXSWTTSOMs9UjUgZigfrDCVqgdwkpIgYg1fSYnf0XXF2AoSyCJZhoZXQwzoai7VGw==
+lucide-react@^0.456.0:
+  version "0.456.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.456.0.tgz#14906c3355cc65d3380b7b2294b331aeda1bb392"
+  integrity sha512-DIIGJqTT5X05sbAsQ+OhA8OtJYyD4NsEMCA/HQW/Y6ToPQ7gwbtujIoeAaup4HpHzV35SQOarKAWH8LYglB6eA==
 
 matchmediaquery@^0.4.2:
   version "0.4.2"

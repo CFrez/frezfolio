@@ -1,3 +1,8 @@
+import type { ReactElement, ReactNode, SVGProps } from 'react'
+import type { Category } from './data/categories'
+
+export type Theme = 'light' | 'dark'
+
 export interface ImageData {
     src: string
     alt: string
@@ -11,20 +16,29 @@ export interface CategoryData {
 }
 
 export interface ProjectData {
+    category: Category
+    date: Date
     title: string
-    description: string
-    details: JSX.Element
-    imageSet: ImageData[]
-    name: string
-    tags?: string[]
-    type?: string
+    url: string
+    element: ReactNode
+    subtitle?: string
+    // Update type to have either element or src
+    graphic: {
+        element?: (props: SVGProps<SVGSVGElement>) => JSX.Element
+        src: string
+        srcDark?: string
+        alt: string
+    }
+    notes?: string
+    details?: string
 }
 
 export interface TopperProperties {
     src: string
     srcLabeled: string
     alt: string
-    link: string
+    style: string
+    /** used to document the numbers used for calculating the style left percentage */
     percentage: number
 }
 

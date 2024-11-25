@@ -1,26 +1,38 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
-import { Footer, Header, Nav } from '../components'
+import { Footer, Header } from '../components'
+import { cn, useIsMobile } from '@/lib'
 
 export const Layout: React.FC = () => {
+    const isMobile = useIsMobile()
+
     return (
         <div
-            className={`
-            bg-background
+            className={cn(
+                `
             mx-auto my-0
             min-h-screen h-full
-            min-w-96 max-w-screen-xl
+            min-w-96
             flex flex-col gap-0
-            [&>main]:flex-1
-            [&>main]:flex [&>main]:flex-col [&>main]:gap-6 [&>main]:md:gap-8
-            [&>main]:px-8 [&>main]:py-8 [&>main]:md:py-10
-        `}
+        `,
+                isMobile ? 'overflow-x-auto' : 'overflow-hidden',
+            )}
         >
             <Header />
-            <Nav />
-            <Outlet />
-            <Footer />
+            <div
+                className={cn(
+                    `
+                flex flex-col gap-8
+                p-8 sm:py-0
+                [&>main]:flex-1
+            `,
+                    !isMobile && 'overflow-x-auto',
+                )}
+            >
+                <Outlet />
+                <Footer />
+            </div>
         </div>
     )
 }

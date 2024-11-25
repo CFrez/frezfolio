@@ -2,7 +2,7 @@ const baseFolder = '/projects/unbtrees'
 
 export const unbtreesPhotos = {
     logo: {
-        src: `${baseFolder}/citylogo.png`,
+        src: `${baseFolder}/citylogo.svg`,
         alt: 'Primary Logo with City Roots',
     },
     bCFront: {

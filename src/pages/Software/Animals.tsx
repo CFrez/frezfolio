@@ -1,19 +1,18 @@
 import React from 'react'
 
+import { PageTitle, PageSection, usePhotoModal } from '@/components'
 import { Dialog } from '@/components/ui'
-
-import { PageTitle, PageSection, usePhotoModal } from '../../components'
-import { animalsPhotos } from '../../data'
+import { animalsPhotos } from '@/data'
+import { useIsTablet } from '@/lib'
 
 import { AnimalProcess } from './AnimalProcess'
 import { AnimalRoles, AnimalFeatures } from './AnimalTables'
-import { useMediaQuery } from 'react-responsive'
 
 const setClass =
     'w-full flex gap-6 sm:gap-4 items-center justify-center mx-auto my-0 flex-wrap'
 
 export const Animals: React.FC = () => {
-    const isMobile = useMediaQuery({ query: '(max-width: 640px)' })
+    const isTablet = useIsTablet()
 
     const { generatePhotoModal, generateTriggerFigure } = usePhotoModal<
         typeof animalsPhotos
@@ -22,7 +21,7 @@ export const Animals: React.FC = () => {
         photos: animalsPhotos,
     })
 
-    const tableOnMobileWarning = isMobile && (
+    const tableOnMobileWarning = isTablet && (
         <p className="text-center italic text-[1rem]">
             ***Table is viewed best on desktop***
         </p>
@@ -33,6 +32,7 @@ export const Animals: React.FC = () => {
             <PageTitle
                 title="Pet Rescue Animal Tracker"
                 subtitle="Foreclosed Upon Pets, Inc"
+                category="Software"
             >
                 <p>
                     As a volunteer and foster for FUPI (Foreclosed Upon Pets, Inc), I

@@ -7,7 +7,7 @@ export default {
         require('./src/assets/presets/shadow.ts'),
         require('./src/assets/presets/typography.ts'),
     ],
-    darkMode: 'selector',
+    darkMode: 'class',
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-    plugins: [require('tailwindcss-animate')],
+    plugins: [require('tailwindcss-animate'), require('@xpd/tailwind-3dtransforms')],
 }

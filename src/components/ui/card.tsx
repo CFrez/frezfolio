@@ -2,19 +2,60 @@ import * as React from 'react'
 
 import { cn } from '@/lib/tailwind.utils'
 
+const baseCardStyle =
+    'rounded-lg bg-card text-card-foreground shadow hover:shadow-lg transition-shadow'
+const flipCardStyle = `w-full h-full backface-hidden transform transition duration-1000 absolute t-0 l-0`
+
 const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+    ({ className, ...props }, ref) => (
+        <article ref={ref} className={cn(baseCardStyle, className)} {...props} />
+    ),
+)
+Card.displayName = 'Card'
+
+const FlipCard = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
     ({ className, ...props }, ref) => (
         <article
             ref={ref}
+            className={cn('group perspective-1000', className)}
+            {...props}
+        />
+    ),
+)
+FlipCard.displayName = 'FlipCard'
+
+const CardFront = React.forwardRef<
+    HTMLDivElement,
+    React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+    <div
+        ref={ref}
+        className={cn(
+            baseCardStyle,
+            flipCardStyle,
+            `group-hover:rotate-y-180 group-focus:rotate-y-180 group-active:rotate-y-180`,
+            className,
+        )}
+        {...props}
+    />
+))
+CardFront.displayName = 'CardFront'
+
+const CardBack = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+    ({ className, ...props }, ref) => (
+        <div
+            ref={ref}
             className={cn(
-                'rounded-lg bg-card text-card-foreground shadow hover:shadow-lg transition-shadow',
+                baseCardStyle,
+                flipCardStyle,
+                `rotate-y-180 group-hover:rotate-y-0 group-focus:rotate-y-0 group-active:rotate-y-0`,
                 className,
             )}
             {...props}
         />
     ),
 )
-Card.displayName = 'Card'
+CardBack.displayName = 'CardBack'
 
 const CardHeader = React.forwardRef<
     HTMLDivElement,
@@ -64,4 +105,14 @@ const CardFooter = React.forwardRef<
 ))
 CardFooter.displayName = 'CardFooter'
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+export {
+    Card,
+    CardBack,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardFront,
+    CardHeader,
+    CardTitle,
+    FlipCard,
+}

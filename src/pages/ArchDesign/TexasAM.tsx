@@ -8,6 +8,7 @@ export const TexasAM: React.FC = () => {
             <PageTitle
                 title="Bachelor's of Environmental Design"
                 subtitle="Texas A&M University"
+                category="ArchDesign"
             >
                 <p>
                     Below is my portfolio that I created to showcase work from this

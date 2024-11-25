@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="150" y1="0" x2="150" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#162c53"/>
+      <stop offset=".29" stop-color="#182d52"/>
+      <stop offset=".44" stop-color="#1f3152"/>
+      <stop offset=".55" stop-color="#2c3952"/>
+      <stop offset=".64" stop-color="#3f4552"/>
+      <stop offset=".72" stop-color="#575451"/>
+      <stop offset=".79" stop-color="#756651"/>
+      <stop offset=".86" stop-color="#987b50"/>
+      <stop offset=".93" stop-color="#c1944f"/>
+      <stop offset=".99" stop-color="#eeb04f"/>
+      <stop offset="1" stop-color="#f9b74f"/>
+    </linearGradient>
+  </defs>
+  <g id="theme">
+    <rect id="night" class="cls-1" width="300" height="300"/>
+  </g>
+</svg>
