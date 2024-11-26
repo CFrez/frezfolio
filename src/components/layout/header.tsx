@@ -12,8 +12,7 @@ export const Header: React.FC = () => {
         <header
             className={`
             bg-contain bg-repeat-x bg-center
-            bg-[url(background/light-sky.svg)] 
-            dark:bg-[url(background/dark-sky.svg)]
+            bg-light-sky dark:bg-dark-sky
             border-b-2 sm:border-b-[6px] 
             border-neutral-800
         `}
