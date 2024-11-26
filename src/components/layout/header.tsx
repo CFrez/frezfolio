@@ -18,6 +18,12 @@ export const Header: React.FC = () => {
             border-neutral-800
         `}
         >
+            {/* 
+                hack to try and force github pages to publish what it doesn't
+                seem to notice in the classname...
+             */}
+            <img src="images/topper/dark-sky.svg" className="hidden" />
+            <img src="images/topper/light-sky.svg" className="hidden" />
             <div className="flex flex-col w-full gap-0 items-center justify-center">
                 <div className="flex flex-row w-full max-w-7xl justify-between items-start px-6 pt-4">
                     <div className="flex flex-row gap-6">
