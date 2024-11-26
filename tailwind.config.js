@@ -8,6 +8,10 @@ export default {
         require('./src/assets/presets/typography.ts'),
     ],
     darkMode: 'class',
-    content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+    content: [
+        './index.html',
+        './src/**/*.{js,ts,jsx,tsx}',
+        './public/**/*.{svg,png,jpg,jpeg}',
+    ],
     plugins: [require('tailwindcss-animate'), require('@xpd/tailwind-3dtransforms')],
 }
