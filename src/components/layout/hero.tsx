@@ -49,9 +49,9 @@ export const Hero: React.FC = () => {
                                 <img
                                     className={cn(
                                         `
-                                    absolute bottom-0 h-full 
-                                    saturate-0 hover:saturate-100
-                                    `,
+                                            absolute bottom-0 h-full 
+                                            saturate-0 hover:saturate-100
+                                        `,
                                         style,
                                     )}
                                     src={srcLabeled}
