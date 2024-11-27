@@ -46,11 +46,11 @@ export const categoryColors: Record<Category, CategoryColor> = {
         hoverColor: 'hover:text-ae',
     },
     MiscDesign: {
-        background: 'bg-md',
-        border: 'border-md',
-        color: 'text-md',
-        decoration: 'decoration-md',
-        hoverColor: 'hover:text-md',
+        background: 'bg-misc',
+        border: 'border-misc',
+        color: 'text-misc',
+        decoration: 'decoration-misc',
+        hoverColor: 'hover:text-misc',
     },
     Software: {
         background: 'bg-se',

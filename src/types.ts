@@ -1,4 +1,4 @@
-import type { ReactElement, ReactNode, SVGProps } from 'react'
+import type { FunctionComponent, ReactNode, SVGProps } from 'react'
 import type { Category } from './data/categories'
 
 export type Theme = 'light' | 'dark'
@@ -6,6 +6,7 @@ export type Theme = 'light' | 'dark'
 export interface ImageData {
     src: string
     alt: string
+    element?: FunctionComponent<SVGProps<SVGSVGElement>>
     caption?: string
     className?: string
 }

@@ -61,10 +61,10 @@
         --muted-foreground: var(--gray-900);
 
         /* Colors for Categories */
-        --ad: var(--primary-400);
-        --ae: #397684;
-        --md: #f77885;
-        --se: var(--secondary-400);
+        --archd: var(--primary-400);
+        --arche: #397684;
+        --miscd: #f77885;
+        --swe: var(--secondary-400);
         --ux: #209e00;
 
         --destructive: #d82d13;

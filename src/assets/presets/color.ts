@@ -78,7 +78,7 @@ module.exports = {
                 /** Pages */
                 ad: 'var(--ad)',
                 ae: 'var(--ae)',
-                md: 'var(--md)',
+                misc: 'var(--md)',
                 se: 'var(--se)',
                 ux: 'var(--ux)',
 
