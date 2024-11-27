@@ -4,22 +4,27 @@ import { PageTitle } from '../../components'
 import { emotionsPhotos } from '../../data'
 import { ImageData } from '../../types'
 
-import './Emotions.css'
-
 export const Emotions: React.FC = () => {
     const generateEmotion = useCallback(
-        (emotion: ImageData) => (
+        ({ alt, element: Image, src }: ImageData) => (
             <figure
-                key={emotion.src}
+                key={src}
                 className={`
                 shadow hover:shadow-md
                 h-80 w-80 p-8
                 rounded-md
-                bg-white
+                bg-card
+                group
             `}
             >
-                <img src={emotion.src} alt={emotion.alt} />
-                <figcaption>{emotion.alt}</figcaption>
+                {Image ? (
+                    <Image style={{ fill: 'currentcolor', stroke: 'currentcolor' }} />
+                ) : (
+                    <img src={src} alt={alt} />
+                )}
+                <figcaption className="hidden group-hover:block text-muted-foreground">
+                    {alt}
+                </figcaption>
             </figure>
         ),
         [],
