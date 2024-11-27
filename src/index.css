@@ -34,7 +34,10 @@
         --primary-900: #182c53;
         --primary-950: #0d172b;
         --primary: var(--primary-500);
-        --primary-foreground: var(--gray-950) /* Tree Poppy */ --secondary-50: #fff8eb;
+        --primary-foreground: var(--gray-950);
+
+        /* Tree Poppy */
+        --secondary-50: #fff8eb;
         --secondary-100: #fdebc8;
         --secondary-200: #fcd38b;
         --secondary-300: #fab74f;
@@ -83,7 +86,7 @@
         --secondary: 12 6.5% 15.1%;
         --secondary-foreground: 60 9.1% 97.8%;
         --muted: var(--gray-100);
-        --muted-foreground: var(--gray-900);
+        --muted-foreground: var(--gray-200);
         --border: var(--gray-700);
         --input: var(--gray-800);
         --ring: 24 5.7% 82.9%;
@@ -139,14 +142,6 @@ div#root {
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
-}
-
-p,
-ul,
-li,
-details {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
 }
 
 a {
