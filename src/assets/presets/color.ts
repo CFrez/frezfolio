@@ -76,10 +76,10 @@ module.exports = {
                 },
 
                 /** Pages */
-                ad: 'var(--ad)',
-                ae: 'var(--ae)',
-                misc: 'var(--md)',
-                se: 'var(--se)',
+                archd: 'var(--archd)',
+                arche: 'var(--arche)',
+                miscd: 'var(--miscd)',
+                swe: 'var(--swe)',
                 ux: 'var(--ux)',
 
                 /** Default */
