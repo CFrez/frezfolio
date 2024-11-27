@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap'); */
 
 @tailwind base;
 @tailwind components;
@@ -70,8 +70,6 @@
         --input: var(--gray-200);
         --ring: var(--primary-500);
         --radius: 0.5rem;
-
-        /* --bg-img: url('/images/stressed-linen.png') */
     }
     .dark {
         --background: #0d1117;
@@ -89,8 +87,30 @@
         --border: var(--gray-700);
         --input: var(--gray-800);
         --ring: 24 5.7% 82.9%;
+    }
 
-        /* --bg-img: url('/images/stressed-linen-inv.png') */
+    @font-face {
+        font-family: 'Josefin Sans';
+        font-style: normal;
+        font-weight: 100 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/josefinsans/v32/Qw3aZQNVED7rKGKxtqIqX5EUDXx4Vn8sig.woff2)
+            format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+            U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+            U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+        font-family: 'Source Sans 3';
+        font-style: normal;
+        font-weight: 200 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesans3/v15/nwpStKy2OAdR1K-IwhWudF-R3w8aZejf5Hc.woff2)
+            format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+            U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+            U+2212, U+2215, U+FEFF, U+FFFD;
     }
 }
 

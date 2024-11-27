@@ -14,7 +14,6 @@ export const Home: React.FC = () => {
                 bg-gradient-to-b from-secondary-200 to-primary-500
                 dark:from-primary-900 dark:to-secondary-300
             `}
-
         >
             <div
                 className={`
@@ -24,7 +23,7 @@ export const Home: React.FC = () => {
                 `}
             >
                 <LogoLink />
-                <div className='flex flex-row gap-3'>
+                <div className="flex flex-row gap-3">
                     <Contact />
                     <ThemeToggle />
                 </div>
