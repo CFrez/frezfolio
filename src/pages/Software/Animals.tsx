@@ -7,6 +7,12 @@ import { useIsTablet } from '@/lib'
 
 import { AnimalProcess } from './AnimalProcess'
 import { AnimalRoles, AnimalFeatures } from './AnimalTables'
+import {
+    AccordionItem,
+    AccordionTrigger,
+    Accordion,
+    AccordionContent,
+} from '@/components/ui/accordion'
 
 const setClass =
     'w-full flex gap-6 sm:gap-4 items-center justify-center mx-auto my-0 flex-wrap'
@@ -23,7 +29,7 @@ export const Animals: React.FC = () => {
 
     const tableOnMobileWarning = isTablet && (
         <p className="text-center italic text-[1rem]">
-            ***Table is viewed best on desktop***
+            *** Table is viewed best on desktop ***
         </p>
     )
 
@@ -67,22 +73,33 @@ export const Animals: React.FC = () => {
                     Data for the project was collected through interviews with board
                     members of the organization and supplemented by personal experience.
                 </p>
-                <details>
-                    <summary>
-                        Ideal process of how an animal gets received through adoption
-                    </summary>
-                    <AnimalProcess />
-                </details>
-                <details>
-                    <summary>Table of roles and potential data models</summary>
-                    {tableOnMobileWarning}
-                    <AnimalRoles />
-                </details>
-                <details>
-                    <summary>Table of feature analysis</summary>
-                    {tableOnMobileWarning}
-                    <AnimalFeatures />
-                </details>
+                <Accordion type="multiple">
+                    <AccordionItem value="process">
+                        <AccordionTrigger>
+                            Ideal process of how an animal gets received through
+                            adoption
+                        </AccordionTrigger>
+                        <AccordionContent>
+                            <AnimalProcess />
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="roles">
+                        <AccordionTrigger>
+                            Table of roles and potential data models
+                        </AccordionTrigger>
+                        <AccordionContent>
+                            {tableOnMobileWarning}
+                            <AnimalRoles />
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="features">
+                        <AccordionTrigger>Table of feature analysis</AccordionTrigger>
+                        <AccordionContent>
+                            {tableOnMobileWarning}
+                            <AnimalFeatures />
+                        </AccordionContent>
+                    </AccordionItem>
+                </Accordion>
             </PageSection>
             <PageSection title="Dashboard">
                 <p>

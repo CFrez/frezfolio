@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
     presets: [
+        require('./src/assets/presets/animation.ts'),
         require('./src/assets/presets/color.ts'),
         require('./src/assets/presets/layout.ts'),
         require('./src/assets/presets/size.ts'),
@@ -8,10 +9,6 @@ export default {
         require('./src/assets/presets/typography.ts'),
     ],
     darkMode: 'class',
-    content: [
-        './index.html',
-        './src/**/*.{js,ts,jsx,tsx}',
-        './public/**/*.{svg,png,jpg,jpeg}',
-    ],
+    content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     plugins: [require('tailwindcss-animate'), require('@xpd/tailwind-3dtransforms')],
 }
