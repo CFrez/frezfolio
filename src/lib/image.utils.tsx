@@ -15,6 +15,7 @@ export const useGraphic = (imgStyle?: string) => {
                 />
             )
         }
+
         const { src, srcDark, alt } = graphic
         return (
             <img
