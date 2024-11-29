@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { allCategories, Category } from '../data/categories'
+import { allCategories, Category } from './categories'
 
 export function useCategories() {
     const [activeCategories, setActiveCategory] = useState<Category[]>(allCategories)

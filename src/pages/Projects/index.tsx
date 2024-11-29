@@ -2,11 +2,11 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import { ProjectsHome } from './home'
-import { allProjects, useProjectFilter } from './useProjectFilter'
+import { useProjectFilter } from './useProjectFilter'
 import { ProjectsLayout } from './layout'
 
 export const Projects: React.FC = () => {
-    const { filteredProjects } = useProjectFilter()
+    const { allProjects, filteredProjects } = useProjectFilter()
 
     return (
         <Routes>

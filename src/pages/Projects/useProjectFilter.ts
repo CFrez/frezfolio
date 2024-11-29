@@ -1,15 +1,15 @@
 import { useMemo } from 'react'
 
-import type { ProjectData } from '@/types'
-
-import { archDesignProjects } from '../ArchDesign/projects'
-import { archEngProjects } from '../ArchEng/projects'
-import { miscDesignProjects } from '../MiscDesign/projects'
-import { softwareProjects } from '../Software/projects'
-import { userExperienceProjects } from '../UserExperience/projects'
 import { useAppContext } from '@/app/App.context'
+import type { ProjectData } from '@/app/types'
 
-export const allProjects: ProjectData[] = [
+import { archDesignProjects } from '../ArchDesign'
+import { archEngProjects } from '../ArchEng'
+import { miscDesignProjects } from '../MiscDesign'
+import { softwareProjects } from '../Software'
+import { userExperienceProjects } from '../UserExperience'
+
+const allProjects: ProjectData[] = [
     ...archDesignProjects,
     ...archEngProjects,
     ...miscDesignProjects,
@@ -28,5 +28,5 @@ export const useProjectFilter = () => {
         )
     }, [activeCategories, allProjects])
 
-    return { filteredProjects }
+    return { allProjects, filteredProjects }
 }

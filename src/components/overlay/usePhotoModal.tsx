@@ -2,7 +2,7 @@ import React, { useMemo, useCallback } from 'react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@radix-ui/react-icons'
 
 import { cn, useIsMobile } from '@/lib'
-import type { ImageData } from '@/types'
+import type { ImageData } from '@/app/types'
 
 import { Button, DialogDescription, DialogTitle, DialogTrigger } from '../ui'
 

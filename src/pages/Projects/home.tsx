@@ -1,6 +1,6 @@
 import React from 'react'
 
-import type { ProjectData } from '@/types'
+import type { ProjectData } from '@/app/types'
 import { CategoryFilterList, LinkCard } from '@/components'
 import { useIsMobile } from '@/lib'
 

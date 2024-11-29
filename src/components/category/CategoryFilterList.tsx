@@ -2,7 +2,7 @@ import React from 'react'
 import { RotateCcwIcon, EyeIcon, EyeClosedIcon } from 'lucide-react'
 
 import { useAppContext } from '@/app/App.context'
-import { categoryColors, categoryTitles, type Category } from '@/data/categories'
+import { categoryColors, categoryTitles, type Category } from '@/app/categories'
 import { cn } from '@/lib'
 
 export const CategoryFilterList: React.FC = () => {

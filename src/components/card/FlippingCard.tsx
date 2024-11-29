@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { categoryColors } from '@/data/categories'
-import { cn } from '@/lib/tailwind.utils'
-import type { ProjectData } from '@/types'
+import { categoryColors } from '@/app/categories'
+import { useGraphic, cn } from '@/lib'
+import type { ProjectData } from '@/app/types'
 
 import {
     CardBack,
@@ -13,16 +13,15 @@ import {
     CardTitle,
     FlipCard,
 } from '../ui'
-import { useAppContext } from '@/app/App.context'
 
 export const FlippingCard: React.FC<ProjectData> = ({
     details,
-    graphic: { src, srcDark, alt, element: Element },
+    graphic,
     notes,
     title,
     category,
 }) => {
-    const { isDark } = useAppContext()
+    const generateImage = useGraphic(`w-full h-full object-cover`)
 
     return (
         <FlipCard
@@ -37,17 +36,7 @@ export const FlippingCard: React.FC<ProjectData> = ({
                     categoryColors[category].border,
                 )}
             >
-                <CardContent className="grow">
-                    {Element ? (
-                        <Element className={`w-full h-full object-cover`} />
-                    ) : (
-                        <img
-                            className={`w-full h-full object-cover`}
-                            src={isDark && srcDark ? srcDark : src}
-                            alt={alt}
-                        />
-                    )}
-                </CardContent>
+                <CardContent className="grow">{generateImage(graphic)}</CardContent>
             </CardFront>
             <CardBack
                 className={cn(

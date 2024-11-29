@@ -2,8 +2,7 @@ import React, { useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 
 import { useAppContext } from '@/app/App.context'
-import { topperProperties } from '@/data'
-import type { Category } from '@/data/categories'
+import { topperProperties, type Category } from '@/app/categories'
 import { cn } from '@/lib'
 
 export const CategoryFilterImage: React.FC = () => {

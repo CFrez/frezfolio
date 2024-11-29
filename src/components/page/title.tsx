@@ -1,6 +1,6 @@
 import React, { type ReactNode } from 'react'
 
-import { type Category, categoryColors } from '@/data/categories'
+import { type Category, categoryColors } from '@/app/categories'
 import { cn } from '@/lib'
 
 interface PageTitleProps {

@@ -1,6 +1,6 @@
 import React, { type ReactNode } from 'react'
 
-import { type Category, categoryColors, categoryTitles } from '@/data/categories'
+import { type Category, categoryColors, categoryTitles } from '@/app/categories'
 import { cn } from '@/lib/tailwind.utils'
 import { Link } from 'react-router-dom'
 import { useAppContext } from '@/app/App.context'
