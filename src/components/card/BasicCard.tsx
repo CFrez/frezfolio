@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { categoryColors } from '@/app/categories'
+import { categoryColors } from '@/pages/categories/categories'
 import { cn, useGraphic } from '@/lib'
 import type { ProjectData } from '@/app/types'
 

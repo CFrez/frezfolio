@@ -1,5 +1,5 @@
 import type { FunctionComponent, ReactNode, SVGProps } from 'react'
-import type { Category } from './categories'
+import type { Category } from '../pages/categories/categories'
 
 export type Theme = 'light' | 'dark'
 

@@ -1,8 +1,9 @@
 import React from 'react'
 
 import { PageTitle, PageSection, usePhotoModal } from '@/components'
-import { labViewPhotos } from './images'
 import { Dialog } from '@/components/ui'
+
+import { labViewPhotos } from './images'
 
 export const Labview: React.FC = () => {
     const { generatePhotoModal, generateTriggerFigure } = usePhotoModal<

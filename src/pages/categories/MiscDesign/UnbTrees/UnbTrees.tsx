@@ -1,8 +1,8 @@
 import React from 'react'
 
+import { PageTitle, PageSection, usePhotoModal } from '@/components'
 import { Dialog } from '@/components/ui'
 
-import { PageTitle, PageSection, usePhotoModal } from '@/components'
 import { unbtreesPhotos } from './images'
 
 export const UnbTrees: React.FC = () => {

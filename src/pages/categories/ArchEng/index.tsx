@@ -1,4 +1,4 @@
-import { CategoryInfo, ProjectData } from '@/app/types'
+import type { CategoryInfo, ProjectData } from '@/app/types'
 
 import { mastersProjects } from './Masters'
 

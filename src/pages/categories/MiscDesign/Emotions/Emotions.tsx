@@ -1,8 +1,9 @@
 import React, { useCallback } from 'react'
 
+import type { ImageElement } from '@/app/types'
 import { PageTitle } from '@/components'
+
 import { emotionsPhotos } from './images'
-import { ImageElement } from '@/app/types'
 
 export const Emotions: React.FC = () => {
     const generateEmotion = useCallback(

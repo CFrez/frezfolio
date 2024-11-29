@@ -2,7 +2,7 @@ import React, { useRef, type WheelEvent } from 'react'
 import { Link } from 'react-router-dom'
 
 import { useAppContext } from '@/app/App.context'
-import { topperProperties, type Category } from '@/app/categories'
+import { topperProperties, type Category } from '@/pages/categories/categories'
 import { cn } from '@/lib/tailwind.utils'
 
 export const Hero: React.FC = () => {

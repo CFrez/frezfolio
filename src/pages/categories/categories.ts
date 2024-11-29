@@ -1,4 +1,4 @@
-import { TopperProperties } from './types'
+import { TopperProperties } from '@/app/types'
 
 /**
  * The titles for each category.
