@@ -22,7 +22,7 @@ interface CategoryColor {
     border: string
     color: string
     decoration: string
-    hoverColor: string
+    groupHoverColor: string
 }
 
 /**
@@ -36,35 +36,35 @@ export const categoryColors: Record<Category, CategoryColor> = {
         border: 'border-archd',
         color: 'text-archd',
         decoration: 'decoration-archd',
-        hoverColor: 'hover:text-archd',
+        groupHoverColor: 'group-hover:text-archd',
     },
     ArchEng: {
         background: 'bg-arche',
         border: 'border-arche',
         color: 'text-arche',
         decoration: 'decoration-arche',
-        hoverColor: 'hover:text-arche',
+        groupHoverColor: 'group-hover:text-arche',
     },
     MiscDesign: {
         background: 'bg-miscd',
         border: 'border-miscd',
         color: 'text-miscd',
         decoration: 'decoration-miscd',
-        hoverColor: 'hover:text-miscd',
+        groupHoverColor: 'group-hover:text-miscd',
     },
     Software: {
         background: 'bg-swe',
         border: 'border-swe',
         color: 'text-swe',
         decoration: 'decoration-swe',
-        hoverColor: 'hover:text-swe',
+        groupHoverColor: 'group-hover:text-swe',
     },
     UserExperience: {
         background: 'bg-ux',
         border: 'border-ux',
         color: 'text-ux',
         decoration: 'decoration-ux',
-        hoverColor: 'hover:text-ux',
+        groupHoverColor: 'group-hover:text-ux',
     },
 }
 

@@ -14,13 +14,7 @@ export const About: React.FC = () => {
     const generateInfo = (
         { category, info }: CategoryInfoType,
         reverse: boolean = false,
-    ) => (
-        <CategoryInfo
-            category={category}
-            children={info}
-            className={cn(reverse && 'flex-row-reverse sm:[&>div]:text-right')}
-        />
-    )
+    ) => <CategoryInfo category={category} children={info} reverse={reverse} />
 
     return (
         <main id="about" className={`flex flex-col gap-8 sm:gap-[48px] md:pt-10`}>

@@ -13,30 +13,33 @@ interface CategoryInfoProps {
     category: Category
     children?: ReactNode
     className?: string
+    reverse?: boolean
 }
 
 export const CategoryInfo: React.FC<CategoryInfoProps> = ({
     category,
     children,
     className,
+    reverse = false,
 }) => {
     const { setCategory } = useAppContext()
 
     return (
-        <section
-            id={category}
-            className={cn(
-                `
-                max-w-7xl mx-auto
-                flex flex-row gap-4 md:gap-8 
-                flex-wrap md:flex-nowrap
-                justify-center items-center
-                [&>p]:w-full [&>p]:text-center [&>p]:sm:text-start
-            `,
-                className,
-            )}
-        >
-            <Link to="/projects" onClick={() => setCategory(category)}>
+        <Link to="/projects" onClick={() => setCategory(category)} className="group">
+            <section
+                id={category}
+                className={cn(
+                    `
+                    max-w-7xl mx-auto
+                    flex flex-row gap-4 md:gap-8 
+                    flex-wrap md:flex-nowrap
+                    justify-center items-center
+                    [&>p]:w-full [&>p]:text-center [&>p]:sm:text-start
+                `,
+                    reverse && 'flex-row-reverse sm:[&>div]:text-right',
+                    className,
+                )}
+            >
                 <h1
                     className={cn(
                         `
@@ -45,13 +48,15 @@ export const CategoryInfo: React.FC<CategoryInfoProps> = ({
                         sm:p-4
                         md:p-12
                     `,
-                        categoryColors[category].hoverColor,
+                        categoryColors[category].groupHoverColor,
                     )}
                 >
                     {categoryTitles[category]}
                 </h1>
-            </Link>
-            <div className="w-full [&>p]:text-base flex flex-col gap-4">{children}</div>
-        </section>
+                <div className="w-full [&>p]:text-base flex flex-col gap-4">
+                    {children}
+                </div>
+            </section>
+        </Link>
     )
 }
