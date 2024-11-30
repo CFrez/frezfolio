@@ -1,5 +1,4 @@
 export * from './card'
-export * from './category'
 export * from './layout'
 export * from './overlay'
 export * from './page'

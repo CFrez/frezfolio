@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 
-import type { Theme } from '../types'
+import type { Theme } from './types'
 
 export function useTheme() {
     const matchDark = '(prefers-color-scheme: dark)'

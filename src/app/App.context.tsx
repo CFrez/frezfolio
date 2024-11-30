@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useCategories } from './useCategories'
+import { useCategories } from '../pages/categories/useCategories'
 import { useTheme } from './useTheme'
 
 export function useAppContextHook() {

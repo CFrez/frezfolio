@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { useAppContext } from '@/app/App.context'
 import { cn, useIsTablet } from '@/lib'
-import type { ProjectData } from '@/types'
+import type { ProjectData } from '@/app/types'
 
 import { BasicCard } from './BasicCard'
 import { FlippingCard } from './FlippingCard'

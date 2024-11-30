@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { Hero, Contact, LogoLink } from '../components'
-import { ThemeToggle } from '@/components/layout/ThemeToggle'
+import { Hero, Contact, LogoLink, ThemeToggle } from '@/components'
 
 export const Home: React.FC = () => {
     return (

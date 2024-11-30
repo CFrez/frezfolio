@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { CategoryFilterImage } from '../category'
+import { CategoryFilterImage } from '@/pages/categories/components'
 
 import { Contact } from './contact'
 import { LogoLink } from './LogoLink'

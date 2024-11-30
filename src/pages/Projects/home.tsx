@@ -1,8 +1,10 @@
 import React from 'react'
 
-import type { ProjectData } from '@/types'
-import { CategoryFilterList, LinkCard } from '@/components'
+import type { ProjectData } from '@/app/types'
+import { LinkCard } from '@/components'
 import { useIsMobile } from '@/lib'
+
+import { CategoryFilterList } from '../categories'
 
 export const ProjectsHome: React.FC<{ projects: ProjectData[] }> = ({ projects }) => {
     const isMobile = useIsMobile()
