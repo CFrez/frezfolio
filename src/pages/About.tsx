@@ -1,14 +1,15 @@
 import React from 'react'
 
 import type { CategoryInfo as CategoryInfoType } from '@/app/types'
-import { cn } from '@/lib'
 
-import { archDesignInfo } from './categories/ArchDesign'
-import { archEngInfo } from './categories/ArchEng'
-import { miscDesignInfo } from './categories/MiscDesign'
-import { softwareInfo } from './categories/Software'
-import { userExperienceInfo } from './categories/UserExperience'
-import { CategoryInfo } from './categories/components'
+import {
+    archDesignInfo,
+    archEngInfo,
+    CategoryInfo,
+    miscDesignInfo,
+    softwareInfo,
+    userExperienceInfo,
+} from './categories'
 
 export const About: React.FC = () => {
     const generateInfo = (
